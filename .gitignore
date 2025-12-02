@@ -1,4 +1,10 @@
 venv/
 config.py
-app/data/pokemons.csv
+
+#pre-processamento
+app/data/*.csv
 app/static/images/pokemons/
+
+# Bytecode Python
+__pycache__/
+*.pyc
