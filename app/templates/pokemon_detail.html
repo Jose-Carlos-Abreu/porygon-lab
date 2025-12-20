@@ -1,8 +1,3 @@
-{% extends "base.html" %}
-
-{% block title %}{{ pokemon.nome|capitalize }}{% endblock %}
-
-{% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/pokemon_detail.css') }}">
 
 <a href="{{ url_for('home.home') }}" class="btn-home btn-voltar">
@@ -85,7 +80,4 @@
             <p class="empty-info">Este Pokémon não possui evoluções.</p>
         {% endif %}
     </div>
-    
-
 </div>
-{% endblock %}
