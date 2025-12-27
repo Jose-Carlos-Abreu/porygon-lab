@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex - Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
 </head>
 <body>
 
@@ -41,10 +42,14 @@
 
             <input
                 type="text"
+                id="search"
                 name="search"
                 placeholder="Buscar por nome ou número..."
                 value="{{ request.args.get('search', '') }}"
+                autocomplete="off"
             >
+
+            <div id="search-suggestions" class="search-suggestions"></div>
 
             <select name="tipo">
                 <option value="">Todos os tipos</option>
