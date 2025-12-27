@@ -1,6 +1,6 @@
-from flask import Blueprint, request, render_template, abort
+from flask import Blueprint, request, render_template, abort, jsonify
 from flask_login import current_user
-from app.models.home import carregar_pokemons, buscar_pokemon_por_nome, listar_tipos
+from app.models.home import carregar_pokemons, buscar_pokemon_por_nome, listar_tipos, buscar_pokemons_por_prefixo
 import csv
 
 home_bp = Blueprint("home", __name__)
@@ -73,3 +73,12 @@ def pokemon_detail(pokemon_id):
         evolutions=evolutions
     )
 
+@home_bp.route("/api/pokemons/search")
+def api_search_pokemons():
+    query = request.args.get("q", "").strip()
+
+    if len(query) < 2:
+        return jsonify([])
+
+    resultados = buscar_pokemons_por_prefixo(query)
+    return jsonify(resultados)

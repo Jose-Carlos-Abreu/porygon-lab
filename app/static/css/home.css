@@ -3,7 +3,10 @@ body {
     background-color: #f7f7f7;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+/* HEADER */
 
 .main-header {
     background: #313131;
@@ -35,6 +38,8 @@ body {
     background: #cc0000;
 }
 
+/* FLASH */
+
 .flash-container {
     padding: 10px 5%;
 }
@@ -59,38 +64,149 @@ body {
     border: 1px solid #000000;
 }
 
+/* SEARCH E FILTER */
+
 .search-section {
-    padding: 30px 5%;
+    padding: 35px 5%;
     display: flex;
     justify-content: center;
 }
 
+.search-section *, .search-section *::before, .search-section *::after {
+    box-sizing: border-box;
+} 
+
 .search-form {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 12px;
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
 }
 
-.search-form input, .search-form select {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+/* Wrapper do input (necessário para sugestões) */
+.search-wrapper {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+
+/* Campo de busca */
+.search-form input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
     font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.search-form input { flex: 3; }
-.search-form select { flex: 1; }
+/* Select de tipos */
+.search-form select {
+    flex-shrink: 0;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    font-size: 1rem;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
 
+/* Focus unificado */
+.search-form input:focus,
+.search-form select:focus {
+    outline: none;
+    border-color: #ee1515;
+    box-shadow: 0 0 0 3px rgba(238, 21, 21, 0.2);
+}
+
+/* Botão buscar */
 .btn-search {
-    padding: 12px 25px;
-    background: #ee1515;
+    flex-shrink: 0;
+    width: 140px;
+    height: 52px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ee1515, #cc1212);
     color: white;
     border: none;
-    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
 }
+
+/* Hover do botão */
+.btn-search:hover {
+    background: linear-gradient(135deg, #cc1212, #a50f0f);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Active (ao clicar) */
+.btn-search:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.btn-search:hover {
+    background-color: #cc1212;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-search:active {
+    transform: scale(0.97);
+}
+
+/* Wrapper da busca (autocomplete) */
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* SUGESTÕES */
+
+#suggestions-container {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    max-height: 260px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+    border: 1px solid #eee;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.suggestion-item img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.suggestion-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* GRID */
 
 .pokemon-grid {
     display: grid;
@@ -113,7 +229,7 @@ body {
     text-decoration: none;
     color: #313131;
     display: block;
-    transition: transform 0.2s, shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
@@ -148,6 +264,8 @@ body {
     margin-top: 10px;
 }
 
+/* TYPES */
+
 .type-badge {
     padding: 4px 12px;
     border-radius: 5px;
@@ -159,35 +277,26 @@ body {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 }
 
-.type-badge.grass    { background-color: #78C850; color: #fff; }
-.type-badge.fire     { background-color: #F08030; color: #fff; }
-.type-badge.water    { background-color: #6890F0; color: #fff; }
-.type-badge.bug      { background-color: #A8B820; color: #fff; }
-.type-badge.normal   { background-color: #A8A878; color: #fff; }
-.type-badge.poison   { background-color: #A040A0; color: #fff; }
-.type-badge.electric { background-color: #F8D030; color: #fff; }
-.type-badge.ground   { background-color: #E0C068; color: #fff; }
-.type-badge.fairy    { background-color: #EE99AC; color: #fff; }
-.type-badge.fighting { background-color: #C03028; color: #fff; }
-.type-badge.psychic  { background-color: #F85888; color: #fff; }
-.type-badge.rock     { background-color: #B8A038; color: #fff; }
-.type-badge.ghost    { background-color: #705898; color: #fff; }
-.type-badge.ice      { background-color: #98D8D8; color: #fff; }
-.type-badge.dragon   { background-color: #7038F8; color: #fff; }
-.type-badge.dark     { background-color: #705848; color: #fff; }
-.type-badge.steel    { background-color: #B8B8D0; color: #fff; }
-.type-badge.flying   { background-color: #A890F0; color: #fff; }
-.fogo { background-color: #F08030; }
-.água, .agua { background-color: #6890F0; }
-.grama { background-color: #78C850; }
-.veneno { background-color: #A040A0; }
-.voador { background-color: #A890F0; }
-.elétrico, .eletrico { background-color: #F8D030; color: #000; }
-.lutador { background-color: #C03028; }
-.psíquico, .psiquico { background-color: #F85888; }
-.gelo { background-color: #98D8D8; color: #000; }
-.dragão, .dragao { background-color: #7038F8; }
-.fada { background-color: #EE99AC; }
+.type-badge.grass    { background-color: #78C850; }
+.type-badge.fire     { background-color: #F08030; }
+.type-badge.water    { background-color: #6890F0; }
+.type-badge.bug      { background-color: #A8B820; }
+.type-badge.normal   { background-color: #A8A878; }
+.type-badge.poison   { background-color: #A040A0; }
+.type-badge.electric { background-color: #F8D030; }
+.type-badge.ground   { background-color: #E0C068; }
+.type-badge.fairy    { background-color: #EE99AC; }
+.type-badge.fighting { background-color: #C03028; }
+.type-badge.psychic  { background-color: #F85888; }
+.type-badge.rock     { background-color: #B8A038; }
+.type-badge.ghost    { background-color: #705898; }
+.type-badge.ice      { background-color: #98D8D8; }
+.type-badge.dragon   { background-color: #7038F8; }
+.type-badge.dark     { background-color: #705848; }
+.type-badge.steel    { background-color: #B8B8D0; }
+.type-badge.flying   { background-color: #A890F0; }
+
+/* FAVORITE */
 
 .btn-favorite {
     width: 100%;
@@ -202,20 +311,4 @@ body {
 
 .btn-favorite:hover {
     background: #f0f0f0;
-}
-
-.search-form select {
-    background-color: #ffffff;
-    cursor: pointer;
-}
-
-.search-form select:focus,
-.search-form input:focus {
-    outline: none;
-    border-color: #ee1515;
-    box-shadow: 0 0 0 2px rgba(238, 21, 21, 0.2);
-}
-
-.btn-search:hover {
-    background-color: #cc1212;
 }
