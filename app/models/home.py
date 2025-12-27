@@ -50,7 +50,7 @@ def buscar_pokemon_por_nome(nome):
 
     return None
 
-def buscar_pokemons_por_prefixo(texto, limite=5):
+def buscar_pokemons_por_prefixo(texto, limite=8):
     texto = texto.strip().lower()
     resultados = []
 
