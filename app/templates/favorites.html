@@ -3,8 +3,10 @@
 {% block title %}Meus Favoritos{% endblock %}
 
 {% block content %}
-
-<h1 class="page-title">⭐ Meus Favoritos</h1>
+<a href="{{ url_for('home.home') }}" class="btn-voltar" style="display: flex; justify-content: center;">
+    ← Voltar para a Pokédex
+</a>
+<h1 class="page-title" style="text-align: center;">⭐ Meus Favoritos</h1>
 
 {% if pokemons %}
 <div class="pokemon-grid">
@@ -40,7 +42,7 @@
     {% endfor %}
 </div>
 {% else %}
-<p class="empty-state">Você ainda não favoritou nenhum Pokémon.</p>
+<p class="empty-state" style="text-align: center;">Você ainda não favoritou nenhum Pokémon.</p>
 {% endif %}
 
 {% endblock %}
