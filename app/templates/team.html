@@ -6,12 +6,17 @@
 <div class="container">
     <div class="team-container">
         <div class="team-header">
-            <div>
-                <h2 class="team-title">Meu time pokemon</h2>
-                <p class="team-sub"><strong>{{ team_pokemons|length }}</strong> membros</p>
+            <div class="team-info">
+                <h2 class="team-title">Meu time Pokémon</h2>
+                <p class="team-sub">
+                    <strong>{{ team_pokemons|length }}</strong> membros
+                </p>
             </div>
+
             <div class="team-actions">
-                <a href="{{ url_for('home.home') }}" class="btn-link">Voltar à Pokédex</a>
+                <a href="{{ url_for('home.home') }}" class="btn-back">
+                    ← Voltar para Pokédex
+                </a>
             </div>
         </div>
 
@@ -20,11 +25,21 @@
                 {% for poke in team_pokemons %}
                     <div class="pokemon-card-container">
                         <div class="pokemon-card">
-                            <form method="post" action="{{ url_for('usuarios.remove_from_team') }}" class="remove-form team-remove-btn">
+                            <form
+                                method="post"
+                                action="{{ url_for('usuarios.remove_from_team') }}"
+                                class="remove-form"
+                            >
                                 <input type="hidden" name="pokemon_id" value="{{ poke.id }}">
-                                <button type="submit" title="Remover">✕</button>
+                                <button
+                                    type="submit"
+                                    class="remove-favorite-x"
+                                    aria-label="Remover do time"
+                                    title="Remover do time"
+                                >
+                                    ✕
+                                </button>
                             </form>
-
                             <div class="image-wrapper">
                                 <img src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}" alt="{{ poke.nome }}" class="pokemon-img">
                             </div>
