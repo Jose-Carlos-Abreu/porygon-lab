@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ pokemon.nome|capitalize }} - Detalhes</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"> <link rel="stylesheet" href="{{ url_for('static', filename='css/pokemon_detail.css') }}">
-</head>
-<body class="page-detail">
+{% extends "base.html" %}
 
+{% block title %}{{ pokemon.nome|capitalize }} - Detalhes{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pokemon_detail.css') }}">
+
+<div class="page-detail">
     <div class="container-detail">
-        <a href="{{ url_for('home.home') }}" class="btn-voltar">
-            ← Voltar para a Pokédex
-        </a>
 
+        <div class="detail-header-top">
+            <a href="{{ url_for('home.home') }}" class="btn-back">
+                ← Voltar para Pokédex
+            </a>
+        </div>
+    
         <div class="pokemon-detail-card">
             <header class="detail-header">
                 <div class="main-image">
@@ -21,7 +22,7 @@
                 <div class="header-info">
                     <span class="pokemon-id">#{{ "%03d"|format(pokemon.id|int) }}</span>
                     <h2 class="pokemon-name">{{ pokemon.nome|capitalize }}</h2>
-                    
+    
                     <div class="pokemon-types">
                         <span class="type-badge {{ pokemon.tipo1|lower }}">{{ pokemon.tipo1 }}</span>
                         {% if pokemon.tipo2 %}
@@ -30,7 +31,7 @@
                     </div>
                 </div>
             </header>
-
+    
             <section class="stats-section">
                 <div class="info-grid">
                     <div class="info-box">
@@ -46,42 +47,42 @@
                         <span class="info-value">{{ pokemon.categoria }}</span>
                     </div>
                 </div>
-
+    
                 <div class="abilities-box">
-                    <span class="info-title">Habilidades</span>
+                    <h3 class="section-title">Habilidades</h3>
                     <div class="abilities-list">
                         {% for habilidade in pokemon.habilidades.split('|') %}
-                            <span class="type-badge {{ pokemon.tipo1|lower }}">
+                            <span class="ability-chip">
                                 {{ habilidade.strip().replace('-', ' ')|capitalize }}
                             </span>
                         {% endfor %}
                     </div>
                 </div>
             </section>
-
+    
             <section class="weakness-section">
-                <h3>Fraquezas</h3>
+                <h3 class="section-title">Fraquezas</h3>
                 <div class="pokemon-types">
                     {% for fraq in pokemon.fraquezas.split('|') %}
                         <span class="type-badge {{ fraq.strip()|lower }}">{{ fraq.strip() }}</span>
                     {% endfor %}
                 </div>
             </section>
-
+    
             <section class="evolution-section">
-                <h3>Evoluções</h3>
+                <h3 class="section-title">Evoluções</h3>
+
                 {% if evolutions %}
                     <div class="evolution-list">
                         {% for evo in evolutions %}
-                            <div class="evolution-wrapper">
-                                <a href="{{ url_for('home.pokemon_detail', pokemon_id=evo.id) }}" class="evolution-item">
-                                    <img src="{{ url_for('static', filename='images/pokemons/' ~ evo.id ~ '.png') }}" alt="{{ evo.nome }}">
-                                    <span>{{ evo.nome|capitalize }}</span>
-                                </a>
-                                {% if not loop.last %}
-                                    <span class="evolution-arrow">➜</span>
-                                {% endif %}
-                            </div>
+                            <a href="{{ url_for('home.pokemon_detail', pokemon_id=evo.id) }}" class="evolution-item">
+                                <img src="{{ url_for('static', filename='images/pokemons/' ~ evo.id ~ '.png') }}" alt="{{ evo.nome }}">
+                                <span>{{ evo.nome|capitalize }}</span>
+                            </a>
+
+                            {% if not loop.last %}
+                                <span class="evolution-arrow">➜</span>
+                            {% endif %}
                         {% endfor %}
                     </div>
                 {% else %}
@@ -90,6 +91,6 @@
             </section>
         </div>
     </div>
+</div>
 
-</body>
-</html>
+{% endblock %}
