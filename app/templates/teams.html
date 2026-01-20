@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block title %}Meus Times{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/teams.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/favorites.css') }}">
+
+<div class="container teams-page">
+    {% if teams %}
+       <div class="favorites-header teams-header">
+            <a href="{{ url_for('home.home') }}" class="btn-back">
+                ← Voltar para Pokédex
+            </a>
+
+            <div class="teams-header-row">
+                <h1 class="page-title">⚔️ Meus Times</h1>
+
+                <a href="{{ url_for('teams.new_team') }}" class="btn-add-team">
+                    + Criar Novo Time
+                </a>
+            </div>
+        </div>
+        {% for team in teams %}
+            <div class="team-container">
+
+                <div class="team-header">
+                    <div class="team-info">
+                        <h2 class="team-title">{{ team.nome }}</h2>
+                        <p class="team-sub">
+                            <strong>{{ team.total }}</strong> membros
+                        </p>
+                    </div>
+
+                    <div class="team-actions">
+                        <a
+                            href="{{ url_for('teams.edit_team', team_id=team.id) }}"
+                            class="btn-link"
+                        >
+                            Editar
+                        </a>
+
+                        <form
+                            method="POST"
+                            action="{{ url_for('teams.delete_team', team_id=team.id) }}"
+                            onsubmit="return confirm('Tem certeza que deseja excluir este time?');"
+                        >
+                            <button type="submit" class="btn-delete">
+                                Excluir
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                {% if team.pokemons %}
+                    <div class="pokemon-grid">
+                        {% for poke in team.pokemons %}
+                            <div class="pokemon-card-container">
+                                <div class="pokemon-card">
+                                    <div class="image-wrapper">
+                                        <img
+                                            src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}"
+                                            alt="{{ poke.nome }}"
+                                            class="pokemon-img"
+                                        >
+                                    </div>
+
+                                    <span class="pokemon-number">
+                                        #{{ "%03d"|format(poke.id|int) }}
+                                    </span>
+
+                                    <h2 class="pokemon-name">
+                                        {{ poke.nome | capitalize }}
+                                    </h2>
+
+                                    <div class="types-row">
+                                        {% if poke.tipo1 %}
+                                            <span class="type-badge {{ poke.tipo1 | lower }}">
+                                                {{ poke.tipo1 }}
+                                            </span>
+                                        {% endif %}
+                                        {% if poke.tipo2 %}
+                                            <span class="type-badge {{ poke.tipo2 | lower }}">
+                                                {{ poke.tipo2 }}
+                                            </span>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+            </div>
+        {% endfor %}
+    {% else %}
+    <div class="empty-state">
+        <div class="empty-icon">⚔️</div>
+        <h2>Nenhum time criado</h2>
+        <p>
+            Você ainda não criou nenhum time Pokémon.<br>
+            Crie um time para organizar seus favoritos!
+        </p>
+
+
+        <a href="{{ url_for('home.home') }}" class="btn-back">
+            ← Voltar para Pokédex
+        </a>
+        <a href="{{ url_for('teams.new_team') }}" class="btn-add-team">
+            + Criar Novo Time
+        </a>
+
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ 'Editar Time' if edit else 'Novo Time' }}
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/team_form.css') }}">
+
+<div class="team-form-container">
+    <h2>{{ 'Editar Time' if edit else 'Criar Novo Time' }}</h2>
+
+    <form method="POST">
+        <label>Nome do Time</label>
+        <input
+            type="text"
+            name="nome_time"
+            required
+            value="{{ team.nome if edit else '' }}"
+        >
+
+        <p class="hint">Escolha até 6 Pokémons</p>
+
+        <div class="pokemon-grid">
+            {% for poke in pokemons %}
+                <label class="pokemon-select-card">
+                    <input
+                        type="checkbox"
+                        name="pokemons"
+                        value="{{ poke.id }}"
+                        {% if edit and poke in team.pokemons %}checked{% endif %}
+                    >
+                    <img src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}">
+                    <span>{{ poke.nome | capitalize }}</span>
+                </label>
+            {% endfor %}
+        </div>
+
+        <button type="submit" class="btn-primary">
+            {{ 'Salvar Alterações' if edit else 'Criar Time' }}
+        </button>
+    </form>
+</div>
+{% endblock %}

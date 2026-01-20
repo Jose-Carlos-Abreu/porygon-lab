@@ -33,7 +33,7 @@
                 </span>
 
                 <a href="{{ url_for('favorite.favorites') }}">⭐ Favoritos</a>
-                <a href="{{ url_for('usuarios.time') }}">⚔️ Time</a>
+                <a href="{{ url_for('teams.list_teams') }}">⚔️ Times</a>
                 <a href="{{ url_for('usuarios.logout') }}" class="btn-logout">Sair</a>
             {% else %}
                 <a href="{{ url_for('usuarios.login') }}" class="btn-login">Login</a>

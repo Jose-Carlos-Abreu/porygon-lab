@@ -14,6 +14,10 @@
     z-index: 7;
 }
 
+.pokemon-grid {
+    margin: 20px auto 32px;
+}
+
 /* When inside a pokemon card, make favorite and control buttons inline and non-overlapping */
 
 .pokemon-card .btn-remove {
@@ -46,6 +50,7 @@
 
 .btn-back {
     display: inline-block;
+    margin: 10px 0 5px;
     padding: 8px 14px;
     border-radius: 8px;
     background: #ffffff;
@@ -82,4 +87,13 @@
     margin: 10px 0;
     font-size: 1.4rem;
     color: #313131;
+}
+
+.empty-state .btn-back,
+.empty-state .btn-add-team {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 10px auto 0;
+    text-align: center;
 }
