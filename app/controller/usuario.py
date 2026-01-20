@@ -61,167 +61,165 @@ def logout():
     flash('Você saiu da sua conta.', 'error')
     return redirect(url_for('home.home'))
 
-# 4. ROTA DE DELETE
-@user_bp.route('/delete/<int:id>', methods=['GET'])
-@login_required
-def delete(id):
-    usuario = Usuario.query.get(id)
-    logout_user()
-    db.session.delete(usuario)
-    db.session.commit()
-    flash('Sua conta foi deletada com sucesso.', 'error')
-    return redirect(url_for('home.home'))
+# @user_bp.route('/delete/<int:id>', methods=['GET'])
+# @login_required
+# def delete(id):
+#     usuario = Usuario.query.get(id)
+#     logout_user()
+#     db.session.delete(usuario)
+#     db.session.commit()
+#     flash('Sua conta foi deletada com sucesso.', 'error')
+#     return redirect(url_for('home.home'))
 
-import csv
-import os
+# import csv
+# import os
 
+# def _ler_pokemons_csv():
+#     caminho = os.path.join('app', 'data', 'pokemons.csv')
+#     pokemons = []
+#     if not os.path.exists(caminho):
+#         return pokemons
+#     with open(caminho, newline='', encoding='utf-8') as f:
+#         reader = csv.DictReader(f)
+#         for row in reader:
+#             pokemons.append({
+#                 'id': row.get('id'),
+#                 'nome': row.get('nome'),
+#                 'tipo1': row.get('tipo1'),
+#                 'tipo2': row.get('tipo2'),
+#                 'imagem': row.get('imagem')
+#             })
+#     return pokemons
 
-def _ler_pokemons_csv():
-    caminho = os.path.join('app', 'data', 'pokemons.csv')
-    pokemons = []
-    if not os.path.exists(caminho):
-        return pokemons
-    with open(caminho, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            pokemons.append({
-                'id': row.get('id'),
-                'nome': row.get('nome'),
-                'tipo1': row.get('tipo1'),
-                'tipo2': row.get('tipo2'),
-                'imagem': row.get('imagem')
-            })
-    return pokemons
-
-def _read_teams():
-    caminho = os.path.join('app', 'data', 'teams.csv')
-    rows = []
-    if not os.path.exists(caminho):
-        return rows
-    with open(caminho, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            # suportar antigas entradas com 'usuario' ou novas com 'usuario_id'
-            if 'usuario_id' not in row and 'usuario' in row:
-                row['usuario_id'] = row.get('usuario')
-            rows.append(row)
-    return rows
+# def _read_teams():
+#     caminho = os.path.join('app', 'data', 'teams.csv')
+#     rows = []
+#     if not os.path.exists(caminho):
+#         return rows
+#     with open(caminho, newline='', encoding='utf-8') as f:
+#         reader = csv.DictReader(f)
+#         for row in reader:
+#             # suportar antigas entradas com 'usuario' ou novas com 'usuario_id'
+#             if 'usuario_id' not in row and 'usuario' in row:
+#                 row['usuario_id'] = row.get('usuario')
+#             rows.append(row)
+#     return rows
 
 
-def _write_teams(rows):
-    caminho = os.path.join('app', 'data', 'teams.csv')
-    os.makedirs(os.path.dirname(caminho), exist_ok=True)
-    header = ['usuario_id', 'nome_time', 'pokemons']
-    with open(caminho, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=header)
-        writer.writeheader()
-        for r in rows:
-            writer.writerow({
-                'usuario_id': r.get('usuario_id'),
-                'nome_time': r.get('nome_time', ''),
-                'pokemons': r.get('pokemons', '')
-            })
+# def _write_teams(rows):
+#     caminho = os.path.join('app', 'data', 'teams.csv')
+#     os.makedirs(os.path.dirname(caminho), exist_ok=True)
+#     header = ['usuario_id', 'nome_time', 'pokemons']
+#     with open(caminho, 'w', newline='', encoding='utf-8') as f:
+#         writer = csv.DictWriter(f, fieldnames=header)
+#         writer.writeheader()
+#         for r in rows:
+#             writer.writerow({
+#                 'usuario_id': r.get('usuario_id'),
+#                 'nome_time': r.get('nome_time', ''),
+#                 'pokemons': r.get('pokemons', '')
+#             })
 
-@user_bp.route('/time')
-@login_required
-def time():
-    rows = _read_teams()
-    usuario_id = str(current_user.id)
-    team_row = None
-    for row in rows:
-        if row.get('usuario_id') == usuario_id:
-            team_row = row
-            break
-
-    pokemons_all = _ler_pokemons_csv()
-    id_to_pokemon = {p['id']: p for p in pokemons_all}
-
-    team_pokemons = []
-    team_name = 'Meu Time'
-    if team_row:
-        team_name = team_row.get('nome_time') or team_name
-        poks = team_row.get('pokemons', '')
-        pids = [p for p in poks.split(';') if p] if poks else []
-        for pid in pids:
-            p = id_to_pokemon.get(pid)
-            if p:
-                team_pokemons.append(p)
-            else:
-                # fallback para caso não encontre no CSV
-                team_pokemons.append({'id': pid, 'nome': pid, 'tipo1': '', 'tipo2': '', 'imagem': ''})
-
-    return render_template('team.html', team_pokemons=team_pokemons, team_name=team_name)
+# @user_bp.route('/teams')
+# @login_required
+# def teams():
+#     rows = _read_teams()
+#     usuario_id = str(current_user.id)
 
 
-@user_bp.route('/time/adicionar', methods=['POST'])
-@login_required
-def add_to_team():
-    pokemon_id = request.form.get('pokemon_id')
-    if not pokemon_id:
-        flash('Pokémon inválido.', 'error')
-        return redirect(request.referrer or url_for('home.home'))
+#     user_teams = [r for r in rows if r.get('usuario_id') == usuario_id]
 
-    rows = _read_teams()
-    usuario_id = str(current_user.id)
-    team = None
-    for r in rows:
-        if r.get('usuario_id') == usuario_id:
-            team = r
-            break
+#     pokemons_all = _ler_pokemons_csv()
+#     id_to_pokemon = {p['id']: p for p in pokemons_all}
 
-    if not team:
-        # criar time padrão
-        team = {'usuario_id': usuario_id, 'nome_time': f'Time de {current_user.nome}', 'pokemons': ''}
-        rows.append(team)
+#     teams = []
+#     for team in user_teams:
+#         poks = team.get('pokemons', '')
+#         pids = [p for p in poks.split(';') if p]
 
-    poks = team.get('pokemons', '')
-    lista = [p for p in poks.split(';') if p] if poks else []
+#         pokemons = []
+#         for pid in pids:
+#             if pid in id_to_pokemon:
+#                 pokemons.append(id_to_pokemon[pid])
 
-    if pokemon_id in lista:
-        flash('Pokémon já está no seu time.', 'error')
-        return redirect(request.referrer or url_for('home.home'))
+#         teams.append({
+#             'nome': team.get('nome_time', 'Time sem nome'),
+#             'pokemons': pokemons,
+#             'quantidade': len(pokemons)
+#         })
 
-    if len(lista) >= 6:
-        flash('Seu time já tem 6 pokémons.', 'error')
-        return redirect(request.referrer or url_for('home.home'))
-
-    lista.append(pokemon_id)
-    team['pokemons'] = ';'.join(lista)
-    _write_teams(rows)
-    flash('Pokémon adicionado ao time!', 'success')
-    return redirect(request.referrer or url_for('usuarios.time'))
+#     return render_template('teams.html', teams=teams)
 
 
-@user_bp.route('/time/remover', methods=['POST'])
-@login_required
-def remove_from_team():
-    pokemon_id = request.form.get('pokemon_id')
-    if not pokemon_id:
-        flash('Pokémon inválido.', 'error')
-        return redirect(request.referrer or url_for('home.home'))
+# @user_bp.route('/time/adicionar', methods=['POST'])
+# @login_required
+# def add_to_team():
+#     pokemon_id = request.form.get('pokemon_id')
+#     if not pokemon_id:
+#         flash('Pokémon inválido.', 'error')
+#         return redirect(request.referrer or url_for('home.home'))
 
-    rows = _read_teams()
-    usuario_id = str(current_user.id)
-    team = None
-    for r in rows:
-        if r.get('usuario_id') == usuario_id:
-            team = r
-            break
+#     rows = _read_teams()
+#     usuario_id = str(current_user.id)
+#     team = None
+#     for r in rows:
+#         if r.get('usuario_id') == usuario_id:
+#             team = r
+#             break
 
-    if not team:
-        flash('Você não tem um time para remover pokémons.', 'error')
-        return redirect(request.referrer or url_for('home.home'))
+#     if not team:
+#         # criar time padrão
+#         team = {'usuario_id': usuario_id, 'nome_time': f'Time de {current_user.nome}', 'pokemons': ''}
+#         rows.append(team)
 
-    poks = team.get('pokemons', '')
-    lista = [p for p in poks.split(';') if p] if poks else []
+#     poks = team.get('pokemons', '')
+#     lista = [p for p in poks.split(';') if p] if poks else []
 
-    if pokemon_id not in lista:
-        flash('Pokémon não está no seu time.', 'error')
-        return redirect(request.referrer or url_for('home.home'))
+#     if pokemon_id in lista:
+#         flash('Pokémon já está no seu time.', 'error')
+#         return redirect(request.referrer or url_for('home.home'))
 
-    lista = [p for p in lista if p != pokemon_id]
-    team['pokemons'] = ';'.join(lista)
-    _write_teams(rows)
-    flash('Pokémon removido do time.', 'success')
-    return redirect(request.referrer or url_for('usuarios.time'))
+#     if len(lista) >= 6:
+#         flash('Seu time já tem 6 pokémons.', 'error')
+#         return redirect(request.referrer or url_for('home.home'))
+
+#     lista.append(pokemon_id)
+#     team['pokemons'] = ';'.join(lista)
+#     _write_teams(rows)
+#     flash('Pokémon adicionado ao time!', 'success')
+#     return redirect(request.referrer or url_for('usuarios.time'))
+
+
+# @user_bp.route('/time/remover', methods=['POST'])
+# @login_required
+# def remove_from_team():
+#     pokemon_id = request.form.get('pokemon_id')
+#     if not pokemon_id:
+#         flash('Pokémon inválido.', 'error')
+#         return redirect(request.referrer or url_for('home.home'))
+
+#     rows = _read_teams()
+#     usuario_id = str(current_user.id)
+#     team = None
+#     for r in rows:
+#         if r.get('usuario_id') == usuario_id:
+#             team = r
+#             break
+
+#     if not team:
+#         flash('Você não tem um time para remover pokémons.', 'error')
+#         return redirect(request.referrer or url_for('home.home'))
+
+#     poks = team.get('pokemons', '')
+#     lista = [p for p in poks.split(';') if p] if poks else []
+
+#     if pokemon_id not in lista:
+#         flash('Pokémon não está no seu time.', 'error')
+#         return redirect(request.referrer or url_for('home.home'))
+
+#     lista = [p for p in lista if p != pokemon_id]
+#     team['pokemons'] = ';'.join(lista)
+#     _write_teams(rows)
+#     flash('Pokémon removido do time.', 'success')
+#     return redirect(request.referrer or url_for('usuarios.time'))
 

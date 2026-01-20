@@ -2,6 +2,7 @@ from flask import Flask, redirect, url_for, flash
 from app.controller.usuario import user_bp as usercontroller
 from app.controller.home import home_bp as homecontroller
 from app.controller.favorite import favorite_bp
+from app.controller.teams import teams_bp
 from flask_login import LoginManager 
 from app.models.usuario import db, Usuario
 import os, subprocess
@@ -19,6 +20,7 @@ app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET_KEY', 'chave_generica_pa
 app.register_blueprint(usercontroller, url_prefix="/pokedex/")
 app.register_blueprint(homecontroller, url_prefix="/pokedex/")
 app.register_blueprint(favorite_bp, url_prefix="/favorite")
+app.register_blueprint(teams_bp, url_prefix="/teams")
 
 @app.route('/')
 def index():
@@ -34,7 +36,7 @@ def load_user(user_id):
 
 @login_manager.unauthorized_handler
 def unauthorized():
-    flash("Faça login para acessar seus favoritos.", "error")
+    flash("Você precisa estar logado para acessar esta funcionalidade.", "error")
     return redirect(url_for("usuarios.login"))
 
 def executar_preprocessamento():
