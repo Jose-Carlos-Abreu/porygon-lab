@@ -4,40 +4,132 @@
 {% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/team_form.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/team_new.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/favorites.css') }}">
+
+<div class="favorites-header">
+    <a href="{{ url_for('teams.list_teams') }}" class="btn-back">
+        ← Voltar para ⚔️ Times
+    </a>
+    <h1 class="page-title">
+        {{ '✏️ Editar Time' if edit else '⚔️ Criar Novo Time' }}
+    </h1>
+</div>
 
 <div class="team-form-container">
-    <h2>{{ 'Editar Time' if edit else 'Criar Novo Time' }}</h2>
-
     <form method="POST">
-        <label>Nome do Time</label>
-        <input
-            type="text"
-            name="nome_time"
-            required
-            value="{{ team.nome if edit else '' }}"
-        >
 
-        <p class="hint">Escolha até 6 Pokémons</p>
+        <!-- Nome do time -->
+        <div class="team-name-wrapper">
+            <label for="nome_time">Nome do Time</label>
+            <input
+                type="text"
+                id="nome_time"
+                name="nome_time"
+                required
+                placeholder="Ex: Time Elétrico"
+                value="{{ team.nome if edit else '' }}"
+            >
+            <p id="selection-counter" class="selection-counter">
+                Selecionados: <strong>0</strong>/6
+            </p>
 
-        <div class="pokemon-grid">
-            {% for poke in pokemons %}
-                <label class="pokemon-select-card">
-                    <input
-                        type="checkbox"
-                        name="pokemons"
-                        value="{{ poke.id }}"
-                        {% if edit and poke in team.pokemons %}checked{% endif %}
-                    >
-                    <img src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}">
-                    <span>{{ poke.nome | capitalize }}</span>
-                </label>
-            {% endfor %}
+            <p id="limit-warning" class="limit-warning">
+                Máximo de 6 Pokémons permitidos.
+            </p>
         </div>
 
-        <button type="submit" class="btn-primary">
-            {{ 'Salvar Alterações' if edit else 'Criar Time' }}
-        </button>
+        <!-- SEARCH + FILTER -->
+        <section class="search-section">
+            <div class="search-form" id="team-search-form">
+
+                <div class="search-wrapper">
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Buscar por nome ou número..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="filter-wrapper">
+                    <select id="filter-type" aria-label="Filtrar por tipo">
+                        <option value="">Todos os tipos</option>
+                        {% for tipo in tipos %}
+                            <option value="{{ tipo }}">{{ tipo|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                    <span class="filter-icon">⚙️</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GRID DE POKÉMONS -->
+        <div class="pokemon-grid-wrapper">
+            <div class="pokemon-grid">
+                {% for poke in pokemons %}
+                    <label
+                        class="pokemon-card-container selectable"
+                        data-name="{{ poke.nome | lower }}"
+                        data-id="{{ poke.id }}"
+                        data-types="{{ poke.tipo1 | lower }} {% if poke.tipo2 %}{{ poke.tipo2 | lower }}{% endif %}"
+                    >
+                        <input
+                            type="checkbox"
+                            name="pokemons"
+                            value="{{ poke.id }}"
+                            {% if edit and poke in team.pokemons %}checked{% endif %}
+                        >
+                        <div class="pokemon-card {% if edit and poke in team.pokemons %}selected{% endif %}">
+                            <div class="image-wrapper">
+                                <img
+                                    src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}"
+                                    alt="{{ poke.nome }}"
+                                    class="pokemon-img"
+                                >
+                            </div>
+                            <!-- Pokébola -->
+                            <div class="card-left-controls">
+                                <span class="pokeball">
+                                    <img src="{{ url_for('static', filename='images/ui/pokeball.svg') }}" alt="Capturar">
+                                </span>
+                            </div>
+                            <span class="pokemon-number">
+                                #{{ "%03d"|format(poke.id|int) }}
+                            </span>
+                            <h2 class="pokemon-name">
+                                {{ poke.nome | capitalize }}
+                            </h2>
+                            <div class="types-row">
+                                <span class="type-badge {{ poke.tipo1 | lower }}">
+                                    {{ poke.tipo1 }}
+                                </span>
+                                {% if poke.tipo2 %}
+                                    <span class="type-badge {{ poke.tipo2 | lower }}">
+                                        {{ poke.tipo2 }}
+                                    </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </label>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- BOTÃO SUBMIT -->
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">
+                {{ 'Salvar Alterações' if edit else 'Criar Time' }}
+            </button>
+        </div>
+
     </form>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/filter.js') }}"></script>
+<script src="{{ url_for('static', filename='js/limit_pokemons.js') }}"></script>
 {% endblock %}
