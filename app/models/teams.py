@@ -1,29 +1,13 @@
+from app.models.home import carregar_pokemons
 import csv
 import os
 
 CSV_PATH = os.path.join('app', 'data', 'teams.csv')
 
-def ler_pokemons_csv():
-    caminho = os.path.join('app', 'data', 'pokemons.csv')
-    pokemons = []
-    if not os.path.exists(caminho):
-        return pokemons
-    with open(caminho, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            pokemons.append({
-                'id': row.get('id'),
-                'nome': row.get('nome'),
-                'tipo1': row.get('tipo1'),
-                'tipo2': row.get('tipo2'),
-                'imagem': row.get('imagem')
-            })
-    return pokemons
-
 def pegar_time_do_usuario(user_id):
     teams = []
-    pokemons_all = ler_pokemons_csv()
-    id_to_pokemon = {p['id']: p for p in pokemons_all}
+    pokemons_all = carregar_pokemons()
+    id_to_pokemon = {str(p['id']): p for p in pokemons_all}
 
     if not os.path.exists(CSV_PATH):
         return teams
