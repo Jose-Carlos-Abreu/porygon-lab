@@ -1,12 +1,12 @@
 from app.models.home import carregar_pokemons
-import os
+from pathlib import Path
 
-CSV_PATH = os.path.join('app', 'data', 'teams.csv')
+CSV_PATH = Path('app/data/teams.csv')
 DELIMITER = ','
 
 
 def ler_arquivo():
-    if not os.path.exists(CSV_PATH):
+    if not CSV_PATH.exists():
         return []
 
     with open(CSV_PATH, 'r', encoding='utf-8') as file:
@@ -100,7 +100,7 @@ def remover_time(usuario_id, team_id):
 
 
 def salvar_novo_time(usuario_id, nome_time, pokemons):
-    arquivo_existe = os.path.exists(CSV_PATH)
+    arquivo_existe = CSV_PATH.exists()
 
     with open(CSV_PATH, 'a', encoding='utf-8') as file:
         if not arquivo_existe:

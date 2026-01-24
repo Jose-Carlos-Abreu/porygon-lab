@@ -53,11 +53,6 @@
                     <img src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}" alt="{{ poke.nome }}" class="pokemon-img">
                 </div>
                 {% if current_user.is_authenticated %}
-                <div class="card-left-controls">
-                    {% if poke.id in team_ids %}
-                    
-                    {% endif %}
-                </div>
                 <button
                     class="favorite-star {% if poke.id in favoritos %}active{% endif %}"
                     data-pokemon-id="{{ poke.id }}"
