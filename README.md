@@ -1,46 +1,102 @@
-# 🔴 Pokédex Flask ⚪
+# PORYGON LAB
 
-Este é um projeto web desenvolvido com Flask que simula uma Pokédex, buscando dados de Pokémons através da [PokeAPI](https://pokeapi.co/). O projeto inclui funcionalidades completas de autenticação de usuários (Cadastro, Login, Logout) usando Flask-Login e persistência de dados via SQLite/SQLAlchemy.
+PORYGON LAB é uma aplicação web desenvolvida com **Flask (Python)** que simula uma **Pokédex interativa**, permitindo a visualização, busca, filtragem e gerenciamento de Pokémons, além de funcionalidades completas de **autenticação de usuários**, **favoritos** e **gerenciamento de times**.
 
-## 📸 Visão Geral do Projeto
+O projeto foi desenvolvido como parte das disciplinas **Programação Web 1**, **Introdução à Programação** e **Introdução à Engenharia de Software**, seguindo boas práticas de desenvolvimento, versionamento com Git/GitHub e modelagem de requisitos.
 
-Abaixo estão alguns screenshots que ilustram o layout unificado e as funcionalidades do aplicativo.
+---
 
-### 1. Página Principal (Catálogo)
+## Visão Geral do Projeto
 
-O catálogo exibe os Pokémons paginados e a barra de busca, mantendo o header de navegação (Login/Logout) no topo.
+A aplicação oferece uma interface web responsiva, organizada e intuitiva, integrando frontend e backend de forma consistente.
 
-![Screenshot da Página Principal da Pokédex](URL_DA_IMAGEM_DA_PAGINA_HOME)
+### Página Principal – Pokédex
 
-### 2. Formulário de Autenticação (Login)
+A Pokédex exibe os Pokémons carregados a partir de arquivos CSV, permitindo busca por nome ou número, filtragem por tipo e acesso aos detalhes de cada Pokémon.
 
-Usando Herança de Templates, os formulários de Login e Cadastro aparecem mantendo o cabeçalho e a estrutura visual da Pokédex.
+![Página principal da Pokédex](app/static/images/readme/home.png)
 
-![Screenshot da Tela de Login](URL_DA_IMAGEM_DA_PAGINA_DE_LOGIN)
+## Autenticação de Usuário
 
-## 🚀 Funcionalidades
+O sistema permite **cadastro, login e logout de usuários**, com controle de sessão e **restrição de acesso** a funcionalidades específicas.
 
-* **Catálogo Principal:** Exibe uma lista de Pokémons com paginação, obtidos da PokeAPI.
-* **Busca:** Permite buscar Pokémons específicos por nome.
-* **Autenticação Segura:**
-    * Cadastro de novos usuários com senha criptografada (Hashing).
-    * Login/Logout e controle de sessão.
-    * Rotas protegidas (como as de edição/exclusão de conta).
-* **Layout Unificado:** Utiliza o padrão de Herança de Templates (Jinja2) para manter o cabeçalho e a navegação da Pokédex em todas as páginas.
 
-## 📋 Pré-requisitos
+![Tela de login](app/static/images/readme/login.png)
 
-Para rodar este projeto, você precisará ter o **Python 3** instalado em sua máquina.
+---
 
-## 🛠️ Configuração e Instalação
+## Gerenciamento de Times
 
-Siga os passos abaixo para configurar e rodar o projeto localmente.
+Usuários autenticados podem **criar, editar, listar e remover times de Pokémons**, respeitando o limite máximo de **seis Pokémons por time**.
 
-### 1. Clonar o Repositório
+![Gerenciamento de times](app/static/images/readme/team.png)
+
+---
+
+## Funcionalidades Principais
+
+### Pokédex
+- Visualização de Pokémons a partir de arquivo CSV
+- Busca por nome ou número
+- Filtro por tipo
+- Sugestões automáticas durante a digitação
+- Página de detalhes do Pokémon
+
+### Autenticação
+- Cadastro de usuários
+- Login e logout
+- Controle de sessão
+- Restrições de acesso a rotas protegidas
+
+### Favoritos
+- Favoritar e desfavoritar Pokémons
+- Listagem de Pokémons favoritados por usuário
+- Acesso restrito para usuários autenticados
+
+### Times
+- Criação de times com até 6 Pokémons
+- Edição de times existentes
+- Remoção de times
+- Listagem de times por usuário
+- Controle de acesso às rotas de times
+
+---
+
+## Modelagem de Requisitos
+
+### Diagrama de Casos de Uso (UML)
+
+O diagrama abaixo apresenta a **modelagem geral dos casos de uso do sistema**, organizados por blocos funcionais.
+
+![Diagrama de Casos de Uso](app/static/images/readme/casos_de_uso.png)
+
+---
+
+## Arquitetura do Sistema
+
+O projeto segue uma **arquitetura em camadas**, separando responsabilidades entre apresentação, controle, lógica de negócio e persistência de dados.
+
+### Visão Arquitetural
+
+![Arquitetura do Sistema](app/static/images/readme/arquitetura_sistema.png)
+
+## Instalação e Execução
+
+### Pré-requisitos
+- Python 3.x
+- Git
+
+### Passos
 
 ```bash
-git clone [https://docs.github.com/pt/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github](https://docs.github.com/pt/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
-cd [NOME-DO-SEU-PROJETO]
+git clone https://github.com/seu-usuario/porygon-lab.git
+cd porygon-lab
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
+```
 
-🤝 Contribuições
-Sinta-se à vontade para sugerir melhorias, corrigir bugs ou adicionar novas funcionalidades.
+A aplicação estará disponível em:
+
+[http://localhost:5000](http://localhost:5000)
