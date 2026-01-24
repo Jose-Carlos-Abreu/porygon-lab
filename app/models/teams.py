@@ -1,118 +1,110 @@
-import csv
-import os
+from app.models.home import carregar_pokemons
+from pathlib import Path
 
-CSV_PATH = os.path.join('app', 'data', 'teams.csv')
+CSV_PATH = Path('app/data/teams.csv')
+DELIMITER = ','
 
-def ler_pokemons_csv():
-    caminho = os.path.join('app', 'data', 'pokemons.csv')
-    pokemons = []
-    if not os.path.exists(caminho):
-        return pokemons
-    with open(caminho, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            pokemons.append({
-                'id': row.get('id'),
-                'nome': row.get('nome'),
-                'tipo1': row.get('tipo1'),
-                'tipo2': row.get('tipo2'),
-                'imagem': row.get('imagem')
-            })
-    return pokemons
+
+def ler_arquivo():
+    if not CSV_PATH.exists():
+        return []
+
+    with open(CSV_PATH, 'r', encoding='utf-8') as file:
+        linhas = file.readlines()
+
+    return linhas[1:]
+
+
+def escrever_arquivo(linhas):
+    with open(CSV_PATH, 'w', encoding='utf-8') as file:
+        file.write('usuario_id,nome_time,pokemons\n')
+        for linha in linhas:
+            file.write(linha)
+
 
 def pegar_time_do_usuario(user_id):
     teams = []
-    pokemons_all = ler_pokemons_csv()
-    id_to_pokemon = {p['id']: p for p in pokemons_all}
+    linhas = ler_arquivo()
 
-    if not os.path.exists(CSV_PATH):
-        return teams
+    pokemons_all = carregar_pokemons()
+    id_to_pokemon = {str(p['id']): p for p in pokemons_all}
 
-    with open(CSV_PATH, newline='', encoding='utf-8') as f:
-        reader = list(csv.DictReader(f))
+    for index, linha in enumerate(linhas):
+        dados = linha.strip().split(DELIMITER)
 
-        for index, row in enumerate(reader):
-            if row.get('usuario_id') == str(user_id):
-                poks = row.get('pokemons', '')
-                pokemon_list = []
+        if len(dados) != 3:
+            continue
 
-                for pid in poks.split(';'):
-                    if pid and pid in id_to_pokemon:
-                        pokemon_list.append(id_to_pokemon[pid])
+        usuario_id, nome_time, pokemons_str = dados
 
-                teams.append({
-                    'id': index,
-                    'nome': row.get('nome_time', 'Time sem nome'),
-                    'pokemons': pokemon_list,
-                    'total': len(pokemon_list)
-                })
+        if usuario_id != str(user_id):
+            continue
+
+        pokemon_list = []
+        for pid in pokemons_str.split(';'):
+            if pid in id_to_pokemon:
+                pokemon_list.append(id_to_pokemon[pid])
+
+        teams.append({
+            'id': index,
+            'nome': nome_time or 'Time sem nome',
+            'pokemons': pokemon_list,
+            'total': len(pokemon_list)
+        })
 
     return teams
 
+
 def atualizar_time(usuario_id, team_id, nome_time, pokemons):
-    if not os.path.exists(CSV_PATH):
+    linhas = ler_arquivo()
+
+    if team_id < 0 or team_id >= len(linhas):
         return False
 
-    with open(CSV_PATH, newline='', encoding='utf-8') as f:
-        rows = list(csv.DictReader(f))
+    dados = linhas[team_id].strip().split(DELIMITER)
 
-    if team_id < 0 or team_id >= len(rows):
+    if len(dados) != 3:
         return False
 
-    if rows[team_id].get('usuario_id') != str(usuario_id):
+    csv_usuario_id, _, _ = dados
+
+    if csv_usuario_id != str(usuario_id):
         return False
 
-    rows[team_id]['nome_time'] = nome_time
-    rows[team_id]['pokemons'] = ';'.join(pokemons)
+    nova_linha = f"{usuario_id},{nome_time},{';'.join(pokemons)}\n"
+    linhas[team_id] = nova_linha
 
-    with open(CSV_PATH, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(
-            f,
-            fieldnames=['usuario_id', 'nome_time', 'pokemons']
-        )
-        writer.writeheader()
-        writer.writerows(rows)
-
+    escrever_arquivo(linhas)
     return True
+
 
 def remover_time(usuario_id, team_id):
-    if not os.path.exists(CSV_PATH):
+    linhas = ler_arquivo()
+
+    if team_id < 0 or team_id >= len(linhas):
         return False
 
-    with open(CSV_PATH, newline='', encoding='utf-8') as f:
-        rows = list(csv.DictReader(f))
+    dados = linhas[team_id].strip().split(DELIMITER)
 
-    if team_id < 0 or team_id >= len(rows):
+    if len(dados) != 3:
         return False
 
-    if rows[team_id].get('usuario_id') != str(usuario_id):
+    csv_usuario_id, _, _ = dados
+
+    if csv_usuario_id != str(usuario_id):
         return False
 
-    rows.pop(team_id)
-
-    with open(CSV_PATH, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(
-            f,
-            fieldnames=['usuario_id', 'nome_time', 'pokemons']
-        )
-        writer.writeheader()
-        writer.writerows(rows)
-
+    linhas.pop(team_id)
+    escrever_arquivo(linhas)
     return True
 
+
 def salvar_novo_time(usuario_id, nome_time, pokemons):
-    file_exists = os.path.exists(CSV_PATH)
+    arquivo_existe = CSV_PATH.exists()
 
-    with open(CSV_PATH, 'a', newline='', encoding='utf-8') as f:
-        fieldnames = ['usuario_id', 'nome_time', 'pokemons']
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+    with open(CSV_PATH, 'a', encoding='utf-8') as file:
+        if not arquivo_existe:
+            file.write('usuario_id,nome_time,pokemons\n')
 
-        if not file_exists:
-            writer.writeheader()
-
-        writer.writerow({
-            'usuario_id': str(usuario_id),
-            'nome_time': nome_time,
-            'pokemons': ';'.join(pokemons)
-        })
-
+        linha = f"{usuario_id},{nome_time},{';'.join(pokemons)}\n"
+        file.write(linha)
