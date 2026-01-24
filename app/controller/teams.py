@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask_login import login_required, current_user
-from app.models.teams import ler_pokemons_csv, salvar_novo_time, pegar_time_do_usuario, remover_time, atualizar_time
-from app.models.home import listar_tipos
+from app.models.teams import salvar_novo_time, pegar_time_do_usuario, remover_time, atualizar_time
+from app.models.home import listar_tipos, carregar_pokemons
 
 teams_bp = Blueprint('teams', __name__)
 
@@ -26,7 +26,7 @@ def delete_team(team_id):
 @teams_bp.route('/team/<int:team_id>/edit', methods=['GET', 'POST'])
 @login_required
 def edit_team(team_id):
-    pokemons = ler_pokemons_csv()
+    pokemons = carregar_pokemons()
     tipos = listar_tipos()
     teams = pegar_time_do_usuario(current_user.id)
 
@@ -72,7 +72,7 @@ def edit_team(team_id):
 @teams_bp.route('/team/new', methods=['GET', 'POST'])
 @login_required
 def new_team():
-    pokemons = ler_pokemons_csv()
+    pokemons = carregar_pokemons()
     tipos = listar_tipos()
 
     if request.method == 'POST':
