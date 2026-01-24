@@ -1,7 +1,8 @@
-import csv
 from pathlib import Path
 
 CSV_PATH = Path("app/data/favorites.csv")
+DELIMITER = ","
+
 
 def listar_favoritos(user_id):
     favoritos = set()
@@ -9,11 +10,20 @@ def listar_favoritos(user_id):
     if not CSV_PATH.exists():
         return favoritos
 
-    with open(CSV_PATH, newline="", encoding="utf-8") as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            if int(row["user_id"]) == user_id:
-                favoritos.add(int(row["pokemon_id"]))
+    with open(CSV_PATH, "r", encoding="utf-8") as file:
+        linhas = file.readlines()
+
+    # Ignora o cabeçalho
+    for linha in linhas[1:]:
+        dados = linha.strip().split(DELIMITER)
+
+        if len(dados) != 2:
+            continue
+
+        csv_user_id, pokemon_id = dados
+
+        if int(csv_user_id) == user_id:
+            favoritos.add(int(pokemon_id))
 
     return favoritos
 
@@ -21,31 +31,35 @@ def listar_favoritos(user_id):
 def salvar_favorito(user_id, pokemon_id):
     arquivo_existe = CSV_PATH.exists()
 
-    with open(CSV_PATH, mode="a", newline="", encoding="utf-8") as file:
-        writer = csv.writer(file)
-
+    with open(CSV_PATH, "a", encoding="utf-8") as file:
         if not arquivo_existe:
-            writer.writerow(["user_id", "pokemon_id"])
+            file.write("user_id,pokemon_id\n")
 
-        writer.writerow([user_id, pokemon_id])
+        file.write(f"{user_id},{pokemon_id}\n")
 
 
 def remover_favorito(user_id, pokemon_id):
     if not CSV_PATH.exists():
         return
 
-    linhas = []
+    with open(CSV_PATH, "r", encoding="utf-8") as file:
+        linhas = file.readlines()
 
-    with open(CSV_PATH, newline="", encoding="utf-8") as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            if not (
-                int(row["user_id"]) == user_id and
-                int(row["pokemon_id"]) == pokemon_id
-            ):
-                linhas.append(row)
+    novas_linhas = [linhas[0]]  # mantém o cabeçalho
 
-    with open(CSV_PATH, mode="w", newline="", encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=["user_id", "pokemon_id"])
-        writer.writeheader()
-        writer.writerows(linhas)
+    for linha in linhas[1:]:
+        dados = linha.strip().split(DELIMITER)
+
+        if len(dados) != 2:
+            continue
+
+        csv_user_id, csv_pokemon_id = dados
+
+        if not (
+            int(csv_user_id) == user_id and
+            int(csv_pokemon_id) == pokemon_id
+        ):
+            novas_linhas.append(linha)
+
+    with open(CSV_PATH, "w", encoding="utf-8") as file:
+        file.writelines(novas_linhas)
