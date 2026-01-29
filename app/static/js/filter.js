@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const texto = searchInput.value.toLowerCase().trim();
         const tipo = typeSelect.value.toLowerCase();
 
+        let visiveis = 0;
+
         cards.forEach(card => {
             const nome = card.dataset.name;
             const id = card.dataset.id;
@@ -20,11 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
             const matchTipo =
                 !tipo || tipos.includes(tipo);
 
-            card.style.display =
-                matchTexto && matchTipo ? "block" : "none";
+            const mostrar = matchTexto && matchTipo;
+
+            card.style.display = mostrar ? "block" : "none";
+
+            if (mostrar) visiveis++;
         });
+
+        const emptyState = document.getElementById("empty-state-team");
+        if (emptyState) {
+            emptyState.style.display = visiveis === 0 ? "block" : "none";
+        }
     }
 
     searchInput.addEventListener("input", aplicarFiltro);
     typeSelect.addEventListener("change", aplicarFiltro);
+
+    aplicarFiltro();
 });
