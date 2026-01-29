@@ -1,12 +1,10 @@
-from flask import Blueprint, request, render_template, abort, jsonify
+from flask import Blueprint, request, render_template, abort, jsonify, redirect, url_for, flash
 from flask_login import current_user
 from app.models.home import carregar_pokemons, buscar_pokemon_por_nome, listar_tipos, buscar_pokemons_por_prefixo
 from app.models.favorite import listar_favoritos
-
 home_bp = Blueprint("home", __name__)
 
 POKEMONS_POR_PAGINA = 200
-
 
 @home_bp.route('/')
 def home():
@@ -57,7 +55,8 @@ def pokemon_detail(pokemon_id):
     pokemon = next((p for p in pokemons if p["id"] == pokemon_id), None)
 
     if not pokemon:
-        abort(404)
+        flash(f"Pokémon #{pokemon_id} não foi encontrado!", "error")
+        return redirect(url_for("home.home"))
 
     evolutions = []
     if pokemon.get("evolucoes"):
