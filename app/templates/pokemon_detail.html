@@ -15,14 +15,26 @@
         </div>
     
         <div class="pokemon-detail-card">
+
+            {% if current_user.is_authenticated %}
+            <button
+                class="favorite-star {% if pokemon.id in favoritos %}active{% endif %}"
+                data-pokemon-id="{{ pokemon.id }}"
+                aria-label="Favoritar Pokémon"
+                type="button"
+            >
+                ★
+            </button>
+            {% endif %}
+
             <header class="detail-header">
                 <div class="main-image">
                     <img src="{{ url_for('static', filename='images/pokemons/' ~ pokemon.id ~ '.png') }}" alt="{{ pokemon.nome }}">
                 </div>
                 <div class="header-info">
+                    
                     <span class="pokemon-id">#{{ "%03d"|format(pokemon.id|int) }}</span>
                     <h2 class="pokemon-name">{{ pokemon.nome|capitalize }}</h2>
-    
                     <div class="pokemon-types">
                         <span class="type-badge {{ pokemon.tipo1|lower }}">{{ pokemon.tipo1 }}</span>
                         {% if pokemon.tipo2 %}
@@ -93,4 +105,8 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/favorite.js') }}"></script>
 {% endblock %}

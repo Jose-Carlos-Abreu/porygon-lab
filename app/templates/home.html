@@ -45,13 +45,17 @@
     </form>
 </section>
 
+{% if pokemons %}
 <div class="pokemon-grid">
     {% for poke in pokemons %}
         <div class="pokemon-card-container">
             <a href="{{ url_for('home.pokemon_detail', pokemon_id=poke.id) }}" class="pokemon-card">
                 <div class="image-wrapper">
-                    <img src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}" alt="{{ poke.nome }}" class="pokemon-img">
+                    <img src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}"
+                         alt="{{ poke.nome }}"
+                         class="pokemon-img">
                 </div>
+
                 {% if current_user.is_authenticated %}
                 <button
                     class="favorite-star {% if poke.id in favoritos %}active{% endif %}"
@@ -59,6 +63,7 @@
                     aria-label="Favoritar Pokémon"
                 >★</button>
                 {% endif %}
+
                 <span class="pokemon-number">#{{ "%03d" | format(poke.id) }}</span>
                 <h2 class="pokemon-name">{{ poke.nome | capitalize }}</h2>
 
@@ -69,10 +74,24 @@
                     {% endif %}
                 </div>
             </a>
-            
         </div>
     {% endfor %}
 </div>
+
+{% else %}
+<div class="empty-state">
+    <div class="empty-icon">🔍</div>
+    <h2>Nenhum Pokémon encontrado</h2>
+    <p>
+        Não encontramos nenhum resultado para sua busca.<br>
+        Tente outro nome, número ou tipo.
+    </p>
+
+    <a href="{{ url_for('home.home') }}" class="btn-clear">
+        Limpar busca
+    </a>
+</div>
+{% endif %}
 
 {% endblock %}
 

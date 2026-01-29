@@ -89,7 +89,7 @@ O projeto segue uma **arquitetura em camadas**, separando responsabilidades entr
 ### Passos
 
 ```bash
-git clone https://github.com/seu-usuario/porygon-lab.git
+git clone https://github.com/Jose-Carlos-Abreu/pokedex_flask.git
 cd porygon-lab
 python -m venv venv
 venv\Scripts\activate

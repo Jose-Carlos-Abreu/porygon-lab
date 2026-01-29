@@ -66,6 +66,20 @@
             </div>
         </section>
 
+        <!-- Se o filtro não encontra nada -->
+        <div class="empty-state" id="empty-state-team" style="display: none;">
+            <div class="empty-icon">🔍</div>
+            <h2>Nenhum Pokémon encontrado</h2>
+            <p>
+                Não encontramos nenhum resultado para sua busca.<br>
+                Tente outro nome, número ou tipo.
+            </p>
+
+            <button type="button" class="btn-clear" id="btn-clear-team-search">
+                Limpar busca
+            </button>
+        </div>
+
         <!-- GRID DE POKÉMONS -->
         <div class="pokemon-grid-wrapper">
             <div class="pokemon-grid">
@@ -132,4 +146,5 @@
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/filter.js') }}"></script>
 <script src="{{ url_for('static', filename='js/limit_pokemons.js') }}"></script>
+<script src="{{ url_for('static', filename='js/team_search_clear.js') }}"></script>
 {% endblock %}
