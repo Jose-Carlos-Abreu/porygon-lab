@@ -1,7 +1,8 @@
-from flask import Blueprint, request, render_template, abort, jsonify, redirect, url_for, flash
+from flask import Blueprint, request, render_template, jsonify, redirect, url_for, flash
 from flask_login import current_user
 from app.models.home import carregar_pokemons, buscar_pokemon_por_nome, listar_tipos, buscar_pokemons_por_prefixo
 from app.models.favorite import listar_favoritos
+
 home_bp = Blueprint("home", __name__)
 
 POKEMONS_POR_PAGINA = 200
@@ -65,10 +66,15 @@ def pokemon_detail(pokemon_id):
             if evo:
                 evolutions.append(evo)
 
+    favoritos = set()
+    if current_user.is_authenticated:
+        favoritos = listar_favoritos(current_user.id)
+
     return render_template(
         "pokemon_detail.html",
         pokemon=pokemon,
-        evolutions=evolutions
+        evolutions=evolutions,
+        favoritos=favoritos
     )
 
 

@@ -37,6 +37,7 @@
 }
 
 .pokemon-detail-card {
+    position: relative;
     background: white;
     border-radius: 20px;
     padding: 40px;
@@ -211,6 +212,32 @@
     color: #919191;
     line-height: 1;
     margin: 0 6px;
+}
+
+.favorite-star {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ccc;
+
+    font-size: 2rem;
+    padding: 0;
+    line-height: 1;
+
+    transition: transform 0.2s ease, color 0.2s ease;
+    z-index: 10;
+}
+
+.favorite-star:hover {
+    transform: scale(1.15);
+}
+
+.favorite-star.active {
+    color: #ffcb05;
 }
 
 @media (max-width: 768px) {
