@@ -246,6 +246,10 @@
         text-align: center;
     }
 
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
     .main-image img {
         width: 180px;
     }
@@ -269,7 +273,12 @@
     }
 
     .info-grid {
+        grid-template-columns: 1fr;
         padding: 16px;
         gap: 14px;
+    }
+
+    .info-box {
+        width: 100%;
     }
 }
