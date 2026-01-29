@@ -39,13 +39,15 @@ def home():
     total_paginas = (len(pokemons) - 1) // POKEMONS_POR_PAGINA + 1
 
     return render_template(
-        'home.html',
+        "home.html",
         pokemons=pokemons[inicio:fim],
         tipos=tipos,
         favoritos=favoritos,
         page=page,
         total_paginas=total_paginas,
-        logado=current_user.is_authenticated
+        logado=current_user.is_authenticated,
+        tipo_selecionado=tipo_selecionado,
+        search=search
     )
 
 
