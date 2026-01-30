@@ -32,17 +32,17 @@
                     </div>
 
                     <div class="team-actions">
-                        <a
-                            href="{{ url_for('teams.edit_team', team_id=team.id) }}"
+                        <a 
+                            href="{{ url_for('teams.edit_team', team_id=team.id) }}" 
                             class="btn-link"
                         >
                             Editar
                         </a>
 
-                        <form
-                            method="POST"
+                        <form 
+                            method="POST" 
                             action="{{ url_for('teams.delete_team', team_id=team.id) }}"
-                            onsubmit="return confirm('Tem certeza que deseja excluir este time?');"
+                            class="delete-team-form"
                         >
                             <button type="submit" class="btn-delete">
                                 Excluir
@@ -57,9 +57,9 @@
                             <div class="pokemon-card-container">
                                 <div class="pokemon-card">
                                     <div class="image-wrapper">
-                                        <img
-                                            src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}"
-                                            alt="{{ poke.nome }}"
+                                        <img 
+                                            src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}" 
+                                            alt="{{ poke.nome }}" 
                                             class="pokemon-img"
                                         >
                                     </div>
@@ -112,4 +112,8 @@
     </div>
     {% endif %}
 </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/teams.js') }}"></script>
 {% endblock %}
