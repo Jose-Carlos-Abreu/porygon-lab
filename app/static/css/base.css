@@ -84,9 +84,21 @@ main.content {
     transform: translateY(-1px);
 }
 
+/* --- ÁREA DO USUÁRIO (TEXTO + ÍCONE) --- */
 .welcome {
-    font-size: 0.9rem;
-    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: white;
+}
+
+/* NOVO ESTILO (apenas a imagem PNG) */
+.user-avatar {
+    width: 25px; /* Aumentei um pouquinho para ficar melhor sem a borda */
+    height: 25px;
+    object-fit: contain; /* Garante que o ícone inteiro apareça sem distorcer */
+    /* Removemos border-radius, border e background-color */
 }
 
 /* BOTÕES */
@@ -107,10 +119,9 @@ main.content {
 }
 
 /* AJUSTE DO BOTÃO SAIR */
-/* AJUSTE DO BOTÃO SAIR */
 .btn-logout {
     background: transparent;
-    border: none;  /* REMOVIDO A BORDA BRANCA FIXA */
+    border: none;
     color: white;
     cursor: pointer;
     font-weight: 600;
@@ -119,10 +130,11 @@ main.content {
 }
 
 .btn-logout:hover {
-    background: rgba(0,0,0,0.2); /* Fundo sutil ao passar o mouse */
+    background: rgba(0,0,0,0.2);
     border-radius: 6px;
     transform: translateY(-1px);
 }
+
 /* FLASH */
 
 .flash-wrapper {
@@ -381,7 +393,7 @@ main.content {
 }
 
 .footer-logo {
-    height: 75px; /* LOGO MAIOR */
+    height: 75px;
     margin-bottom: 10px;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
 }

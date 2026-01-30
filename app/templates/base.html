@@ -29,9 +29,10 @@
         <div class="user-auth" id="mobile-menu">
             {% if current_user.is_authenticated %}
                 <span class="welcome">
-                    Olá, <strong>{{ current_user.nome }}</strong>
+                <img src="{{ url_for('static', filename='images/login/user.png') }}" alt="User" class="user-avatar">
+    
+                Olá, <strong>{{ current_user.nome }}</strong>
                 </span>
-
                 <a href="{{ url_for('favorite.favorites') }}">⭐ Favoritos</a>
                 <a href="{{ url_for('teams.list_teams') }}">⚔️ Times</a>
                 <a href="{{ url_for('usuarios.logout') }}" class="btn-logout">Sair</a>
