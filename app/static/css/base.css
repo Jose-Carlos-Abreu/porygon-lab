@@ -7,6 +7,17 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f7f7f7;
+    
+    /* CONFIGURAÇÃO STICKY FOOTER */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Faz o conteúdo principal crescer para empurrar o rodapé */
+main.content {
+    flex: 1;
+    width: 100%; /* Garante largura total */
 }
 
 /* HEADER */
@@ -160,7 +171,6 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 25px;
     padding: 0 5% 50px;
-    /* Ensure base grid settings preserved; prepare for responsive tweaks */
 }
 
 .pokemon-card-container {
@@ -190,7 +200,6 @@ body {
 .pokemon-img {
     width: 120px;
     height: 120px;
-    /* Ensure base grid settings preserved; prepare for responsive tweaks */
     object-fit: contain;
     margin-bottom: 10px;
 }
@@ -228,7 +237,6 @@ body {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 }
 
-
 /* --- MODAL GLOBAL (Usado em Sair, Favoritos e Times) --- */
 .confirm-overlay {
     position: fixed;
@@ -242,7 +250,7 @@ body {
     z-index: 9999;
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none; /* Garante que não bloqueie clicks quando invisível */
+    pointer-events: none;
 }
 
 .confirm-overlay.visible {
@@ -320,6 +328,7 @@ body {
     box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
 }
 
+/* CORES DOS TIPOS */
 .type-badge.grass    { background-color: #78C850; }
 .type-badge.fire     { background-color: #F08030; }
 .type-badge.water    { background-color: #6890F0; }
@@ -338,6 +347,84 @@ body {
 .type-badge.dark     { background-color: #705848; }
 .type-badge.steel    { background-color: #B8B8D0; }
 .type-badge.flying   { background-color: #A890F0; }
+
+
+
+.main-footer {
+    background-color: #222;
+    color: #eee;
+    padding: 40px 5% 20px;
+    border-top: 4px solid #DC0A2D;
+    margin-top: auto; 
+    font-size: 0.95rem;
+}
+
+
+.footer-logo {
+    height: 70px; 
+    margin-bottom: 8px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); 
+}
+
+.footer-container {
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-brand p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.footer-devs {
+    text-align: right;
+}
+
+.dev-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+    padding: 0;
+}
+
+.dev-list li {
+    color: #ccc;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+/* Bolinha separadora entre os nomes */
+.dev-list li:not(:last-child)::after {
+    content: '•';
+    position: absolute;
+    right: -10px;
+    color: #555;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: #777;
+    font-size: 0.8rem;
+}
 
 /* RESPONSIVO */
 
@@ -395,6 +482,21 @@ body {
 
     .pokemon-img { width: 96px; height: 96px; }
     .pokemon-name { font-size: 1.1rem; }
+
+    /* Ajustes Footer Mobile */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-devs {
+        text-align: center;
+    }
+
+    .dev-list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 480px) {
@@ -452,5 +554,3 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
-
