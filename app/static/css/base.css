@@ -17,7 +17,7 @@ body {
 /* Faz o conteúdo principal crescer para empurrar o rodapé */
 main.content {
     flex: 1;
-    width: 100%; /* Garante largura total */
+    width: 100%;
 }
 
 /* HEADER */
@@ -106,14 +106,23 @@ main.content {
     background: rgba(255,255,255,0.15);
 }
 
+/* AJUSTE DO BOTÃO SAIR */
+/* AJUSTE DO BOTÃO SAIR */
 .btn-logout {
-    background: rgba(0,0,0,0.25);
+    background: transparent;
+    border: none;  /* REMOVIDO A BORDA BRANCA FIXA */
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 6px 14px;
+    transition: all 0.3s ease;
 }
 
 .btn-logout:hover {
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.2); /* Fundo sutil ao passar o mouse */
+    border-radius: 6px;
+    transform: translateY(-1px);
 }
-
 /* FLASH */
 
 .flash-wrapper {
@@ -349,25 +358,17 @@ main.content {
 .type-badge.flying   { background-color: #A890F0; }
 
 
-
+/* --- RODAPÉ PORYGON LAB --- */
 .main-footer {
     background-color: #222;
     color: #eee;
     padding: 40px 5% 20px;
     border-top: 4px solid #DC0A2D;
-    margin-top: auto; 
+    margin-top: auto;
     font-size: 0.95rem;
 }
 
-
-.footer-logo {
-    height: 70px; 
-    margin-bottom: 8px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); 
-}
-
 .footer-container {
-    
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -379,13 +380,10 @@ main.content {
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.footer-brand h3 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.footer-logo {
+    height: 75px; /* LOGO MAIOR */
+    margin-bottom: 10px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
 }
 
 .footer-brand p {
@@ -411,7 +409,6 @@ main.content {
     position: relative;
 }
 
-/* Bolinha separadora entre os nomes */
 .dev-list li:not(:last-child)::after {
     content: '•';
     position: absolute;
