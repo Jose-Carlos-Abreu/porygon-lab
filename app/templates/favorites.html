@@ -10,7 +10,10 @@
         <a href="{{ url_for('home.home') }}" class="btn-back">
             ← Voltar para Pokédex
         </a>
-        <h1 class="page-title">⭐ Meus Favoritos</h1>
+        <div class="page-title">
+            <img src="{{ url_for('static', filename='images/ui/icon_favoritos.png') }}" alt="favoritos" class="icon">
+            <h1 class="page-title">Meus Favoritos</h1>
+        </div>
     </div>
 {% endif %}
 
@@ -53,7 +56,7 @@
 </div>
 {% else %}
 <div class="empty-state">
-    <div class="empty-icon">⭐</div>
+    <img src="{{ url_for('static', filename='images/ui/icon_favoritos.png') }}" alt="favoritos" class="empty-icon">
     <h2>Nenhum Pokémon favorito</h2>
     <p>
         Você ainda não favoritou nenhum Pokémon.<br>

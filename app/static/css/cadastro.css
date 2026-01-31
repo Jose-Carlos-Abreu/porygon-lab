@@ -130,6 +130,65 @@ body {
     z-index: -1; 
 }
 
+/* FLASH */
+
+.flash-wrapper {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.flash {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    animation: flash-slide 0.4s ease;
+}
+
+/* VARIAÇÕES */
+
+.flash-success {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    color: #155724;
+}
+
+.flash-error {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    color: #721c24;
+}
+
+.flash-info {
+    background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+    color: #0c5460;
+}
+
+/* ÍCONE */
+
+.flash-icon {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.flash-text {
+    flex: 1;
+}
+
+@keyframes flash-slide {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .box-area {

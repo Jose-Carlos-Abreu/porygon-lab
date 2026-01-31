@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/teams.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -33,8 +34,14 @@
     
                 Olá, <strong>{{ current_user.nome }}</strong>
                 </span>
-                <a href="{{ url_for('favorite.favorites') }}">⭐ Favoritos</a>
-                <a href="{{ url_for('teams.list_teams') }}">⚔️ Times</a>
+                <a href="{{ url_for('favorite.favorites') }}" class="flex-navbar">
+                    <img src="{{ url_for('static', filename='images/ui/icon_favoritos.png') }}" alt="favoritos" class="icon">
+                    <p>Favoritos</p>
+                </a>
+                <a href="{{ url_for('teams.list_teams') }}" class="flex-navbar">
+                    <img src="{{ url_for('static', filename='images/ui/icon_times.png') }}" alt="favoritos" class="icon">
+                    <p>Times</p>
+                </a>
                 <a href="{{ url_for('usuarios.logout') }}" class="btn-logout">Sair</a>
             {% else %}
                 <a href="{{ url_for('usuarios.login') }}" class="btn-login">Login</a>
@@ -50,7 +57,7 @@
                 {% for category, message in messages %}
                     <div class="flash flash-{{ category }}">
                         <span class="flash-icon">
-                            {% if category == 'success' %}✅{% elif category == 'error' %}❌{% else %}ℹ️{% endif %}
+                            {% if category == 'success' %}<i class="fa-solid fa-check"></i>{% elif category == 'error' %}<i class="fa-solid fa-x"></i>{% else %}ℹ️{% endif %}
                         </span>
                         <span class="flash-text">{{ message }}</span>
                     </div>

@@ -185,6 +185,26 @@ main.content {
     flex: 1;
 }
 
+.flex-navbar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.flex-navbar .icon {
+    width: 24px;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-title .icon {
+    width: 48px;
+}
+
 /* GRID */
 
 .pokemon-grid {
