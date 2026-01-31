@@ -29,9 +29,10 @@
         <div class="user-auth" id="mobile-menu">
             {% if current_user.is_authenticated %}
                 <span class="welcome">
-                    Olá, <strong>{{ current_user.nome }}</strong>
+                <img src="{{ url_for('static', filename='images/login/user.png') }}" alt="User" class="user-avatar">
+    
+                Olá, <strong>{{ current_user.nome }}</strong>
                 </span>
-
                 <a href="{{ url_for('favorite.favorites') }}">⭐ Favoritos</a>
                 <a href="{{ url_for('teams.list_teams') }}">⚔️ Times</a>
                 <a href="{{ url_for('usuarios.logout') }}" class="btn-logout">Sair</a>
@@ -60,7 +61,37 @@
     {% block content %}{% endblock %}
 </main>
 
+<footer class="main-footer">
+    <div class="footer-container">
+        
+       <div class="footer-brand">
+            <img 
+                src="{{ url_for('static', filename='images/login/logo.png') }}" 
+                alt="Porygon Lab" 
+                class="footer-logo"
+            >
+            <p>Pokédex Virtual</p>
+        </div>
+
+        <div class="footer-devs">
+            <p>Desenvolvido por alunos do <strong>IFPB João Pessoa</strong></p>
+            <ul class="dev-list">
+                <li>Igor Gimenez</li>
+                <li>José Carlos</li>
+                <li>Ian Lucas</li>
+            </ul>
+        </div>
+
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Porygon Lab. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
 <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+<script src="{{ url_for('static', filename='js/logout.js') }}"></script>
+
 {% block scripts %}{% endblock %}
 
 </body>
