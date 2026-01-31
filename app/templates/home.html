@@ -49,7 +49,7 @@
 <div class="pokemon-grid">
     {% for poke in pokemons %}
         <div class="pokemon-card-container">
-            <a href="{{ url_for('home.pokemon_detail', pokemon_id=poke.id) }}" class="pokemon-card">
+            <a href="{{ url_for('home.pokemon_detail', pokemon_id=poke.id, page=page, search=search, tipo=tipo_selecionado) }}" class="pokemon-card">
                 <div class="image-wrapper">
                     <img src="{{ url_for('static', filename='images/pokemons/' ~ poke.id ~ '.png') }}"
                          alt="{{ poke.nome }}"
@@ -77,6 +77,38 @@
         </div>
     {% endfor %}
 </div>
+
+{% if total_paginas > 1 %}
+<div class="pagination-wrapper">
+    <div class="pagination">
+
+        {# Botão voltar #}
+        {% if page > 1 %}
+            <a class="page-btn"
+               href="{{ url_for('home.home', page=page-1, search=search, tipo=tipo_selecionado) }}">
+                ←
+            </a>
+        {% else %}
+            <span class="page-btn disabled">←</span>
+        {% endif %}
+
+        <span class="page-info">
+            Página <strong>{{ page }}</strong> de <strong>{{ total_paginas }}</strong>
+        </span>
+
+        {# Botão avançar #}
+        {% if page < total_paginas %}
+            <a class="page-btn"
+               href="{{ url_for('home.home', page=page+1, search=search, tipo=tipo_selecionado) }}">
+                →
+            </a>
+        {% else %}
+            <span class="page-btn disabled">→</span>
+        {% endif %}
+
+    </div>
+</div>
+{% endif %}
 
 {% else %}
 <div class="empty-state">

@@ -1,14 +1,15 @@
-from flask import Blueprint, request, render_template, jsonify, redirect, url_for, flash
+from flask import Blueprint, request, render_template, jsonify, redirect, url_for, flash, session
 from flask_login import current_user
 from app.models.home import carregar_pokemons, buscar_pokemon_por_nome, listar_tipos, buscar_pokemons_por_prefixo
 from app.models.favorite import listar_favoritos
 
 home_bp = Blueprint("home", __name__)
 
-POKEMONS_POR_PAGINA = 200
+POKEMONS_POR_PAGINA = 10
 
 @home_bp.route('/')
 def home():
+    session["pokedex_return_url"] = request.full_path
     pokemons = carregar_pokemons()
     tipos = listar_tipos()
 
@@ -37,6 +38,7 @@ def home():
 
     total_paginas = (len(pokemons) - 1) // POKEMONS_POR_PAGINA + 1
 
+    session["pokedex_return_url"] = request.full_path.rstrip("?")
     return render_template(
         "home.html",
         pokemons=pokemons[inicio:fim],
@@ -70,11 +72,16 @@ def pokemon_detail(pokemon_id):
     if current_user.is_authenticated:
         favoritos = listar_favoritos(current_user.id)
 
+    return_url = request.args.get("return_url")
+    if not return_url:
+        return_url = session.get("pokedex_return_url", url_for("home.home"))
+
     return render_template(
         "pokemon_detail.html",
         pokemon=pokemon,
         evolutions=evolutions,
-        favoritos=favoritos
+        favoritos=favoritos,
+        return_url=return_url
     )
 
 

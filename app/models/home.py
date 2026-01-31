@@ -3,7 +3,6 @@ from pathlib import Path
 CSV_PATH = Path("app/data/pokemons.csv")
 DELIMITER = ","
 
-
 def _ler_linhas():
     if not CSV_PATH.exists():
         return []
