@@ -67,7 +67,6 @@
     margin-top: 8px;
 }
 
-/* Header tweaks */
 .team-title {
     font-size: 1.3rem;
     font-weight: 700;
@@ -76,10 +75,29 @@
     font-size: 0.85rem;
     color: #777;
 }
-.team-actions .btn-link { text-decoration: none; color: #313131; border: 1px solid #e6e6e6; padding: 8px 10px; border-radius: 8px; background: #fff; }
-.team-actions .btn-link:hover { background: #f5f5f5; }
 
-/* Remove button as overlay on card */
+.btn-delete {
+    padding: 11px 8px 11px 8px;
+    border-radius: 8px;
+    border: none;
+    background: #e74c3c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.team-actions .btn-link { 
+    text-decoration: none;
+    color: #313131; 
+    border: 1px solid #e6e6e6; 
+    padding: 8px 10px; 
+    border-radius: 8px; 
+    background: #fff; 
+}
+.team-actions .btn-link:hover { 
+    background: #f5f5f5; 
+}
+
 .pokemon-card .remove-favorite-x {
     background: transparent;
     border: none;
@@ -142,15 +160,6 @@
     margin: 0;
 }
 
-.btn-delete {
-    padding: 8px 10px;
-    border-radius: 8px;
-    border: none;
-    background: #e74c3c;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
 
 .btn-delete:hover {
     background: #c0392b;

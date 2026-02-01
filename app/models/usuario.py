@@ -1,10 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin
 
 db = SQLAlchemy()
 
-class Usuario(db.Model, UserMixin):
+class Usuario(db.Model):
     id = db.Column('id', db.Integer, primary_key=True, autoincrement=True)
     nome = db.Column(db.String(150), unique=True)
     senha_hash = db.Column(db.String(128))

@@ -16,7 +16,7 @@
     
         <div class="pokemon-detail-card">
 
-            {% if current_user.is_authenticated %}
+            {% if logado %}
             <button
                 class="favorite-star {% if pokemon.id in favoritos %}active{% endif %}"
                 data-pokemon-id="{{ pokemon.id }}"

@@ -1,10 +1,9 @@
-from flask import Flask, redirect, url_for, flash
+from flask import Flask, redirect, url_for
 from app.controller.usuario import user_bp as usercontroller
 from app.controller.home import home_bp as homecontroller
 from app.controller.favorite import favorite_bp
 from app.controller.teams import teams_bp
-from flask_login import LoginManager 
-from app.models.usuario import db, Usuario
+from app.models.usuario import db
 import os, subprocess
 
 app = Flask(
@@ -17,6 +16,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///usuarios.sqlite3'
 
 app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET_KEY', 'chave_generica_para_dev_local')
 
+db.init_app(app)
+
 app.register_blueprint(usercontroller, url_prefix="/pokedex/")
 app.register_blueprint(homecontroller, url_prefix="/pokedex/")
 app.register_blueprint(favorite_bp, url_prefix="/favorite")
@@ -25,19 +26,6 @@ app.register_blueprint(teams_bp, url_prefix="/teams")
 @app.route('/')
 def index():
     return redirect(url_for('home.home'))
-
-login_manager = LoginManager()
-login_manager.init_app(app)
-login_manager.login_view = 'usuarios.login' 
-
-@login_manager.user_loader
-def load_user(user_id):
-    return Usuario.query.get(int(user_id))
-
-@login_manager.unauthorized_handler
-def unauthorized():
-    flash("Você precisa estar logado para acessar esta funcionalidade.", "error")
-    return redirect(url_for("usuarios.login"))
 
 def executar_preprocessamento():
     csv_ok = os.path.exists("app/data/pokemons.csv")
@@ -50,7 +38,6 @@ def executar_preprocessamento():
 executar_preprocessamento()
 
 if __name__ == '__main__':
-    db.init_app(app=app)
     with app.app_context():
         db.create_all()
     app.run(debug=True)

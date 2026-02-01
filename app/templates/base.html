@@ -28,11 +28,11 @@
 
         <!-- MENU -->
         <div class="user-auth" id="mobile-menu">
-            {% if current_user.is_authenticated %}
+            {% if logado %}
                 <span class="welcome">
                 <img src="{{ url_for('static', filename='images/login/user.png') }}" alt="User" class="user-avatar">
     
-                Olá, <strong>{{ current_user.nome }}</strong>
+                Olá, <strong>{{ session.get('usuario_nome', 'Usuário') }}</strong>
                 </span>
                 <a href="{{ url_for('favorite.favorites') }}" class="flex-navbar">
                     <img src="{{ url_for('static', filename='images/ui/icon_favoritos.png') }}" alt="favoritos" class="icon">

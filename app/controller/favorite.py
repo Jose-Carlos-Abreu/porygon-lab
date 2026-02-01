@@ -1,32 +1,34 @@
-from flask import Blueprint, redirect, url_for, flash, request, jsonify, render_template
-from flask_login import current_user, login_required
+from flask import Blueprint, redirect, url_for, flash, request, jsonify, render_template, session
 from app.models.favorite import salvar_favorito, remover_favorito, listar_favoritos
 from app.models.home import carregar_pokemons
+from app.decorators import session_required
 
 favorite_bp = Blueprint("favorite", __name__)
 
 @favorite_bp.route("/toggle/<int:pokemon_id>", methods=["POST"])
-@login_required
+@session_required
 def toggle(pokemon_id):
-    favoritos = listar_favoritos(current_user.id)
+    usuario_id = session.get('usuario_id')
+    favoritos = listar_favoritos(usuario_id)
 
     if pokemon_id in favoritos:
-        remover_favorito(current_user.id, pokemon_id)
+        remover_favorito(usuario_id, pokemon_id)
         return jsonify({
             "status": "removed",
             "pokemon_id": pokemon_id
         })
     else:
-        salvar_favorito(current_user.id, pokemon_id)
+        salvar_favorito(usuario_id, pokemon_id)
         return jsonify({
             "status": "added",
             "pokemon_id": pokemon_id
         })
 
 @favorite_bp.route("/favorites")
-@login_required
+@session_required
 def favorites():
-    favoritos_ids = listar_favoritos(current_user.id)
+    usuario_id = session.get('usuario_id')
+    favoritos_ids = listar_favoritos(usuario_id)
 
     pokemons = carregar_pokemons()
 
@@ -37,5 +39,6 @@ def favorites():
 
     return render_template(
         "favorites.html",
-        pokemons=favoritos
+        pokemons=favoritos,
+        logado='usuario_id' in session
     )

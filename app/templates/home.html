@@ -56,7 +56,7 @@
                          class="pokemon-img">
                 </div>
 
-                {% if current_user.is_authenticated %}
+                {% if logado %}
                 <button
                     class="favorite-star {% if poke.id in favoritos %}active{% endif %}"
                     data-pokemon-id="{{ poke.id }}"

@@ -1,13 +1,14 @@
 from app.models.usuario import db, Usuario
-from flask import Blueprint, render_template, request, redirect, url_for, flash
-from flask_login import login_user, logout_user, login_required, current_user
+from flask import Blueprint, render_template, request, redirect, url_for, flash, session
+from app.decorators import session_required
+import re
 
 user_bp = Blueprint("usuarios", __name__)
 
 
 @user_bp.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
-    if current_user.is_authenticated:
+    if 'usuario_id' in session:
         return redirect(url_for('home.home'))
 
     if request.method == 'POST':
@@ -17,6 +18,21 @@ def cadastro():
 
         if not nome or not senha or not confirmar_senha:
             flash('Preencha todos os campos.', 'error')
+            return redirect(url_for('usuarios.cadastro'))
+
+        # Não permitir espaços em nome ou senha
+        if re.search(r"\s", nome) or re.search(r"\s", senha):
+            flash('Nome de usuário e senha não podem conter espaços.', 'error')
+            return redirect(url_for('usuarios.cadastro'))
+
+        # Verificar tamanho mínimo da senha
+        if len(senha) < 6:
+            flash('A senha deve ter pelo menos 6 caracteres.', 'error')
+            return redirect(url_for('usuarios.cadastro'))
+
+        # Verificar ao menos um símbolo especial na senha
+        if not re.search(r"[^A-Za-z0-9]", senha):
+            flash('A senha deve conter ao menos um símbolo especial.', 'error')
             return redirect(url_for('usuarios.cadastro'))
 
         if Usuario.query.filter_by(nome=nome).first():
@@ -39,7 +55,7 @@ def cadastro():
 
 @user_bp.route('/login', methods=['GET', 'POST'])
 def login():
-    if current_user.is_authenticated:
+    if 'usuario_id' in session:
         return redirect(url_for('home.home'))
 
     if request.method == 'POST':
@@ -50,10 +66,16 @@ def login():
             flash('Informe nome de usuário e senha.', 'error')
             return redirect(url_for('usuarios.login'))
 
+        # Rejeitar entradas com espaços (não permitido)
+        if re.search(r"\s", nome) or re.search(r"\s", senha):
+            flash('Nome de usuário e senha não podem conter espaços.', 'error')
+            return redirect(url_for('usuarios.login'))
+
         usuario = Usuario.query.filter_by(nome=nome).first()
 
         if usuario and usuario.check_password(senha):
-            login_user(usuario)
+            session['usuario_id'] = usuario.id
+            session['usuario_nome'] = usuario.nome
             next_page = request.args.get('next')
             flash(f'Bem vindo, {nome}!', 'success')
             return redirect(next_page or url_for('home.home'))
@@ -65,8 +87,9 @@ def login():
 
 
 @user_bp.route('/logout')
-@login_required
+@session_required
 def logout():
-    logout_user()
+    session.clear()
     flash('Você saiu da sua conta.', 'success')
     return redirect(url_for('home.home'))
+
