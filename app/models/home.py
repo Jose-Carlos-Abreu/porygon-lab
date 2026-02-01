@@ -3,22 +3,35 @@ from pathlib import Path
 CSV_PATH = Path("app/data/pokemons.csv")
 DELIMITER = ","
 
-def _ler_linhas():
+def ler_arquivo():
+    """
+    Lê o arquivo CSV e retorna todas as linhas.
+    """
     if not CSV_PATH.exists():
         return []
-
+    
     with open(CSV_PATH, "r", encoding="utf-8") as file:
-        return file.readlines()
+        linhas = file.readlines() 
+    return linhas # retorna uma lista ['linha1\n', 'linha2\n', 'linha3']
 
-
-def _parse_linha(header, linha):
+def converter_linha_em_dict(header, linha):
+    """
+    Converte uma linha do CSV em dict, caso faltar alguma coluna, ela vira string vazia.
+    """
     valores = linha.strip().split(DELIMITER)
-    return dict(zip(header, valores))
 
+    dados = {}
+    for i, coluna in enumerate(header):
+        dados[coluna] = valores[i] if i < len(valores) else ""
+
+    return dados
 
 def carregar_pokemons():
+    """
+    Carrega todos os pokémons do CSV e retorna em formato de lista de dicionários.
+    """
     pokemons = []
-    linhas = _ler_linhas()
+    linhas = ler_arquivo()
 
     if not linhas:
         return pokemons
@@ -26,7 +39,7 @@ def carregar_pokemons():
     header = linhas[0].strip().split(DELIMITER)
 
     for linha in linhas[1:]:
-        row = _parse_linha(header, linha)
+        row = converter_linha_em_dict(header, linha)
 
         pokemons.append({
             "id": int(row["id"]),
@@ -44,10 +57,12 @@ def carregar_pokemons():
 
     return pokemons
 
-
 def listar_tipos():
+    """
+    Lista todos os tipos existentes no CSV (tipo1 e tipo2), sem repetição utilizando set().
+    """
     tipos = set()
-    linhas = _ler_linhas()
+    linhas = ler_arquivo()
 
     if not linhas:
         return []
@@ -55,7 +70,7 @@ def listar_tipos():
     header = linhas[0].strip().split(DELIMITER)
 
     for linha in linhas[1:]:
-        row = _parse_linha(header, linha)
+        row = converter_linha_em_dict(header, linha)
 
         if row.get("tipo1"):
             tipos.add(row["tipo1"].lower())
@@ -64,10 +79,12 @@ def listar_tipos():
 
     return sorted(tipos)
 
-
 def buscar_pokemon_por_nome(nome):
+    """
+    Busca um pokémon pelo nome exato no CSV, usado para apresentar cards de evoluções do pokemon.
+    """
     nome = nome.strip().lower()
-    linhas = _ler_linhas()
+    linhas = ler_arquivo()
 
     if not linhas:
         return None
@@ -75,7 +92,7 @@ def buscar_pokemon_por_nome(nome):
     header = linhas[0].strip().split(DELIMITER)
 
     for linha in linhas[1:]:
-        row = _parse_linha(header, linha)
+        row = converter_linha_em_dict(header, linha)
 
         if row["nome"].lower() == nome:
             return {
@@ -86,19 +103,23 @@ def buscar_pokemon_por_nome(nome):
 
     return None
 
-
 def buscar_pokemons_por_prefixo(texto, limite=8):
+    """
+    Busca pokémons cujo nome começa com o texto informado, usado no autocomplete de busca.
+    """
     texto = texto.strip().lower()
     resultados = []
 
     if not texto:
         return resultados
 
-    linhas = _ler_linhas()
+    linhas = ler_arquivo()
     header = linhas[0].strip().split(DELIMITER)
 
     for linha in linhas[1:]:
-        row = _parse_linha(header, linha)
+        row = converter_linha_em_dict(header, linha)
+
+        # O startswith() retorna True se a string começar com o valor especificado, caso contrário, retorna False.
 
         if row["nome"].lower().startswith(texto):
             resultados.append({
