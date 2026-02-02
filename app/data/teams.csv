@@ -1,5 +1,5 @@
 usuario_id,nome_time,pokemons
 4,time,1;2;3;4;5;6
 6,time,1;2;3;4
-1,tipo planta,1;2;3
-1,tipo fogo,4;5;6
+1,tipo planta com inseto,1;2;3;10
+1,time rato,1;28;29;30;131;144

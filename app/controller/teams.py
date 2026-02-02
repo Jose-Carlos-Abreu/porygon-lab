@@ -5,18 +5,33 @@ from app.models.home import listar_tipos, carregar_pokemons
 
 teams_bp = Blueprint('teams', __name__)
 
+MAX_POKEMONS_POR_TIME = 6
+
+
 @teams_bp.route('/teams')
 @session_required
 def list_teams():
-    usuario_id = session.get('usuario_id')
-    teams = pegar_time_do_usuario(usuario_id)
-    return render_template('teams.html', teams=teams, logado='usuario_id' in session)
+    """
+    Lista todos os times do usuário logado.
+    """
+    usuario_id = session.get('usuario_id') 
+    teams = pegar_time_do_usuario(usuario_id) # Carrega os times do usuário no arquivo CSV.
+    return render_template(
+        'teams.html', 
+        teams=teams, 
+        logado='usuario_id' in session
+    )
+
 
 @teams_bp.route('/team/<int:team_id>/delete', methods=['POST'])
 @session_required
 def delete_team(team_id):
+    """
+    Remove um time do usuário logado com base no ID do time.
+    """
     usuario_id = session.get('usuario_id')
-    sucesso = remover_time(usuario_id, team_id)
+
+    sucesso = remover_time(usuario_id, team_id) # retorna True ou False.
 
     if sucesso:
         flash('Time removido com sucesso.', 'success')
@@ -25,23 +40,33 @@ def delete_team(team_id):
 
     return redirect(url_for('teams.list_teams'))
 
+
 @teams_bp.route('/team/<int:team_id>/edit', methods=['GET', 'POST'])
 @session_required
 def edit_team(team_id):
+    """
+    Edita um time existente.
+    """
     usuario_id = session.get('usuario_id')
+
+    # Carrega todos os pokémons e tipos disponíveis no CSV.
     pokemons = carregar_pokemons()
     tipos = listar_tipos()
-    teams = pegar_time_do_usuario(usuario_id)
 
-    team = next((t for t in teams if t['id'] == team_id), None)
+    teams = pegar_time_do_usuario(usuario_id) # Carrega os times do usuário no arquivo CSV.
+    
+    team = next((t for t in teams if t['id'] == team_id), None) # Busca o time pelo ID dentro dos times do usuário.
+
     if not team:
         flash('Time não encontrado.', 'error')
         return redirect(url_for('teams.list_teams'))
 
+    # Verifica se o method é POST, significando que o usuário enviou o formulário.
     if request.method == 'POST':
         nome_time = request.form.get('nome_time')
         selecionados = request.form.getlist('pokemons')
 
+        # Validações do formulário.
         if not nome_time:
             flash('Informe o nome do time.', 'error')
             return redirect(request.url)
@@ -50,10 +75,10 @@ def edit_team(team_id):
             flash('Selecione ao menos um Pokémon.', 'error')
             return redirect(request.url)
 
-        if len(selecionados) > 6:
-            flash('Um time pode ter no máximo 6 Pokémons.', 'error')
+        if len(selecionados) > MAX_POKEMONS_POR_TIME:
+            flash(f'Um time pode ter no máximo {MAX_POKEMONS_POR_TIME} Pokémons.', 'error')
             return redirect(request.url)
-
+        
         atualizar_time(
             usuario_id=usuario_id,
             team_id=team_id,
@@ -64,6 +89,7 @@ def edit_team(team_id):
         flash('Time atualizado com sucesso!', 'success')
         return redirect(url_for('teams.list_teams'))
 
+    # Se o method é GET, exibe a tela com os dados atuais do time.
     return render_template(
         'team_new.html',
         pokemons=pokemons,
@@ -73,17 +99,25 @@ def edit_team(team_id):
         logado='usuario_id' in session
     )
     
+
 @teams_bp.route('/team/new', methods=['GET', 'POST'])
 @session_required
 def new_team():
+    """
+    Cria um novo time para o usuário logado.
+    """
     usuario_id = session.get('usuario_id')
+
+    # Carrega todos os pokémons e tipos disponíveis no CSV.
     pokemons = carregar_pokemons()
     tipos = listar_tipos()
 
+    # Verifica se o method é POST, significando que o usuário enviou o formulário.
     if request.method == 'POST':
         nome_time = request.form.get('nome_time')
         selecionados = request.form.getlist('pokemons')
 
+        # Validações do formulário.
         if not nome_time:
             flash('Informe o nome do time.', 'error')
             return redirect(url_for('teams.new_team'))
@@ -92,10 +126,9 @@ def new_team():
             flash('Selecione ao menos um Pokémon.', 'error')
             return redirect(url_for('teams.new_team'))
 
-        if len(selecionados) > 6:
-            flash('Um time pode ter no máximo 6 Pokémons.', 'error')
+        if len(selecionados) > MAX_POKEMONS_POR_TIME:
+            flash(f'Um time pode ter no máximo {MAX_POKEMONS_POR_TIME} Pokémons.', 'error')
             return redirect(url_for('teams.new_team'))
-
         salvar_novo_time(
             usuario_id=usuario_id,
             nome_time=nome_time,
@@ -105,4 +138,5 @@ def new_team():
         flash('Time criado com sucesso!', 'success')
         return redirect(url_for('teams.list_teams'))
 
+    # Se o method é GET, exibe o formulário vazio.
     return render_template('team_new.html', pokemons=pokemons, tipos=tipos, logado='usuario_id' in session)

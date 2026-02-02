@@ -14,7 +14,7 @@ def ler_arquivo():
     with open(CSV_PATH, "r", encoding="utf-8") as file:
         linhas = file.readlines() 
 
-    return linhas # retorna uma lista ['linha1\n', 'linha2\n', 'linha3']
+    return linhas # retorna uma lista ['linha1\n', 'linha2\n', 'linha3'].
 
 
 def converter_linha_em_dict(header, linha):

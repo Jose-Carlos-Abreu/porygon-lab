@@ -16,7 +16,7 @@ def toggle(pokemon_id):
 
     # A função jsonify() converte dicionários em JSON, e enviar dados estruturados como resposta HTTP. 
 
-    # Se já estiver favoritado, remove
+    # Se já estiver favoritado, remove.
     if pokemon_id in favoritos_ids:
         remover_favorito(usuario_id, pokemon_id)
         return jsonify({
@@ -24,7 +24,7 @@ def toggle(pokemon_id):
             "pokemon_id": pokemon_id
         })
     
-    # Senão, adiciona aos favoritos
+    # Senão, adiciona aos favoritos.
     else:
         salvar_favorito(usuario_id, pokemon_id)
         return jsonify({

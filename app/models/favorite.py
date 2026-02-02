@@ -3,6 +3,7 @@ from pathlib import Path
 CSV_PATH = Path("app/data/favorites.csv")
 DELIMITER = ","
 
+
 def ler_arquivo():
     """
     Lê o arquivo CSV de favoritos e retorna todas as linhas.
