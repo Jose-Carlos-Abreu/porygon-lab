@@ -3,28 +3,32 @@ from pathlib import Path
 CSV_PATH = Path("app/data/pokemons.csv")
 DELIMITER = ","
 
+
 def ler_arquivo():
     """
-    Lê o arquivo CSV e retorna todas as linhas.
+    Lê o arquivo CSV de pokemons e retorna todas as linhas.
     """
     if not CSV_PATH.exists():
         return []
     
     with open(CSV_PATH, "r", encoding="utf-8") as file:
         linhas = file.readlines() 
+
     return linhas # retorna uma lista ['linha1\n', 'linha2\n', 'linha3']
+
 
 def converter_linha_em_dict(header, linha):
     """
-    Converte uma linha do CSV em dict, caso faltar alguma coluna, ela vira string vazia.
+    Converte uma linha do CSV em dict baseado no header, caso faltar alguma coluna na linha, ela vira string vazia.
     """
     valores = linha.strip().split(DELIMITER)
 
     dados = {}
     for i, coluna in enumerate(header):
         dados[coluna] = valores[i] if i < len(valores) else ""
-
+        
     return dados
+
 
 def carregar_pokemons():
     """
@@ -57,6 +61,7 @@ def carregar_pokemons():
 
     return pokemons
 
+
 def listar_tipos():
     """
     Lista todos os tipos existentes no CSV (tipo1 e tipo2), sem repetição utilizando set().
@@ -78,6 +83,7 @@ def listar_tipos():
             tipos.add(row["tipo2"].lower())
 
     return sorted(tipos)
+
 
 def buscar_pokemon_por_nome(nome):
     """
@@ -102,6 +108,7 @@ def buscar_pokemon_por_nome(nome):
             }
 
     return None
+
 
 def buscar_pokemons_por_prefixo(texto, limite):
     """

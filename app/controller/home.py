@@ -114,6 +114,8 @@ def api_search_pokemons():
     query = request.args.get("q", "").strip()
     limite = 8
 
+    # A função jsonify() converte dicionários em JSON, e enviar dados estruturados como resposta HTTP. 
+
     # Evita retornar muitos resultados quando o usuário digitou pouco.
     if len(query) < 2:
         return jsonify([])
