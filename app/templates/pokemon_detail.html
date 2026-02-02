@@ -87,7 +87,7 @@
                 {% if evolutions %}
                     <div class="evolution-list">
                         {% for evo in evolutions %}
-                            <a href="{{ url_for('home.pokemon_detail', pokemon_id=evo.id) }}" class="evolution-item">
+                            <a href="{{ url_for('home.pokemon_detail', pokemon_id=evo.id, page=page, search=search, tipo=tipo_selecionado) }}" class="evolution-item">
                                 <img src="{{ url_for('static', filename='images/pokemons/' ~ evo.id ~ '.png') }}" alt="{{ evo.nome }}">
                                 <span>{{ evo.nome|capitalize }}</span>
                             </a>

@@ -103,7 +103,7 @@ def buscar_pokemon_por_nome(nome):
 
     return None
 
-def buscar_pokemons_por_prefixo(texto, limite=8):
+def buscar_pokemons_por_prefixo(texto, limite):
     """
     Busca pokémons cujo nome começa com o texto informado, usado no autocomplete de busca.
     """
