@@ -199,3 +199,828 @@ id,nome,tipo1,tipo2,imagem,altura,peso,categoria,habilidades,evolucoes,fraquezas
 198,murkrow,dark,flying,198.png,0.5,2.1,Darkness Pokémon,insomnia | prankster | super-luck,murkrow | honchkrow,bug | electric | fairy | fighting | ice | rock
 199,slowking,water,psychic,199.png,2.0,79.5,Royal Pokémon,oblivious | own-tempo | regenerator,slowpoke | slowbro | slowking,bug | dark | electric | ghost | grass
 200,misdreavus,ghost,,200.png,0.7,1.0,Screech Pokémon,levitate,misdreavus | mismagius,dark | ghost
+201,unown,psychic,,201.png,0.5,5.0,Symbol Pokémon,levitate,unown,bug | dark | ghost
+202,wobbuffet,psychic,,202.png,1.3,28.5,Patient Pokémon,shadow-tag | telepathy,wynaut | wobbuffet,bug | dark | ghost
+203,girafarig,normal,psychic,203.png,1.5,41.5,Long Neck Pokémon,early-bird | inner-focus | sap-sipper,girafarig | farigiraf,bug | dark | fighting | ghost
+204,pineco,bug,,204.png,0.6,7.2,Bagworm Pokémon,overcoat | sturdy,pineco | forretress,fire | flying | rock
+205,forretress,bug,steel,205.png,1.2,125.8,Bagworm Pokémon,overcoat | sturdy,pineco | forretress,fighting | fire | flying | ground | rock
+206,dunsparce,normal,,206.png,1.5,14.0,Land Snake Pokémon,rattled | run-away | serene-grace,dunsparce | dudunsparce,fighting
+207,gligar,ground,flying,207.png,1.1,64.8,Fly Scorpion Pokémon,hyper-cutter | immunity | sand-veil,gligar | gliscor,electric | grass | ice | rock | water
+208,steelix,steel,ground,208.png,9.2,400.0,Iron Snake Pokémon,rock-head | sheer-force | sturdy,onix | steelix,fighting | fire | grass | ground | ice | water
+209,snubbull,fairy,,209.png,0.6,7.8,Fairy Pokémon,intimidate | rattled | run-away,snubbull | granbull,poison | steel
+210,granbull,fairy,,210.png,1.4,48.7,Fairy Pokémon,intimidate | quick-feet | rattled,snubbull | granbull,poison | steel
+211,qwilfish,water,poison,211.png,0.5,3.9,Balloon Pokémon,intimidate | poison-point | swift-swim,qwilfish | overqwil,electric | grass | ground | psychic
+212,scizor,bug,steel,212.png,1.8,118.0,Pincer Pokémon,light-metal | swarm | technician,scyther | scizor | kleavor,fighting | fire | flying | ground | rock
+213,shuckle,bug,rock,213.png,0.6,20.5,Mold Pokémon,contrary | gluttony | sturdy,shuckle,fighting | fire | flying | grass | ground | rock | steel | water
+214,heracross,bug,fighting,214.png,1.5,54.0,Single Horn Pokémon,guts | moxie | swarm,heracross,fairy | fire | flying | psychic | rock
+215,sneasel,dark,ice,215.png,0.9,28.0,Sharp Claw Pokémon,inner-focus | keen-eye | pickpocket,sneasel | weavile | sneasler,bug | fairy | fighting | fire | rock | steel
+216,teddiursa,normal,,216.png,0.6,8.8,Little Bear Pokémon,honey-gather | pickup | quick-feet,teddiursa | ursaring | ursaluna,fighting
+217,ursaring,normal,,217.png,1.8,125.8,Hibernator Pokémon,guts | quick-feet | unnerve,teddiursa | ursaring | ursaluna,fighting
+218,slugma,fire,,218.png,0.7,35.0,Lava Pokémon,flame-body | magma-armor | weak-armor,slugma | magcargo,ground | rock | water
+219,magcargo,fire,rock,219.png,0.8,55.0,Lava Pokémon,flame-body | magma-armor | weak-armor,slugma | magcargo,fighting | grass | ground | rock | steel | water
+220,swinub,ice,ground,220.png,0.4,6.5,Pig Pokémon,oblivious | snow-cloak | thick-fat,swinub | piloswine | mamoswine,fighting | fire | grass | ice | rock | steel | water
+221,piloswine,ice,ground,221.png,1.1,55.8,Swine Pokémon,oblivious | snow-cloak | thick-fat,swinub | piloswine | mamoswine,fighting | fire | grass | ice | rock | steel | water
+222,corsola,water,rock,222.png,0.6,5.0,Coral Pokémon,hustle | natural-cure | regenerator,corsola | cursola,electric | fighting | grass | ground | steel | water
+223,remoraid,water,,223.png,0.6,12.0,Jet Pokémon,hustle | moody | sniper,remoraid | octillery,electric | grass
+224,octillery,water,,224.png,0.9,28.5,Jet Pokémon,moody | sniper | suction-cups,remoraid | octillery,electric | grass
+225,delibird,ice,flying,225.png,0.9,16.0,Delivery Pokémon,hustle | insomnia | vital-spirit,delibird,electric | fighting | fire | ice | rock | steel
+226,mantine,water,flying,226.png,2.1,220.0,Kite Pokémon,swift-swim | water-absorb | water-veil,mantyke | mantine,electric | grass | ice | rock
+227,skarmory,steel,flying,227.png,1.7,50.5,Armor Bird Pokémon,keen-eye | sturdy | weak-armor,skarmory,electric | fighting | fire | ground | ice | rock
+228,houndour,dark,fire,228.png,0.6,10.8,Dark Pokémon,early-bird | flash-fire | unnerve,houndour | houndoom,bug | fairy | fighting | ground | rock | water
+229,houndoom,dark,fire,229.png,1.4,35.0,Dark Pokémon,early-bird | flash-fire | unnerve,houndour | houndoom,bug | fairy | fighting | ground | rock | water
+230,kingdra,water,dragon,230.png,1.8,152.0,Dragon Pokémon,damp | sniper | swift-swim,horsea | seadra | kingdra,dragon | electric | fairy | grass | ice
+231,phanpy,ground,,231.png,0.5,33.5,Long Nose Pokémon,pickup | sand-veil,phanpy | donphan,grass | ice | water
+232,donphan,ground,,232.png,1.1,120.0,Armor Pokémon,sand-veil | sturdy,phanpy | donphan,grass | ice | water
+233,porygon2,normal,,233.png,0.6,32.5,Virtual Pokémon,analytic | download | trace,porygon | porygon2 | porygon-z,fighting
+234,stantler,normal,,234.png,1.4,71.2,Big Horn Pokémon,frisk | intimidate | sap-sipper,stantler | wyrdeer,fighting
+235,smeargle,normal,,235.png,1.2,58.0,Painter Pokémon,moody | own-tempo | technician,smeargle,fighting
+236,tyrogue,fighting,,236.png,0.7,21.0,Scuffle Pokémon,guts | steadfast | vital-spirit,tyrogue | hitmonlee | hitmonchan | hitmontop,fairy | flying | psychic
+237,hitmontop,fighting,,237.png,1.4,48.0,Handstand Pokémon,intimidate | steadfast | technician,tyrogue | hitmonlee | hitmonchan | hitmontop,fairy | flying | psychic
+238,smoochum,ice,psychic,238.png,0.4,6.0,Kiss Pokémon,forewarn | hydration | oblivious,smoochum | jynx,bug | dark | fighting | fire | ghost | rock | steel
+239,elekid,electric,,239.png,0.6,23.5,Electric Pokémon,static | vital-spirit,elekid | electabuzz | electivire,ground
+240,magby,fire,,240.png,0.7,21.4,Live Coal Pokémon,flame-body | vital-spirit,magby | magmar | magmortar,ground | rock | water
+241,miltank,normal,,241.png,1.2,75.5,Milk Cow Pokémon,sap-sipper | scrappy | thick-fat,miltank,fighting
+242,blissey,normal,,242.png,1.5,46.8,Happiness Pokémon,healer | natural-cure | serene-grace,happiny | chansey | blissey,fighting
+243,raikou,electric,,243.png,1.9,178.0,Thunder Pokémon,inner-focus | pressure,raikou,ground
+244,entei,fire,,244.png,2.1,198.0,Volcano Pokémon,inner-focus | pressure,entei,ground | rock | water
+245,suicune,water,,245.png,2.0,187.0,Aurora Pokémon,inner-focus | pressure,suicune,electric | grass
+246,larvitar,rock,ground,246.png,0.6,72.0,Rock Skin Pokémon,guts | sand-veil,larvitar | pupitar | tyranitar,fighting | grass | ground | ice | steel | water
+247,pupitar,rock,ground,247.png,1.2,152.0,Hard Shell Pokémon,shed-skin,larvitar | pupitar | tyranitar,fighting | grass | ground | ice | steel | water
+248,tyranitar,rock,dark,248.png,2.0,202.0,Armor Pokémon,sand-stream | unnerve,larvitar | pupitar | tyranitar,bug | fairy | fighting | grass | ground | steel | water
+249,lugia,psychic,flying,249.png,5.2,216.0,Diving Pokémon,multiscale | pressure,lugia,bug | dark | electric | ghost | ice | rock
+250,ho-oh,fire,flying,250.png,3.8,199.0,Rainbow Pokémon,pressure | regenerator,ho-oh,electric | ground | ice | rock | water
+251,celebi,psychic,grass,251.png,0.6,5.0,Time Travel Pokémon,natural-cure,celebi,bug | dark | fire | flying | ghost | ice | poison
+252,treecko,grass,,252.png,0.5,5.0,Wood Gecko Pokémon,overgrow | unburden,treecko | grovyle | sceptile,bug | fire | flying | ice | poison
+253,grovyle,grass,,253.png,0.9,21.6,Wood Gecko Pokémon,overgrow | unburden,treecko | grovyle | sceptile,bug | fire | flying | ice | poison
+254,sceptile,grass,,254.png,1.7,52.2,Forest Pokémon,overgrow | unburden,treecko | grovyle | sceptile,bug | fire | flying | ice | poison
+255,torchic,fire,,255.png,0.4,2.5,Chick Pokémon,blaze | speed-boost,torchic | combusken | blaziken,ground | rock | water
+256,combusken,fire,fighting,256.png,0.9,19.5,Young Fowl Pokémon,blaze | speed-boost,torchic | combusken | blaziken,fairy | flying | ground | psychic | rock | water
+257,blaziken,fire,fighting,257.png,1.9,52.0,Blaze Pokémon,blaze | speed-boost,torchic | combusken | blaziken,fairy | flying | ground | psychic | rock | water
+258,mudkip,water,,258.png,0.4,7.6,Mud Fish Pokémon,damp | torrent,mudkip | marshtomp | swampert,electric | grass
+259,marshtomp,water,ground,259.png,0.7,28.0,Mud Fish Pokémon,damp | torrent,mudkip | marshtomp | swampert,electric | grass | ice | water
+260,swampert,water,ground,260.png,1.5,81.9,Mud Fish Pokémon,damp | torrent,mudkip | marshtomp | swampert,electric | grass | ice | water
+261,poochyena,dark,,261.png,0.5,13.6,Bite Pokémon,quick-feet | rattled | run-away,poochyena | mightyena,bug | fairy | fighting
+262,mightyena,dark,,262.png,1.0,37.0,Bite Pokémon,intimidate | moxie | quick-feet,poochyena | mightyena,bug | fairy | fighting
+263,zigzagoon,normal,,263.png,0.4,17.5,Tiny Raccoon Pokémon,gluttony | pickup | quick-feet,zigzagoon | linoone | obstagoon,fighting
+264,linoone,normal,,264.png,0.5,32.5,Rushing Pokémon,gluttony | pickup | quick-feet,zigzagoon | linoone | obstagoon,fighting
+265,wurmple,bug,,265.png,0.3,3.6,Worm Pokémon,run-away | shield-dust,wurmple | silcoon | beautifly | cascoon | dustox,fire | flying | rock
+266,silcoon,bug,,266.png,0.6,10.0,Cocoon Pokémon,shed-skin,wurmple | silcoon | beautifly | cascoon | dustox,fire | flying | rock
+267,beautifly,bug,flying,267.png,1.0,28.4,Butterfly Pokémon,rivalry | swarm,wurmple | silcoon | beautifly | cascoon | dustox,electric | fire | flying | ice | rock
+268,cascoon,bug,,268.png,0.7,11.5,Cocoon Pokémon,shed-skin,wurmple | silcoon | beautifly | cascoon | dustox,fire | flying | rock
+269,dustox,bug,poison,269.png,1.2,31.6,Poison Moth Pokémon,compound-eyes | shield-dust,wurmple | silcoon | beautifly | cascoon | dustox,fire | flying | ground | psychic | rock
+270,lotad,water,grass,270.png,0.5,2.6,Water Weed Pokémon,own-tempo | rain-dish | swift-swim,lotad | lombre | ludicolo,bug | electric | fire | flying | grass | ice | poison
+271,lombre,water,grass,271.png,1.2,32.5,Jolly Pokémon,own-tempo | rain-dish | swift-swim,lotad | lombre | ludicolo,bug | electric | fire | flying | grass | ice | poison
+272,ludicolo,water,grass,272.png,1.5,55.0,Carefree Pokémon,own-tempo | rain-dish | swift-swim,lotad | lombre | ludicolo,bug | electric | fire | flying | grass | ice | poison
+273,seedot,grass,,273.png,0.5,4.0,Acorn Pokémon,chlorophyll | early-bird | pickpocket,seedot | nuzleaf | shiftry,bug | fire | flying | ice | poison
+274,nuzleaf,grass,dark,274.png,1.0,28.0,Wily Pokémon,chlorophyll | early-bird | pickpocket,seedot | nuzleaf | shiftry,bug | fairy | fighting | fire | flying | ice | poison
+275,shiftry,grass,dark,275.png,1.3,59.6,Wicked Pokémon,chlorophyll | pickpocket | wind-rider,seedot | nuzleaf | shiftry,bug | fairy | fighting | fire | flying | ice | poison
+276,taillow,normal,flying,276.png,0.3,2.3,Tiny Swallow Pokémon,guts | scrappy,taillow | swellow,electric | fighting | ice | rock
+277,swellow,normal,flying,277.png,0.7,19.8,Swallow Pokémon,guts | scrappy,taillow | swellow,electric | fighting | ice | rock
+278,wingull,water,flying,278.png,0.6,9.5,Seagull Pokémon,hydration | keen-eye | rain-dish,wingull | pelipper,electric | grass | ice | rock
+279,pelipper,water,flying,279.png,1.2,28.0,Water Bird Pokémon,drizzle | keen-eye | rain-dish,wingull | pelipper,electric | grass | ice | rock
+280,ralts,psychic,fairy,280.png,0.4,6.6,Feeling Pokémon,synchronize | telepathy | trace,ralts | kirlia | gardevoir | gallade,bug | dark | ghost | poison | steel
+281,kirlia,psychic,fairy,281.png,0.8,20.2,Emotion Pokémon,synchronize | telepathy | trace,ralts | kirlia | gardevoir | gallade,bug | dark | ghost | poison | steel
+282,gardevoir,psychic,fairy,282.png,1.6,48.4,Embrace Pokémon,synchronize | telepathy | trace,ralts | kirlia | gardevoir | gallade,bug | dark | ghost | poison | steel
+283,surskit,bug,water,283.png,0.5,1.7,Pond Skater Pokémon,rain-dish | swift-swim,surskit | masquerain,electric | fire | flying | grass | rock
+284,masquerain,bug,flying,284.png,0.8,3.6,Eyeball Pokémon,intimidate | unnerve,surskit | masquerain,electric | fire | flying | ice | rock
+285,shroomish,grass,,285.png,0.4,4.5,Mushroom Pokémon,effect-spore | poison-heal | quick-feet,shroomish | breloom,bug | fire | flying | ice | poison
+286,breloom,grass,fighting,286.png,1.2,39.2,Mushroom Pokémon,effect-spore | poison-heal | technician,shroomish | breloom,bug | fairy | fire | flying | ice | poison | psychic
+287,slakoth,normal,,287.png,0.8,24.0,Slacker Pokémon,truant,slakoth | vigoroth | slaking,fighting
+288,vigoroth,normal,,288.png,1.4,46.5,Wild Monkey Pokémon,vital-spirit,slakoth | vigoroth | slaking,fighting
+289,slaking,normal,,289.png,2.0,130.5,Lazy Pokémon,truant,slakoth | vigoroth | slaking,fighting
+290,nincada,bug,ground,290.png,0.5,5.5,Trainee Pokémon,compound-eyes | run-away,nincada | ninjask | shedinja,fire | flying | grass | ice | rock | water
+291,ninjask,bug,flying,291.png,0.8,12.0,Ninja Pokémon,infiltrator | speed-boost,nincada | ninjask | shedinja,electric | fire | flying | ice | rock
+292,shedinja,bug,ghost,292.png,0.8,1.2,Shed Pokémon,wonder-guard,nincada | ninjask | shedinja,dark | fire | flying | ghost | rock
+293,whismur,normal,,293.png,0.6,16.3,Whisper Pokémon,rattled | soundproof,whismur | loudred | exploud,fighting
+294,loudred,normal,,294.png,1.0,40.5,Big Voice Pokémon,scrappy | soundproof,whismur | loudred | exploud,fighting
+295,exploud,normal,,295.png,1.5,84.0,Loud Noise Pokémon,scrappy | soundproof,whismur | loudred | exploud,fighting
+296,makuhita,fighting,,296.png,1.0,86.4,Guts Pokémon,guts | sheer-force | thick-fat,makuhita | hariyama,fairy | flying | psychic
+297,hariyama,fighting,,297.png,2.3,253.8,Arm Thrust Pokémon,guts | sheer-force | thick-fat,makuhita | hariyama,fairy | flying | psychic
+298,azurill,normal,fairy,298.png,0.2,2.0,Polka Dot Pokémon,huge-power | sap-sipper | thick-fat,azurill | marill | azumarill,fighting | poison | steel
+299,nosepass,rock,,299.png,1.0,97.0,Compass Pokémon,magnet-pull | sand-force | sturdy,nosepass | probopass,fighting | grass | ground | steel | water
+300,skitty,normal,,300.png,0.6,11.0,Kitten Pokémon,cute-charm | normalize | wonder-skin,skitty | delcatty,fighting
+301,delcatty,normal,,301.png,1.1,32.6,Prim Pokémon,cute-charm | normalize | wonder-skin,skitty | delcatty,fighting
+302,sableye,dark,ghost,302.png,0.5,11.0,Darkness Pokémon,keen-eye | prankster | stall,sableye,bug | dark | fairy | fighting | ghost
+303,mawile,steel,fairy,303.png,0.6,11.5,Deceiver Pokémon,hyper-cutter | intimidate | sheer-force,mawile,fighting | fire | ground | poison | steel
+304,aron,steel,rock,304.png,0.4,60.0,Iron Armor Pokémon,heavy-metal | rock-head | sturdy,aron | lairon | aggron,fighting | fire | grass | ground | steel | water
+305,lairon,steel,rock,305.png,0.9,120.0,Iron Armor Pokémon,heavy-metal | rock-head | sturdy,aron | lairon | aggron,fighting | fire | grass | ground | steel | water
+306,aggron,steel,rock,306.png,2.1,360.0,Iron Armor Pokémon,heavy-metal | rock-head | sturdy,aron | lairon | aggron,fighting | fire | grass | ground | steel | water
+307,meditite,fighting,psychic,307.png,0.6,11.2,Meditate Pokémon,pure-power | telepathy,meditite | medicham,bug | dark | fairy | flying | ghost | psychic
+308,medicham,fighting,psychic,308.png,1.3,31.5,Meditate Pokémon,pure-power | telepathy,meditite | medicham,bug | dark | fairy | flying | ghost | psychic
+309,electrike,electric,,309.png,0.6,15.2,Lightning Pokémon,lightning-rod | minus | static,electrike | manectric,ground
+310,manectric,electric,,310.png,1.5,40.2,Discharge Pokémon,lightning-rod | minus | static,electrike | manectric,ground
+311,plusle,electric,,311.png,0.4,4.2,Cheering Pokémon,lightning-rod | plus,plusle,ground
+312,minun,electric,,312.png,0.4,4.2,Cheering Pokémon,minus | volt-absorb,minun,ground
+313,volbeat,bug,,313.png,0.7,17.7,Firefly Pokémon,illuminate | prankster | swarm,volbeat,fire | flying | rock
+314,illumise,bug,,314.png,0.6,17.7,Firefly Pokémon,oblivious | prankster | tinted-lens,illumise,fire | flying | rock
+315,roselia,grass,poison,315.png,0.3,2.0,Thorn Pokémon,leaf-guard | natural-cure | poison-point,budew | roselia | roserade,bug | fire | flying | ground | ice | poison | psychic
+316,gulpin,poison,,316.png,0.4,10.3,Stomach Pokémon,gluttony | liquid-ooze | sticky-hold,gulpin | swalot,ground | psychic
+317,swalot,poison,,317.png,1.7,80.0,Poison Bag Pokémon,gluttony | liquid-ooze | sticky-hold,gulpin | swalot,ground | psychic
+318,carvanha,water,dark,318.png,0.8,20.8,Savage Pokémon,rough-skin | speed-boost,carvanha | sharpedo,bug | electric | fairy | fighting | grass
+319,sharpedo,water,dark,319.png,1.8,88.8,Brutal Pokémon,rough-skin | speed-boost,carvanha | sharpedo,bug | electric | fairy | fighting | grass
+320,wailmer,water,,320.png,2.0,130.0,Ball Whale Pokémon,oblivious | pressure | water-veil,wailmer | wailord,electric | grass
+321,wailord,water,,321.png,14.5,398.0,Float Whale Pokémon,oblivious | pressure | water-veil,wailmer | wailord,electric | grass
+322,numel,fire,ground,322.png,0.7,24.0,Numb Pokémon,oblivious | own-tempo | simple,numel | camerupt,grass | ground | ice | rock | water
+323,camerupt,fire,ground,323.png,1.9,220.0,Eruption Pokémon,anger-point | magma-armor | solid-rock,numel | camerupt,grass | ground | ice | rock | water
+324,torkoal,fire,,324.png,0.5,80.4,Coal Pokémon,drought | shell-armor | white-smoke,torkoal,ground | rock | water
+325,spoink,psychic,,325.png,0.7,30.6,Bounce Pokémon,gluttony | own-tempo | thick-fat,spoink | grumpig,bug | dark | ghost
+326,grumpig,psychic,,326.png,0.9,71.5,Manipulate Pokémon,gluttony | own-tempo | thick-fat,spoink | grumpig,bug | dark | ghost
+327,spinda,normal,,327.png,1.1,5.0,Spot Panda Pokémon,contrary | own-tempo | tangled-feet,spinda,fighting
+328,trapinch,ground,,328.png,0.7,15.0,Ant Pit Pokémon,arena-trap | hyper-cutter | sheer-force,trapinch | vibrava | flygon,grass | ice | water
+329,vibrava,ground,dragon,329.png,1.1,15.3,Vibration Pokémon,levitate,trapinch | vibrava | flygon,dragon | fairy | grass | ice | water
+330,flygon,ground,dragon,330.png,2.0,82.0,Mystic Pokémon,levitate,trapinch | vibrava | flygon,dragon | fairy | grass | ice | water
+331,cacnea,grass,,331.png,0.4,51.3,Cactus Pokémon,sand-veil | water-absorb,cacnea | cacturne,bug | fire | flying | ice | poison
+332,cacturne,grass,dark,332.png,1.3,77.4,Scarecrow Pokémon,sand-veil | water-absorb,cacnea | cacturne,bug | fairy | fighting | fire | flying | ice | poison
+333,swablu,normal,flying,333.png,0.4,1.2,Cotton Bird Pokémon,cloud-nine | natural-cure,swablu | altaria,electric | fighting | ice | rock
+334,altaria,dragon,flying,334.png,1.1,20.6,Humming Pokémon,cloud-nine | natural-cure,swablu | altaria,dragon | electric | fairy | ice | rock
+335,zangoose,normal,,335.png,1.3,40.3,Cat Ferret Pokémon,immunity | toxic-boost,zangoose,fighting
+336,seviper,poison,,336.png,2.7,52.5,Fang Snake Pokémon,infiltrator | shed-skin,seviper,ground | psychic
+337,lunatone,rock,psychic,337.png,1.0,168.0,Meteorite Pokémon,levitate,lunatone,bug | dark | fighting | ghost | grass | ground | steel | water
+338,solrock,rock,psychic,338.png,1.2,154.0,Meteorite Pokémon,levitate,solrock,bug | dark | fighting | ghost | grass | ground | steel | water
+339,barboach,water,ground,339.png,0.4,1.9,Whiskers Pokémon,anticipation | hydration | oblivious,barboach | whiscash,electric | grass | ice | water
+340,whiscash,water,ground,340.png,0.9,23.6,Whiskers Pokémon,anticipation | hydration | oblivious,barboach | whiscash,electric | grass | ice | water
+341,corphish,water,,341.png,0.6,11.5,Ruffian Pokémon,adaptability | hyper-cutter | shell-armor,corphish | crawdaunt,electric | grass
+342,crawdaunt,water,dark,342.png,1.1,32.8,Rogue Pokémon,adaptability | hyper-cutter | shell-armor,corphish | crawdaunt,bug | electric | fairy | fighting | grass
+343,baltoy,ground,psychic,343.png,0.5,21.5,Clay Doll Pokémon,levitate,baltoy | claydol,bug | dark | ghost | grass | ice | water
+344,claydol,ground,psychic,344.png,1.5,108.0,Clay Doll Pokémon,levitate,baltoy | claydol,bug | dark | ghost | grass | ice | water
+345,lileep,rock,grass,345.png,1.0,23.8,Sea Lily Pokémon,storm-drain | suction-cups,lileep | cradily,bug | fighting | fire | flying | grass | ground | ice | poison | steel | water
+346,cradily,rock,grass,346.png,1.5,60.4,Barnacle Pokémon,storm-drain | suction-cups,lileep | cradily,bug | fighting | fire | flying | grass | ground | ice | poison | steel | water
+347,anorith,rock,bug,347.png,0.7,12.5,Old Shrimp Pokémon,battle-armor | swift-swim,anorith | armaldo,fighting | fire | flying | grass | ground | rock | steel | water
+348,armaldo,rock,bug,348.png,1.5,68.2,Plate Pokémon,battle-armor | swift-swim,anorith | armaldo,fighting | fire | flying | grass | ground | rock | steel | water
+349,feebas,water,,349.png,0.6,7.4,Fish Pokémon,adaptability | oblivious | swift-swim,feebas | milotic,electric | grass
+350,milotic,water,,350.png,6.2,162.0,Tender Pokémon,competitive | cute-charm | marvel-scale,feebas | milotic,electric | grass
+351,castform,normal,,351.png,0.3,0.8,Weather Pokémon,forecast,castform,fighting
+352,kecleon,normal,,352.png,1.0,22.0,Color Swap Pokémon,color-change | protean,kecleon,fighting
+353,shuppet,ghost,,353.png,0.6,2.3,Puppet Pokémon,cursed-body | frisk | insomnia,shuppet | banette,dark | ghost
+354,banette,ghost,,354.png,1.1,12.5,Marionette Pokémon,cursed-body | frisk | insomnia,shuppet | banette,dark | ghost
+355,duskull,ghost,,355.png,0.8,15.0,Requiem Pokémon,frisk | levitate,duskull | dusclops | dusknoir,dark | ghost
+356,dusclops,ghost,,356.png,1.6,30.6,Beckon Pokémon,frisk | pressure,duskull | dusclops | dusknoir,dark | ghost
+357,tropius,grass,flying,357.png,2.0,100.0,Fruit Pokémon,chlorophyll | harvest | solar-power,tropius,bug | electric | fire | flying | ice | poison | rock
+358,chimecho,psychic,,358.png,0.6,1.0,Wind Chime Pokémon,levitate,chingling | chimecho,bug | dark | ghost
+359,absol,dark,,359.png,1.2,47.0,Disaster Pokémon,justified | pressure | super-luck,absol,bug | fairy | fighting
+360,wynaut,psychic,,360.png,0.6,14.0,Bright Pokémon,shadow-tag | telepathy,wynaut | wobbuffet,bug | dark | ghost
+361,snorunt,ice,,361.png,0.7,16.8,Snow Hat Pokémon,ice-body | inner-focus | moody,snorunt | glalie | froslass,fighting | fire | rock | steel
+362,glalie,ice,,362.png,1.5,256.5,Face Pokémon,ice-body | inner-focus | moody,snorunt | glalie | froslass,fighting | fire | rock | steel
+363,spheal,ice,water,363.png,0.8,39.5,Clap Pokémon,ice-body | oblivious | thick-fat,spheal | sealeo | walrein,electric | fighting | fire | grass | rock | steel
+364,sealeo,ice,water,364.png,1.1,87.6,Ball Roll Pokémon,ice-body | oblivious | thick-fat,spheal | sealeo | walrein,electric | fighting | fire | grass | rock | steel
+365,walrein,ice,water,365.png,1.4,150.6,Ice Break Pokémon,ice-body | oblivious | thick-fat,spheal | sealeo | walrein,electric | fighting | fire | grass | rock | steel
+366,clamperl,water,,366.png,0.4,52.5,Bivalve Pokémon,rattled | shell-armor,clamperl | huntail | gorebyss,electric | grass
+367,huntail,water,,367.png,1.7,27.0,Deep Sea Pokémon,swift-swim | water-veil,clamperl | huntail | gorebyss,electric | grass
+368,gorebyss,water,,368.png,1.8,22.6,South Sea Pokémon,hydration | swift-swim,clamperl | huntail | gorebyss,electric | grass
+369,relicanth,water,rock,369.png,1.0,23.4,Longevity Pokémon,rock-head | sturdy | swift-swim,relicanth,electric | fighting | grass | ground | steel | water
+370,luvdisc,water,,370.png,0.6,8.7,Rendezvous Pokémon,hydration | swift-swim,luvdisc,electric | grass
+371,bagon,dragon,,371.png,0.6,42.1,Rock Head Pokémon,rock-head | sheer-force,bagon | shelgon | salamence,dragon | fairy | ice
+372,shelgon,dragon,,372.png,1.1,110.5,Endurance Pokémon,overcoat | rock-head,bagon | shelgon | salamence,dragon | fairy | ice
+373,salamence,dragon,flying,373.png,1.5,102.6,Dragon Pokémon,intimidate | moxie,bagon | shelgon | salamence,dragon | electric | fairy | ice | rock
+374,beldum,steel,psychic,374.png,0.6,95.2,Iron Ball Pokémon,clear-body | light-metal,beldum | metang | metagross,bug | dark | fighting | fire | ghost | ground
+375,metang,steel,psychic,375.png,1.2,202.5,Iron Claw Pokémon,clear-body | light-metal,beldum | metang | metagross,bug | dark | fighting | fire | ghost | ground
+376,metagross,steel,psychic,376.png,1.6,550.0,Iron Leg Pokémon,clear-body | light-metal,beldum | metang | metagross,bug | dark | fighting | fire | ghost | ground
+377,regirock,rock,,377.png,1.7,230.0,Rock Peak Pokémon,clear-body | sturdy,regirock,fighting | grass | ground | steel | water
+378,regice,ice,,378.png,1.8,175.0,Iceberg Pokémon,clear-body | ice-body,regice,fighting | fire | rock | steel
+379,registeel,steel,,379.png,1.9,205.0,Iron Pokémon,clear-body | light-metal,registeel,fighting | fire | ground
+380,latias,dragon,psychic,380.png,1.4,40.0,Eon Pokémon,levitate,latias,bug | dark | dragon | fairy | ghost | ice
+381,latios,dragon,psychic,381.png,2.0,60.0,Eon Pokémon,levitate,latios,bug | dark | dragon | fairy | ghost | ice
+382,kyogre,water,,382.png,4.5,352.0,Sea Basin Pokémon,drizzle,kyogre,electric | grass
+383,groudon,ground,,383.png,3.5,950.0,Continent Pokémon,drought,groudon,grass | ice | water
+384,rayquaza,dragon,flying,384.png,7.0,206.5,Sky High Pokémon,air-lock,rayquaza,dragon | electric | fairy | ice | rock
+385,jirachi,steel,psychic,385.png,0.3,1.1,Wish Pokémon,serene-grace,jirachi,bug | dark | fighting | fire | ghost | ground
+386,deoxys-normal,psychic,,386.png,1.7,60.8,DNA Pokémon,pressure,deoxys,bug | dark | ghost
+387,turtwig,grass,,387.png,0.4,10.2,Tiny Leaf Pokémon,overgrow | shell-armor,turtwig | grotle | torterra,bug | fire | flying | ice | poison
+388,grotle,grass,,388.png,1.1,97.0,Grove Pokémon,overgrow | shell-armor,turtwig | grotle | torterra,bug | fire | flying | ice | poison
+389,torterra,grass,ground,389.png,2.2,310.0,Continent Pokémon,overgrow | shell-armor,turtwig | grotle | torterra,bug | fire | flying | grass | ice | poison | water
+390,chimchar,fire,,390.png,0.5,6.2,Chimp Pokémon,blaze | iron-fist,chimchar | monferno | infernape,ground | rock | water
+391,monferno,fire,fighting,391.png,0.9,22.0,Playful Pokémon,blaze | iron-fist,chimchar | monferno | infernape,fairy | flying | ground | psychic | rock | water
+392,infernape,fire,fighting,392.png,1.2,55.0,Flame Pokémon,blaze | iron-fist,chimchar | monferno | infernape,fairy | flying | ground | psychic | rock | water
+393,piplup,water,,393.png,0.4,5.2,Penguin Pokémon,competitive | torrent,piplup | prinplup | empoleon,electric | grass
+394,prinplup,water,,394.png,0.8,23.0,Penguin Pokémon,competitive | torrent,piplup | prinplup | empoleon,electric | grass
+395,empoleon,water,steel,395.png,1.7,84.5,Emperor Pokémon,competitive | torrent,piplup | prinplup | empoleon,electric | fighting | fire | grass | ground
+396,starly,normal,flying,396.png,0.3,2.0,Starling Pokémon,keen-eye | reckless,starly | staravia | staraptor,electric | fighting | ice | rock
+397,staravia,normal,flying,397.png,0.6,15.5,Starling Pokémon,intimidate | reckless,starly | staravia | staraptor,electric | fighting | ice | rock
+398,staraptor,normal,flying,398.png,1.2,24.9,Predator Pokémon,intimidate | reckless,starly | staravia | staraptor,electric | fighting | ice | rock
+399,bidoof,normal,,399.png,0.5,20.0,Plump Mouse Pokémon,moody | simple | unaware,bidoof | bibarel,fighting
+400,bibarel,normal,water,400.png,1.0,31.5,Beaver Pokémon,moody | simple | unaware,bidoof | bibarel,electric | fighting | grass
+401,kricketot,bug,,401.png,0.3,2.2,Cricket Pokémon,run-away | shed-skin,kricketot | kricketune,fire | flying | rock
+402,kricketune,bug,,402.png,1.0,25.5,Cricket Pokémon,swarm | technician,kricketot | kricketune,fire | flying | rock
+403,shinx,electric,,403.png,0.5,9.5,Flash Pokémon,guts | intimidate | rivalry,shinx | luxio | luxray,ground
+404,luxio,electric,,404.png,0.9,30.5,Spark Pokémon,guts | intimidate | rivalry,shinx | luxio | luxray,ground
+405,luxray,electric,,405.png,1.4,42.0,Gleam Eyes Pokémon,guts | intimidate | rivalry,shinx | luxio | luxray,ground
+406,budew,grass,poison,406.png,0.2,1.2,Bud Pokémon,leaf-guard | natural-cure | poison-point,budew | roselia | roserade,bug | fire | flying | ground | ice | poison | psychic
+407,roserade,grass,poison,407.png,0.9,14.5,Bouquet Pokémon,natural-cure | poison-point | technician,budew | roselia | roserade,bug | fire | flying | ground | ice | poison | psychic
+408,cranidos,rock,,408.png,0.9,31.5,Head Butt Pokémon,mold-breaker | sheer-force,cranidos | rampardos,fighting | grass | ground | steel | water
+409,rampardos,rock,,409.png,1.6,102.5,Head Butt Pokémon,mold-breaker | sheer-force,cranidos | rampardos,fighting | grass | ground | steel | water
+410,shieldon,rock,steel,410.png,0.5,57.0,Shield Pokémon,soundproof | sturdy,shieldon | bastiodon,fighting | fire | grass | ground | steel | water
+411,bastiodon,rock,steel,411.png,1.3,149.5,Shield Pokémon,soundproof | sturdy,shieldon | bastiodon,fighting | fire | grass | ground | steel | water
+412,burmy,bug,,412.png,0.2,3.4,Bagworm Pokémon,overcoat | shed-skin,burmy | wormadam | mothim,fire | flying | rock
+413,wormadam-plant,bug,grass,413.png,0.5,6.5,Bagworm Pokémon,anticipation | overcoat,burmy | wormadam | mothim,bug | fire | flying | ice | poison | rock
+414,mothim,bug,flying,414.png,0.9,23.3,Moth Pokémon,swarm | tinted-lens,burmy | wormadam | mothim,electric | fire | flying | ice | rock
+415,combee,bug,flying,415.png,0.3,5.5,Tiny Bee Pokémon,honey-gather | hustle,combee | vespiquen,electric | fire | flying | ice | rock
+416,vespiquen,bug,flying,416.png,1.2,38.5,Beehive Pokémon,pressure | unnerve,combee | vespiquen,electric | fire | flying | ice | rock
+417,pachirisu,electric,,417.png,0.4,3.9,EleSquirrel Pokémon,pickup | run-away | volt-absorb,pachirisu,ground
+418,buizel,water,,418.png,0.7,29.5,Sea Weasel Pokémon,swift-swim | water-veil,buizel | floatzel,electric | grass
+419,floatzel,water,,419.png,1.1,33.5,Sea Weasel Pokémon,swift-swim | water-veil,buizel | floatzel,electric | grass
+420,cherubi,grass,,420.png,0.4,3.3,Cherry Pokémon,chlorophyll,cherubi | cherrim,bug | fire | flying | ice | poison
+421,cherrim,grass,,421.png,0.5,9.3,Blossom Pokémon,flower-gift,cherubi | cherrim,bug | fire | flying | ice | poison
+422,shellos,water,,422.png,0.3,6.3,Sea Slug Pokémon,sand-force | sticky-hold | storm-drain,shellos | gastrodon,electric | grass
+423,gastrodon,water,ground,423.png,0.9,29.9,Sea Slug Pokémon,sand-force | sticky-hold | storm-drain,shellos | gastrodon,electric | grass | ice | water
+424,ambipom,normal,,424.png,1.2,20.3,Long Tail Pokémon,pickup | skill-link | technician,aipom | ambipom,fighting
+425,drifloon,ghost,flying,425.png,0.4,1.2,Balloon Pokémon,aftermath | flare-boost | unburden,drifloon | drifblim,dark | electric | ghost | ice | rock
+426,drifblim,ghost,flying,426.png,1.2,15.0,Blimp Pokémon,aftermath | flare-boost | unburden,drifloon | drifblim,dark | electric | ghost | ice | rock
+427,buneary,normal,,427.png,0.4,5.5,Rabbit Pokémon,klutz | limber | run-away,buneary | lopunny,fighting
+428,lopunny,normal,,428.png,1.2,33.3,Rabbit Pokémon,cute-charm | klutz | limber,buneary | lopunny,fighting
+429,mismagius,ghost,,429.png,0.9,4.4,Magical Pokémon,levitate,misdreavus | mismagius,dark | ghost
+430,honchkrow,dark,flying,430.png,0.9,27.3,Big Boss Pokémon,insomnia | moxie | super-luck,murkrow | honchkrow,bug | electric | fairy | fighting | ice | rock
+431,glameow,normal,,431.png,0.5,3.9,Catty Pokémon,keen-eye | limber | own-tempo,glameow | purugly,fighting
+432,purugly,normal,,432.png,1.0,43.8,Tiger Cat Pokémon,defiant | own-tempo | thick-fat,glameow | purugly,fighting
+433,chingling,psychic,,433.png,0.2,0.6,Bell Pokémon,levitate,chingling | chimecho,bug | dark | ghost
+434,stunky,poison,dark,434.png,0.4,19.2,Skunk Pokémon,aftermath | keen-eye | stench,stunky | skuntank,bug | fairy | fighting | ground | psychic
+435,skuntank,poison,dark,435.png,1.0,38.0,Skunk Pokémon,aftermath | keen-eye | stench,stunky | skuntank,bug | fairy | fighting | ground | psychic
+436,bronzor,steel,psychic,436.png,0.5,60.5,Bronze Pokémon,heatproof | heavy-metal | levitate,bronzor | bronzong,bug | dark | fighting | fire | ghost | ground
+437,bronzong,steel,psychic,437.png,1.3,187.0,Bronze Bell Pokémon,heatproof | heavy-metal | levitate,bronzor | bronzong,bug | dark | fighting | fire | ghost | ground
+438,bonsly,rock,,438.png,0.5,15.0,Bonsai Pokémon,rattled | rock-head | sturdy,bonsly | sudowoodo,fighting | grass | ground | steel | water
+439,mime-jr,psychic,fairy,439.png,0.6,13.0,Mime Pokémon,filter | soundproof | technician,mime-jr | mr-mime | mr-rime,bug | dark | ghost | poison | steel
+440,happiny,normal,,440.png,0.6,24.4,Playhouse Pokémon,friend-guard | natural-cure | serene-grace,happiny | chansey | blissey,fighting
+441,chatot,normal,flying,441.png,0.5,1.9,Music Note Pokémon,big-pecks | keen-eye | tangled-feet,chatot,electric | fighting | ice | rock
+442,spiritomb,ghost,dark,442.png,1.0,108.0,Forbidden Pokémon,infiltrator | pressure,spiritomb,bug | dark | fairy | fighting | ghost
+443,gible,dragon,ground,443.png,0.7,20.5,Land Shark Pokémon,rough-skin | sand-veil,gible | gabite | garchomp,dragon | fairy | grass | ice | water
+444,gabite,dragon,ground,444.png,1.4,56.0,Cave Pokémon,rough-skin | sand-veil,gible | gabite | garchomp,dragon | fairy | grass | ice | water
+445,garchomp,dragon,ground,445.png,1.9,95.0,Mach Pokémon,rough-skin | sand-veil,gible | gabite | garchomp,dragon | fairy | grass | ice | water
+446,munchlax,normal,,446.png,0.6,105.0,Big Eater Pokémon,gluttony | pickup | thick-fat,munchlax | snorlax,fighting
+447,riolu,fighting,,447.png,0.7,20.2,Emanation Pokémon,inner-focus | prankster | steadfast,riolu | lucario,fairy | flying | psychic
+448,lucario,fighting,steel,448.png,1.2,54.0,Aura Pokémon,inner-focus | justified | steadfast,riolu | lucario,fairy | fighting | fire | flying | ground | psychic
+449,hippopotas,ground,,449.png,0.8,49.5,Hippo Pokémon,sand-force | sand-stream,hippopotas | hippowdon,grass | ice | water
+450,hippowdon,ground,,450.png,2.0,300.0,Heavyweight Pokémon,sand-force | sand-stream,hippopotas | hippowdon,grass | ice | water
+451,skorupi,poison,bug,451.png,0.8,12.0,Scorpion Pokémon,battle-armor | keen-eye | sniper,skorupi | drapion,fire | flying | ground | psychic | rock
+452,drapion,poison,dark,452.png,1.3,61.5,Ogre Scorpion Pokémon,battle-armor | keen-eye | sniper,skorupi | drapion,bug | fairy | fighting | ground | psychic
+453,croagunk,poison,fighting,453.png,0.7,23.0,Toxic Mouth Pokémon,anticipation | dry-skin | poison-touch,croagunk | toxicroak,fairy | flying | ground | psychic
+454,toxicroak,poison,fighting,454.png,1.3,44.4,Toxic Mouth Pokémon,anticipation | dry-skin | poison-touch,croagunk | toxicroak,fairy | flying | ground | psychic
+455,carnivine,grass,,455.png,1.4,27.0,Bug Catcher Pokémon,levitate,carnivine,bug | fire | flying | ice | poison
+456,finneon,water,,456.png,0.4,7.0,Wing Fish Pokémon,storm-drain | swift-swim | water-veil,finneon | lumineon,electric | grass
+457,lumineon,water,,457.png,1.2,24.0,Neon Pokémon,storm-drain | swift-swim | water-veil,finneon | lumineon,electric | grass
+458,mantyke,water,flying,458.png,1.0,65.0,Kite Pokémon,swift-swim | water-absorb | water-veil,mantyke | mantine,electric | grass | ice | rock
+459,snover,grass,ice,459.png,1.0,50.5,Frost Tree Pokémon,snow-warning | soundproof,snover | abomasnow,bug | fighting | fire | flying | ice | poison | rock | steel
+460,abomasnow,grass,ice,460.png,2.2,135.5,Frost Tree Pokémon,snow-warning | soundproof,snover | abomasnow,bug | fighting | fire | flying | ice | poison | rock | steel
+461,weavile,dark,ice,461.png,1.1,34.0,Sharp Claw Pokémon,pickpocket | pressure,sneasel | weavile | sneasler,bug | fairy | fighting | fire | rock | steel
+462,magnezone,electric,steel,462.png,1.2,180.0,Magnet Area Pokémon,analytic | magnet-pull | sturdy,magnemite | magneton | magnezone,fighting | fire | ground
+463,lickilicky,normal,,463.png,1.7,140.0,Licking Pokémon,cloud-nine | oblivious | own-tempo,lickitung | lickilicky,fighting
+464,rhyperior,ground,rock,464.png,2.4,282.8,Drill Pokémon,lightning-rod | reckless | solid-rock,rhyhorn | rhydon | rhyperior,fighting | grass | ground | ice | steel | water
+465,tangrowth,grass,,465.png,2.0,128.6,Vine Pokémon,chlorophyll | leaf-guard | regenerator,tangela | tangrowth,bug | fire | flying | ice | poison
+466,electivire,electric,,466.png,1.8,138.6,Thunderbolt Pokémon,motor-drive | vital-spirit,elekid | electabuzz | electivire,ground
+467,magmortar,fire,,467.png,1.6,68.0,Blast Pokémon,flame-body | vital-spirit,magby | magmar | magmortar,ground | rock | water
+468,togekiss,fairy,flying,468.png,1.5,38.0,Jubilee Pokémon,hustle | serene-grace | super-luck,togepi | togetic | togekiss,electric | ice | poison | rock | steel
+469,yanmega,bug,flying,469.png,1.9,51.5,Ogre Darner Pokémon,frisk | speed-boost | tinted-lens,yanma | yanmega,electric | fire | flying | ice | rock
+470,leafeon,grass,,470.png,1.0,25.5,Verdant Pokémon,chlorophyll | leaf-guard,eevee | vaporeon | jolteon | flareon | espeon | umbreon | leafeon | glaceon | sylveon,bug | fire | flying | ice | poison
+471,glaceon,ice,,471.png,0.8,25.9,Fresh Snow Pokémon,ice-body | snow-cloak,eevee | vaporeon | jolteon | flareon | espeon | umbreon | leafeon | glaceon | sylveon,fighting | fire | rock | steel
+472,gliscor,ground,flying,472.png,2.0,42.5,Fang Scorpion Pokémon,hyper-cutter | poison-heal | sand-veil,gligar | gliscor,electric | grass | ice | rock | water
+473,mamoswine,ice,ground,473.png,2.5,291.0,Twin Tusk Pokémon,oblivious | snow-cloak | thick-fat,swinub | piloswine | mamoswine,fighting | fire | grass | ice | rock | steel | water
+474,porygon-z,normal,,474.png,0.9,34.0,Virtual Pokémon,adaptability | analytic | download,porygon | porygon2 | porygon-z,fighting
+475,gallade,psychic,fighting,475.png,1.6,52.0,Blade Pokémon,justified | sharpness | steadfast,ralts | kirlia | gardevoir | gallade,bug | dark | fairy | flying | ghost | psychic
+476,probopass,rock,steel,476.png,1.4,340.0,Compass Pokémon,magnet-pull | sand-force | sturdy,nosepass | probopass,fighting | fire | grass | ground | steel | water
+477,dusknoir,ghost,,477.png,2.2,106.6,Gripper Pokémon,frisk | pressure,duskull | dusclops | dusknoir,dark | ghost
+478,froslass,ice,ghost,478.png,1.3,26.6,Snow Land Pokémon,cursed-body | snow-cloak,snorunt | glalie | froslass,dark | fighting | fire | ghost | rock | steel
+479,rotom,electric,ghost,479.png,0.3,0.3,Plasma Pokémon,levitate,rotom,dark | ghost | ground
+480,uxie,psychic,,480.png,0.3,0.3,Knowledge Pokémon,levitate,uxie,bug | dark | ghost
+481,mesprit,psychic,,481.png,0.3,0.3,Emotion Pokémon,levitate,mesprit,bug | dark | ghost
+482,azelf,psychic,,482.png,0.3,0.3,Willpower Pokémon,levitate,azelf,bug | dark | ghost
+483,dialga,steel,dragon,483.png,5.4,683.0,Temporal Pokémon,pressure | telepathy,dialga,dragon | fairy | fighting | fire | ground | ice
+484,palkia,water,dragon,484.png,4.2,336.0,Spatial Pokémon,pressure | telepathy,palkia,dragon | electric | fairy | grass | ice
+485,heatran,fire,steel,485.png,1.7,430.0,Lava Dome Pokémon,flame-body | flash-fire,heatran,fighting | fire | ground | rock | water
+486,regigigas,normal,,486.png,3.7,420.0,Colossal Pokémon,slow-start,regigigas,fighting
+487,giratina-altered,ghost,dragon,487.png,4.5,750.0,Renegade Pokémon,pressure | telepathy,giratina,dark | dragon | fairy | ghost | ice
+488,cresselia,psychic,,488.png,1.5,85.6,Lunar Pokémon,levitate,cresselia,bug | dark | ghost
+489,phione,water,,489.png,0.4,3.1,Sea Drifter Pokémon,hydration,phione | manaphy,electric | grass
+490,manaphy,water,,490.png,0.3,1.4,Seafaring Pokémon,hydration,phione | manaphy,electric | grass
+491,darkrai,dark,,491.png,1.5,50.5,Pitch-Black Pokémon,bad-dreams,darkrai,bug | fairy | fighting
+492,shaymin-land,grass,,492.png,0.2,2.1,Gratitude Pokémon,natural-cure,shaymin,bug | fire | flying | ice | poison
+493,arceus,normal,,493.png,3.2,320.0,Alpha Pokémon,multitype,arceus,fighting
+494,victini,psychic,fire,494.png,0.4,4.0,Victory Pokémon,victory-star,victini,bug | dark | ghost | ground | rock | water
+495,snivy,grass,,495.png,0.6,8.1,Grass Snake Pokémon,contrary | overgrow,snivy | servine | serperior,bug | fire | flying | ice | poison
+496,servine,grass,,496.png,0.8,16.0,Grass Snake Pokémon,contrary | overgrow,snivy | servine | serperior,bug | fire | flying | ice | poison
+497,serperior,grass,,497.png,3.3,63.0,Regal Pokémon,contrary | overgrow,snivy | servine | serperior,bug | fire | flying | ice | poison
+498,tepig,fire,,498.png,0.5,9.9,Fire Pig Pokémon,blaze | thick-fat,tepig | pignite | emboar,ground | rock | water
+499,pignite,fire,fighting,499.png,1.0,55.5,Fire Pig Pokémon,blaze | thick-fat,tepig | pignite | emboar,fairy | flying | ground | psychic | rock | water
+500,emboar,fire,fighting,500.png,1.6,150.0,Mega Fire Pig Pokémon,blaze | reckless,tepig | pignite | emboar,fairy | flying | ground | psychic | rock | water
+501,oshawott,water,,501.png,0.5,5.9,Sea Otter Pokémon,shell-armor | torrent,oshawott | dewott | samurott,electric | grass
+502,dewott,water,,502.png,0.8,24.5,Discipline Pokémon,shell-armor | torrent,oshawott | dewott | samurott,electric | grass
+503,samurott,water,,503.png,1.5,94.6,Formidable Pokémon,shell-armor | torrent,oshawott | dewott | samurott,electric | grass
+504,patrat,normal,,504.png,0.5,11.6,Scout Pokémon,analytic | keen-eye | run-away,patrat | watchog,fighting
+505,watchog,normal,,505.png,1.1,27.0,Lookout Pokémon,analytic | illuminate | keen-eye,patrat | watchog,fighting
+506,lillipup,normal,,506.png,0.4,4.1,Puppy Pokémon,pickup | run-away | vital-spirit,lillipup | herdier | stoutland,fighting
+507,herdier,normal,,507.png,0.9,14.7,Loyal Dog Pokémon,intimidate | sand-rush | scrappy,lillipup | herdier | stoutland,fighting
+508,stoutland,normal,,508.png,1.2,61.0,Big-Hearted Pokémon,intimidate | sand-rush | scrappy,lillipup | herdier | stoutland,fighting
+509,purrloin,dark,,509.png,0.4,10.1,Devious Pokémon,limber | prankster | unburden,purrloin | liepard,bug | fairy | fighting
+510,liepard,dark,,510.png,1.1,37.5,Cruel Pokémon,limber | prankster | unburden,purrloin | liepard,bug | fairy | fighting
+511,pansage,grass,,511.png,0.6,10.5,Grass Monkey Pokémon,gluttony | overgrow,pansage | simisage,bug | fire | flying | ice | poison
+512,simisage,grass,,512.png,1.1,30.5,Thorn Monkey Pokémon,gluttony | overgrow,pansage | simisage,bug | fire | flying | ice | poison
+513,pansear,fire,,513.png,0.6,11.0,High Temp Pokémon,blaze | gluttony,pansear | simisear,ground | rock | water
+514,simisear,fire,,514.png,1.0,28.0,Ember Pokémon,blaze | gluttony,pansear | simisear,ground | rock | water
+515,panpour,water,,515.png,0.6,13.5,Spray Pokémon,gluttony | torrent,panpour | simipour,electric | grass
+516,simipour,water,,516.png,1.0,29.0,Geyser Pokémon,gluttony | torrent,panpour | simipour,electric | grass
+517,munna,psychic,,517.png,0.6,23.3,Dream Eater Pokémon,forewarn | synchronize | telepathy,munna | musharna,bug | dark | ghost
+518,musharna,psychic,,518.png,1.1,60.5,Drowsing Pokémon,forewarn | synchronize | telepathy,munna | musharna,bug | dark | ghost
+519,pidove,normal,flying,519.png,0.3,2.1,Tiny Pigeon Pokémon,big-pecks | rivalry | super-luck,pidove | tranquill | unfezant,electric | fighting | ice | rock
+520,tranquill,normal,flying,520.png,0.6,15.0,Wild Pigeon Pokémon,big-pecks | rivalry | super-luck,pidove | tranquill | unfezant,electric | fighting | ice | rock
+521,unfezant,normal,flying,521.png,1.2,29.0,Proud Pokémon,big-pecks | rivalry | super-luck,pidove | tranquill | unfezant,electric | fighting | ice | rock
+522,blitzle,electric,,522.png,0.8,29.8,Electrified Pokémon,lightning-rod | motor-drive | sap-sipper,blitzle | zebstrika,ground
+523,zebstrika,electric,,523.png,1.6,79.5,Thunderbolt Pokémon,lightning-rod | motor-drive | sap-sipper,blitzle | zebstrika,ground
+524,roggenrola,rock,,524.png,0.4,18.0,Mantle Pokémon,sand-force | sturdy | weak-armor,roggenrola | boldore | gigalith,fighting | grass | ground | steel | water
+525,boldore,rock,,525.png,0.9,102.0,Ore Pokémon,sand-force | sturdy | weak-armor,roggenrola | boldore | gigalith,fighting | grass | ground | steel | water
+526,gigalith,rock,,526.png,1.7,260.0,Compressed Pokémon,sand-force | sand-stream | sturdy,roggenrola | boldore | gigalith,fighting | grass | ground | steel | water
+527,woobat,psychic,flying,527.png,0.4,2.1,Bat Pokémon,klutz | simple | unaware,woobat | swoobat,bug | dark | electric | ghost | ice | rock
+528,swoobat,psychic,flying,528.png,0.9,10.5,Courting Pokémon,klutz | simple | unaware,woobat | swoobat,bug | dark | electric | ghost | ice | rock
+529,drilbur,ground,,529.png,0.3,8.5,Mole Pokémon,mold-breaker | sand-force | sand-rush,drilbur | excadrill,grass | ice | water
+530,excadrill,ground,steel,530.png,0.7,40.4,Subterrene Pokémon,mold-breaker | sand-force | sand-rush,drilbur | excadrill,fighting | fire | grass | ground | ice | water
+531,audino,normal,,531.png,1.1,31.0,Hearing Pokémon,healer | klutz | regenerator,audino,fighting
+532,timburr,fighting,,532.png,0.6,12.5,Muscular Pokémon,guts | iron-fist | sheer-force,timburr | gurdurr | conkeldurr,fairy | flying | psychic
+533,gurdurr,fighting,,533.png,1.2,40.0,Muscular Pokémon,guts | iron-fist | sheer-force,timburr | gurdurr | conkeldurr,fairy | flying | psychic
+534,conkeldurr,fighting,,534.png,1.4,87.0,Muscular Pokémon,guts | iron-fist | sheer-force,timburr | gurdurr | conkeldurr,fairy | flying | psychic
+535,tympole,water,,535.png,0.5,4.5,Tadpole Pokémon,hydration | swift-swim | water-absorb,tympole | palpitoad | seismitoad,electric | grass
+536,palpitoad,water,ground,536.png,0.8,17.0,Vibration Pokémon,hydration | swift-swim | water-absorb,tympole | palpitoad | seismitoad,electric | grass | ice | water
+537,seismitoad,water,ground,537.png,1.5,62.0,Vibration Pokémon,poison-touch | swift-swim | water-absorb,tympole | palpitoad | seismitoad,electric | grass | ice | water
+538,throh,fighting,,538.png,1.3,55.5,Judo Pokémon,guts | inner-focus | mold-breaker,throh,fairy | flying | psychic
+539,sawk,fighting,,539.png,1.4,51.0,Karate Pokémon,inner-focus | mold-breaker | sturdy,sawk,fairy | flying | psychic
+540,sewaddle,bug,grass,540.png,0.3,2.5,Sewing Pokémon,chlorophyll | overcoat | swarm,sewaddle | swadloon | leavanny,bug | fire | flying | ice | poison | rock
+541,swadloon,bug,grass,541.png,0.5,7.3,Leaf-Wrapped Pokémon,chlorophyll | leaf-guard | overcoat,sewaddle | swadloon | leavanny,bug | fire | flying | ice | poison | rock
+542,leavanny,bug,grass,542.png,1.2,20.5,Nurturing Pokémon,chlorophyll | overcoat | swarm,sewaddle | swadloon | leavanny,bug | fire | flying | ice | poison | rock
+543,venipede,bug,poison,543.png,0.4,5.3,Centipede Pokémon,poison-point | speed-boost | swarm,venipede | whirlipede | scolipede,fire | flying | ground | psychic | rock
+544,whirlipede,bug,poison,544.png,1.2,58.5,Curlipede Pokémon,poison-point | speed-boost | swarm,venipede | whirlipede | scolipede,fire | flying | ground | psychic | rock
+545,scolipede,bug,poison,545.png,2.5,200.5,Megapede Pokémon,poison-point | speed-boost | swarm,venipede | whirlipede | scolipede,fire | flying | ground | psychic | rock
+546,cottonee,grass,fairy,546.png,0.3,0.6,Cotton Puff Pokémon,chlorophyll | infiltrator | prankster,cottonee | whimsicott,bug | fire | flying | ice | poison | steel
+547,whimsicott,grass,fairy,547.png,0.7,6.6,Windveiled Pokémon,chlorophyll | infiltrator | prankster,cottonee | whimsicott,bug | fire | flying | ice | poison | steel
+548,petilil,grass,,548.png,0.5,6.6,Bulb Pokémon,chlorophyll | leaf-guard | own-tempo,petilil | lilligant,bug | fire | flying | ice | poison
+549,lilligant,grass,,549.png,1.1,16.3,Flowering Pokémon,chlorophyll | leaf-guard | own-tempo,petilil | lilligant,bug | fire | flying | ice | poison
+550,basculin-red-striped,water,,550.png,1.0,18.0,Hostile Pokémon,adaptability | mold-breaker | reckless,basculin | basculegion,electric | grass
+551,sandile,ground,dark,551.png,0.7,15.2,Desert Croc Pokémon,anger-point | intimidate | moxie,sandile | krokorok | krookodile,bug | fairy | fighting | grass | ice | water
+552,krokorok,ground,dark,552.png,1.0,33.4,Desert Croc Pokémon,anger-point | intimidate | moxie,sandile | krokorok | krookodile,bug | fairy | fighting | grass | ice | water
+553,krookodile,ground,dark,553.png,1.5,96.3,Intimidation Pokémon,anger-point | intimidate | moxie,sandile | krokorok | krookodile,bug | fairy | fighting | grass | ice | water
+554,darumaka,fire,,554.png,0.6,37.5,Zen Charm Pokémon,hustle | inner-focus,darumaka | darmanitan,ground | rock | water
+555,darmanitan-standard,fire,,555.png,1.3,92.9,Blazing Pokémon,sheer-force | zen-mode,darumaka | darmanitan,ground | rock | water
+556,maractus,grass,,556.png,1.0,28.0,Cactus Pokémon,chlorophyll | storm-drain | water-absorb,maractus,bug | fire | flying | ice | poison
+557,dwebble,bug,rock,557.png,0.3,14.5,Rock Inn Pokémon,shell-armor | sturdy | weak-armor,dwebble | crustle,fighting | fire | flying | grass | ground | rock | steel | water
+558,crustle,bug,rock,558.png,1.4,200.0,Stone Home Pokémon,shell-armor | sturdy | weak-armor,dwebble | crustle,fighting | fire | flying | grass | ground | rock | steel | water
+559,scraggy,dark,fighting,559.png,0.6,11.8,Shedding Pokémon,intimidate | moxie | shed-skin,scraggy | scrafty,bug | fairy | fighting | flying | psychic
+560,scrafty,dark,fighting,560.png,1.1,30.0,Hoodlum Pokémon,intimidate | moxie | shed-skin,scraggy | scrafty,bug | fairy | fighting | flying | psychic
+561,sigilyph,psychic,flying,561.png,1.4,14.0,Avianoid Pokémon,magic-guard | tinted-lens | wonder-skin,sigilyph,bug | dark | electric | ghost | ice | rock
+562,yamask,ghost,,562.png,0.5,1.5,Spirit Pokémon,mummy,yamask | cofagrigus | runerigus,dark | ghost
+563,cofagrigus,ghost,,563.png,1.7,76.5,Coffin Pokémon,mummy,yamask | cofagrigus | runerigus,dark | ghost
+564,tirtouga,water,rock,564.png,0.7,16.5,Prototurtle Pokémon,solid-rock | sturdy | swift-swim,tirtouga | carracosta,electric | fighting | grass | ground | steel | water
+565,carracosta,water,rock,565.png,1.2,81.0,Prototurtle Pokémon,solid-rock | sturdy | swift-swim,tirtouga | carracosta,electric | fighting | grass | ground | steel | water
+566,archen,rock,flying,566.png,0.5,9.5,First Bird Pokémon,defeatist,archen | archeops,electric | fighting | grass | ground | ice | rock | steel | water
+567,archeops,rock,flying,567.png,1.4,32.0,First Bird Pokémon,defeatist,archen | archeops,electric | fighting | grass | ground | ice | rock | steel | water
+568,trubbish,poison,,568.png,0.6,31.0,Trash Bag Pokémon,aftermath | stench | sticky-hold,trubbish | garbodor,ground | psychic
+569,garbodor,poison,,569.png,1.9,107.3,Trash Heap Pokémon,aftermath | stench | weak-armor,trubbish | garbodor,ground | psychic
+570,zorua,dark,,570.png,0.7,12.5,Tricky Fox Pokémon,illusion,zorua | zoroark,bug | fairy | fighting
+571,zoroark,dark,,571.png,1.6,81.1,Illusion Fox Pokémon,illusion,zorua | zoroark,bug | fairy | fighting
+572,minccino,normal,,572.png,0.4,5.8,Chinchilla Pokémon,cute-charm | skill-link | technician,minccino | cinccino,fighting
+573,cinccino,normal,,573.png,0.5,7.5,Scarf Pokémon,cute-charm | skill-link | technician,minccino | cinccino,fighting
+574,gothita,psychic,,574.png,0.4,5.8,Fixation Pokémon,competitive | frisk | shadow-tag,gothita | gothorita | gothitelle,bug | dark | ghost
+575,gothorita,psychic,,575.png,0.7,18.0,Manipulate Pokémon,competitive | frisk | shadow-tag,gothita | gothorita | gothitelle,bug | dark | ghost
+576,gothitelle,psychic,,576.png,1.5,44.0,Astral Body Pokémon,competitive | frisk | shadow-tag,gothita | gothorita | gothitelle,bug | dark | ghost
+577,solosis,psychic,,577.png,0.3,1.0,Cell Pokémon,magic-guard | overcoat | regenerator,solosis | duosion | reuniclus,bug | dark | ghost
+578,duosion,psychic,,578.png,0.6,8.0,Mitosis Pokémon,magic-guard | overcoat | regenerator,solosis | duosion | reuniclus,bug | dark | ghost
+579,reuniclus,psychic,,579.png,1.0,20.1,Multiplying Pokémon,magic-guard | overcoat | regenerator,solosis | duosion | reuniclus,bug | dark | ghost
+580,ducklett,water,flying,580.png,0.5,5.5,Water Bird Pokémon,big-pecks | hydration | keen-eye,ducklett | swanna,electric | grass | ice | rock
+581,swanna,water,flying,581.png,1.3,24.2,White Bird Pokémon,big-pecks | hydration | keen-eye,ducklett | swanna,electric | grass | ice | rock
+582,vanillite,ice,,582.png,0.4,5.7,Fresh Snow Pokémon,ice-body | snow-cloak | weak-armor,vanillite | vanillish | vanilluxe,fighting | fire | rock | steel
+583,vanillish,ice,,583.png,1.1,41.0,Icy Snow Pokémon,ice-body | snow-cloak | weak-armor,vanillite | vanillish | vanilluxe,fighting | fire | rock | steel
+584,vanilluxe,ice,,584.png,1.3,57.5,Snowstorm Pokémon,ice-body | snow-warning | weak-armor,vanillite | vanillish | vanilluxe,fighting | fire | rock | steel
+585,deerling,normal,grass,585.png,0.6,19.5,Season Pokémon,chlorophyll | sap-sipper | serene-grace,deerling | sawsbuck,bug | fighting | fire | flying | ice | poison
+586,sawsbuck,normal,grass,586.png,1.9,92.5,Season Pokémon,chlorophyll | sap-sipper | serene-grace,deerling | sawsbuck,bug | fighting | fire | flying | ice | poison
+587,emolga,electric,flying,587.png,0.4,5.0,Sky Squirrel Pokémon,motor-drive | static,emolga,electric | ground | ice | rock
+588,karrablast,bug,,588.png,0.5,5.9,Clamping Pokémon,no-guard | shed-skin | swarm,karrablast | escavalier,fire | flying | rock
+589,escavalier,bug,steel,589.png,1.0,33.0,Cavalry Pokémon,overcoat | shell-armor | swarm,karrablast | escavalier,fighting | fire | flying | ground | rock
+590,foongus,grass,poison,590.png,0.2,1.0,Mushroom Pokémon,effect-spore | regenerator,foongus | amoonguss,bug | fire | flying | ground | ice | poison | psychic
+591,amoonguss,grass,poison,591.png,0.6,10.5,Mushroom Pokémon,effect-spore | regenerator,foongus | amoonguss,bug | fire | flying | ground | ice | poison | psychic
+592,frillish,water,ghost,592.png,1.2,33.0,Floating Pokémon,cursed-body | damp | water-absorb,frillish | jellicent,dark | electric | ghost | grass
+593,jellicent,water,ghost,593.png,2.2,135.0,Floating Pokémon,cursed-body | damp | water-absorb,frillish | jellicent,dark | electric | ghost | grass
+594,alomomola,water,,594.png,1.2,31.6,Caring Pokémon,healer | hydration | regenerator,alomomola,electric | grass
+595,joltik,bug,electric,595.png,0.1,0.6,Attaching Pokémon,compound-eyes | swarm | unnerve,joltik | galvantula,fire | flying | ground | rock
+596,galvantula,bug,electric,596.png,0.8,14.3,EleSpider Pokémon,compound-eyes | swarm | unnerve,joltik | galvantula,fire | flying | ground | rock
+597,ferroseed,grass,steel,597.png,0.6,18.8,Thorn Seed Pokémon,iron-barbs,ferroseed | ferrothorn,bug | fighting | fire | flying | ground | ice | poison
+598,ferrothorn,grass,steel,598.png,1.0,110.0,Thorn Pod Pokémon,anticipation | iron-barbs,ferroseed | ferrothorn,bug | fighting | fire | flying | ground | ice | poison
+599,klink,steel,,599.png,0.3,21.0,Gear Pokémon,clear-body | minus | plus,klink | klang | klinklang,fighting | fire | ground
+600,klang,steel,,600.png,0.6,51.0,Gear Pokémon,clear-body | minus | plus,klink | klang | klinklang,fighting | fire | ground
+601,klinklang,steel,,601.png,0.6,81.0,Gear Pokémon,clear-body | minus | plus,klink | klang | klinklang,fighting | fire | ground
+602,tynamo,electric,,602.png,0.2,0.3,EleFish Pokémon,levitate,tynamo | eelektrik | eelektross,ground
+603,eelektrik,electric,,603.png,1.2,22.0,EleFish Pokémon,levitate,tynamo | eelektrik | eelektross,ground
+604,eelektross,electric,,604.png,2.1,80.5,EleFish Pokémon,levitate,tynamo | eelektrik | eelektross,ground
+605,elgyem,psychic,,605.png,0.5,9.0,Cerebral Pokémon,analytic | synchronize | telepathy,elgyem | beheeyem,bug | dark | ghost
+606,beheeyem,psychic,,606.png,1.0,34.5,Cerebral Pokémon,analytic | synchronize | telepathy,elgyem | beheeyem,bug | dark | ghost
+607,litwick,ghost,fire,607.png,0.3,3.1,Candle Pokémon,flame-body | flash-fire | infiltrator,litwick | lampent | chandelure,dark | ghost | ground | rock | water
+608,lampent,ghost,fire,608.png,0.6,13.0,Lamp Pokémon,flame-body | flash-fire | infiltrator,litwick | lampent | chandelure,dark | ghost | ground | rock | water
+609,chandelure,ghost,fire,609.png,1.0,34.3,Luring Pokémon,flame-body | flash-fire | infiltrator,litwick | lampent | chandelure,dark | ghost | ground | rock | water
+610,axew,dragon,,610.png,0.6,18.0,Tusk Pokémon,mold-breaker | rivalry | unnerve,axew | fraxure | haxorus,dragon | fairy | ice
+611,fraxure,dragon,,611.png,1.0,36.0,Axe Jaw Pokémon,mold-breaker | rivalry | unnerve,axew | fraxure | haxorus,dragon | fairy | ice
+612,haxorus,dragon,,612.png,1.8,105.5,Axe Jaw Pokémon,mold-breaker | rivalry | unnerve,axew | fraxure | haxorus,dragon | fairy | ice
+613,cubchoo,ice,,613.png,0.5,8.5,Chill Pokémon,rattled | slush-rush | snow-cloak,cubchoo | beartic,fighting | fire | rock | steel
+614,beartic,ice,,614.png,2.6,260.0,Freezing Pokémon,slush-rush | snow-cloak | swift-swim,cubchoo | beartic,fighting | fire | rock | steel
+615,cryogonal,ice,,615.png,1.1,148.0,Crystallizing Pokémon,levitate,cryogonal,fighting | fire | rock | steel
+616,shelmet,bug,,616.png,0.4,7.7,Snail Pokémon,hydration | overcoat | shell-armor,shelmet | accelgor,fire | flying | rock
+617,accelgor,bug,,617.png,0.8,25.3,Shell Out Pokémon,hydration | sticky-hold | unburden,shelmet | accelgor,fire | flying | rock
+618,stunfisk,ground,electric,618.png,0.7,11.0,Trap Pokémon,limber | sand-veil | static,stunfisk,grass | ground | ice | water
+619,mienfoo,fighting,,619.png,0.9,20.0,Martial Arts Pokémon,inner-focus | reckless | regenerator,mienfoo | mienshao,fairy | flying | psychic
+620,mienshao,fighting,,620.png,1.4,35.5,Martial Arts Pokémon,inner-focus | reckless | regenerator,mienfoo | mienshao,fairy | flying | psychic
+621,druddigon,dragon,,621.png,1.6,139.0,Cave Pokémon,mold-breaker | rough-skin | sheer-force,druddigon,dragon | fairy | ice
+622,golett,ground,ghost,622.png,1.0,92.0,Automaton Pokémon,iron-fist | klutz | no-guard,golett | golurk,dark | ghost | grass | ice | water
+623,golurk,ground,ghost,623.png,2.8,330.0,Automaton Pokémon,iron-fist | klutz | no-guard,golett | golurk,dark | ghost | grass | ice | water
+624,pawniard,dark,steel,624.png,0.5,10.2,Sharp Blade Pokémon,defiant | inner-focus | pressure,pawniard | bisharp | kingambit,bug | fairy | fighting | fire | ground
+625,bisharp,dark,steel,625.png,1.6,70.0,Sword Blade Pokémon,defiant | inner-focus | pressure,pawniard | bisharp | kingambit,bug | fairy | fighting | fire | ground
+626,bouffalant,normal,,626.png,1.6,94.6,Bash Buffalo Pokémon,reckless | sap-sipper | soundproof,bouffalant,fighting
+627,rufflet,normal,flying,627.png,0.5,10.5,Eaglet Pokémon,hustle | keen-eye | sheer-force,rufflet | braviary,electric | fighting | ice | rock
+628,braviary,normal,flying,628.png,1.5,41.0,Valiant Pokémon,defiant | keen-eye | sheer-force,rufflet | braviary,electric | fighting | ice | rock
+629,vullaby,dark,flying,629.png,0.5,9.0,Diapered Pokémon,big-pecks | overcoat | weak-armor,vullaby | mandibuzz,bug | electric | fairy | fighting | ice | rock
+630,mandibuzz,dark,flying,630.png,1.2,39.5,Bone Vulture Pokémon,big-pecks | overcoat | weak-armor,vullaby | mandibuzz,bug | electric | fairy | fighting | ice | rock
+631,heatmor,fire,,631.png,1.4,58.0,Anteater Pokémon,flash-fire | gluttony | white-smoke,heatmor,ground | rock | water
+632,durant,bug,steel,632.png,0.3,33.0,Iron Ant Pokémon,hustle | swarm | truant,durant,fighting | fire | flying | ground | rock
+633,deino,dark,dragon,633.png,0.8,17.3,Irate Pokémon,hustle,deino | zweilous | hydreigon,bug | dragon | fairy | fighting | ice
+634,zweilous,dark,dragon,634.png,1.4,50.0,Hostile Pokémon,hustle,deino | zweilous | hydreigon,bug | dragon | fairy | fighting | ice
+635,hydreigon,dark,dragon,635.png,1.8,160.0,Brutal Pokémon,levitate,deino | zweilous | hydreigon,bug | dragon | fairy | fighting | ice
+636,larvesta,bug,fire,636.png,1.1,28.8,Torch Pokémon,flame-body | swarm,larvesta | volcarona,fire | flying | ground | rock | water
+637,volcarona,bug,fire,637.png,1.6,46.0,Sun Pokémon,flame-body | swarm,larvesta | volcarona,fire | flying | ground | rock | water
+638,cobalion,steel,fighting,638.png,2.1,250.0,Iron Will Pokémon,justified,cobalion,fairy | fighting | fire | flying | ground | psychic
+639,terrakion,rock,fighting,639.png,1.9,260.0,Cavern Pokémon,justified,terrakion,fairy | fighting | flying | grass | ground | psychic | steel | water
+640,virizion,grass,fighting,640.png,2.0,200.0,Grassland Pokémon,justified,virizion,bug | fairy | fire | flying | ice | poison | psychic
+641,tornadus-incarnate,flying,,641.png,1.5,63.0,Cyclone Pokémon,defiant | prankster,tornadus,electric | ice | rock
+642,thundurus-incarnate,electric,flying,642.png,1.5,61.0,Bolt Strike Pokémon,defiant | prankster,thundurus,electric | ground | ice | rock
+643,reshiram,dragon,fire,643.png,3.2,330.0,Vast White Pokémon,turboblaze,reshiram,dragon | fairy | ground | ice | rock | water
+644,zekrom,dragon,electric,644.png,2.9,345.0,Deep Black Pokémon,teravolt,zekrom,dragon | fairy | ground | ice
+645,landorus-incarnate,ground,flying,645.png,1.5,68.0,Abundance Pokémon,sand-force | sheer-force,landorus,electric | grass | ice | rock | water
+646,kyurem,dragon,ice,646.png,3.0,325.0,Boundary Pokémon,pressure,kyurem,dragon | fairy | fighting | fire | ice | rock | steel
+647,keldeo-ordinary,water,fighting,647.png,1.4,48.5,Colt Pokémon,justified,keldeo,electric | fairy | flying | grass | psychic
+648,meloetta-aria,normal,psychic,648.png,0.6,6.5,Melody Pokémon,serene-grace,meloetta,bug | dark | fighting | ghost
+649,genesect,bug,steel,649.png,1.5,82.5,Paleozoic Pokémon,download,genesect,fighting | fire | flying | ground | rock
+650,chespin,grass,,650.png,0.4,9.0,Spiny Nut Pokémon,bulletproof | overgrow,chespin | quilladin | chesnaught,bug | fire | flying | ice | poison
+651,quilladin,grass,,651.png,0.7,29.0,Spiny Armor Pokémon,bulletproof | overgrow,chespin | quilladin | chesnaught,bug | fire | flying | ice | poison
+652,chesnaught,grass,fighting,652.png,1.6,90.0,Spiny Armor Pokémon,bulletproof | overgrow,chespin | quilladin | chesnaught,bug | fairy | fire | flying | ice | poison | psychic
+653,fennekin,fire,,653.png,0.4,9.4,Fox Pokémon,blaze | magician,fennekin | braixen | delphox,ground | rock | water
+654,braixen,fire,,654.png,1.0,14.5,Fox Pokémon,blaze | magician,fennekin | braixen | delphox,ground | rock | water
+655,delphox,fire,psychic,655.png,1.5,39.0,Fox Pokémon,blaze | magician,fennekin | braixen | delphox,bug | dark | ghost | ground | rock | water
+656,froakie,water,,656.png,0.3,7.0,Bubble Frog Pokémon,protean | torrent,froakie | frogadier | greninja,electric | grass
+657,frogadier,water,,657.png,0.6,10.9,Bubble Frog Pokémon,protean | torrent,froakie | frogadier | greninja,electric | grass
+658,greninja,water,dark,658.png,1.5,40.0,Ninja Pokémon,protean | torrent,froakie | frogadier | greninja,bug | electric | fairy | fighting | grass
+659,bunnelby,normal,,659.png,0.4,5.0,Digging Pokémon,cheek-pouch | huge-power | pickup,bunnelby | diggersby,fighting
+660,diggersby,normal,ground,660.png,1.0,42.4,Digging Pokémon,cheek-pouch | huge-power | pickup,bunnelby | diggersby,fighting | grass | ice | water
+661,fletchling,normal,flying,661.png,0.3,1.7,Tiny Robin Pokémon,big-pecks | gale-wings,fletchling | fletchinder | talonflame,electric | fighting | ice | rock
+662,fletchinder,fire,flying,662.png,0.7,16.0,Ember Pokémon,flame-body | gale-wings,fletchling | fletchinder | talonflame,electric | ground | ice | rock | water
+663,talonflame,fire,flying,663.png,1.2,24.5,Scorching Pokémon,flame-body | gale-wings,fletchling | fletchinder | talonflame,electric | ground | ice | rock | water
+664,scatterbug,bug,,664.png,0.3,2.5,Scatterdust Pokémon,compound-eyes | friend-guard | shield-dust,scatterbug | spewpa | vivillon,fire | flying | rock
+665,spewpa,bug,,665.png,0.3,8.4,Scatterdust Pokémon,friend-guard | shed-skin,scatterbug | spewpa | vivillon,fire | flying | rock
+666,vivillon,bug,flying,666.png,1.2,17.0,Scale Pokémon,compound-eyes | friend-guard | shield-dust,scatterbug | spewpa | vivillon,electric | fire | flying | ice | rock
+667,litleo,fire,normal,667.png,0.6,13.5,Lion Cub Pokémon,moxie | rivalry | unnerve,litleo | pyroar,fighting | ground | rock | water
+668,pyroar,fire,normal,668.png,1.5,81.5,Royal Pokémon,moxie | rivalry | unnerve,litleo | pyroar,fighting | ground | rock | water
+669,flabebe,fairy,,669.png,0.1,0.1,Single Bloom Pokémon,flower-veil | symbiosis,flabebe | floette | florges,poison | steel
+670,floette,fairy,,670.png,0.2,0.9,Single Bloom Pokémon,flower-veil | symbiosis,flabebe | floette | florges,poison | steel
+671,florges,fairy,,671.png,1.1,10.0,Garden Pokémon,flower-veil | symbiosis,flabebe | floette | florges,poison | steel
+672,skiddo,grass,,672.png,0.9,31.0,Mount Pokémon,grass-pelt | sap-sipper,skiddo | gogoat,bug | fire | flying | ice | poison
+673,gogoat,grass,,673.png,1.7,91.0,Mount Pokémon,grass-pelt | sap-sipper,skiddo | gogoat,bug | fire | flying | ice | poison
+674,pancham,fighting,,674.png,0.6,8.0,Playful Pokémon,iron-fist | mold-breaker | scrappy,pancham | pangoro,fairy | flying | psychic
+675,pangoro,fighting,dark,675.png,2.1,136.0,Daunting Pokémon,iron-fist | mold-breaker | scrappy,pancham | pangoro,bug | fairy | fighting | flying | psychic
+676,furfrou,normal,,676.png,1.2,28.0,Poodle Pokémon,fur-coat,furfrou,fighting
+677,espurr,psychic,,677.png,0.3,3.5,Restraint Pokémon,infiltrator | keen-eye | own-tempo,espurr | meowstic,bug | dark | ghost
+678,meowstic-male,psychic,,678.png,0.6,8.5,Constraint Pokémon,infiltrator | keen-eye | prankster,espurr | meowstic,bug | dark | ghost
+679,honedge,steel,ghost,679.png,0.8,2.0,Sword Pokémon,no-guard,honedge | doublade | aegislash,dark | fighting | fire | ghost | ground
+680,doublade,steel,ghost,680.png,0.8,4.5,Sword Pokémon,no-guard,honedge | doublade | aegislash,dark | fighting | fire | ghost | ground
+681,aegislash-shield,steel,ghost,681.png,1.7,53.0,Royal Sword Pokémon,stance-change,honedge | doublade | aegislash,dark | fighting | fire | ghost | ground
+682,spritzee,fairy,,682.png,0.2,0.5,Perfume Pokémon,aroma-veil | healer,spritzee | aromatisse,poison | steel
+683,aromatisse,fairy,,683.png,0.8,15.5,Fragrance Pokémon,aroma-veil | healer,spritzee | aromatisse,poison | steel
+684,swirlix,fairy,,684.png,0.4,3.5,Cotton Candy Pokémon,sweet-veil | unburden,swirlix | slurpuff,poison | steel
+685,slurpuff,fairy,,685.png,0.8,5.0,Meringue Pokémon,sweet-veil | unburden,swirlix | slurpuff,poison | steel
+686,inkay,dark,psychic,686.png,0.4,3.5,Revolving Pokémon,contrary | infiltrator | suction-cups,inkay | malamar,bug | dark | fairy | fighting | ghost
+687,malamar,dark,psychic,687.png,1.5,47.0,Overturning Pokémon,contrary | infiltrator | suction-cups,inkay | malamar,bug | dark | fairy | fighting | ghost
+688,binacle,rock,water,688.png,0.5,31.0,Two-Handed Pokémon,pickpocket | sniper | tough-claws,binacle | barbaracle,electric | fighting | grass | ground | steel | water
+689,barbaracle,rock,water,689.png,1.3,96.0,Collective Pokémon,pickpocket | sniper | tough-claws,binacle | barbaracle,electric | fighting | grass | ground | steel | water
+690,skrelp,poison,water,690.png,0.5,7.3,Mock Kelp Pokémon,adaptability | poison-point | poison-touch,skrelp | dragalge,electric | grass | ground | psychic
+691,dragalge,poison,dragon,691.png,1.8,81.5,Mock Kelp Pokémon,adaptability | poison-point | poison-touch,skrelp | dragalge,dragon | fairy | ground | ice | psychic
+692,clauncher,water,,692.png,0.5,8.3,Water Gun Pokémon,mega-launcher,clauncher | clawitzer,electric | grass
+693,clawitzer,water,,693.png,1.3,35.3,Howitzer Pokémon,mega-launcher,clauncher | clawitzer,electric | grass
+694,helioptile,electric,normal,694.png,0.5,6.0,Generator Pokémon,dry-skin | sand-veil | solar-power,helioptile | heliolisk,fighting | ground
+695,heliolisk,electric,normal,695.png,1.0,21.0,Generator Pokémon,dry-skin | sand-veil | solar-power,helioptile | heliolisk,fighting | ground
+696,tyrunt,rock,dragon,696.png,0.8,26.0,Royal Heir Pokémon,strong-jaw | sturdy,tyrunt | tyrantrum,dragon | fairy | fighting | grass | ground | ice | steel | water
+697,tyrantrum,rock,dragon,697.png,2.5,270.0,Despot Pokémon,rock-head | strong-jaw,tyrunt | tyrantrum,dragon | fairy | fighting | grass | ground | ice | steel | water
+698,amaura,rock,ice,698.png,1.3,25.2,Tundra Pokémon,refrigerate | snow-warning,amaura | aurorus,fighting | fire | grass | ground | rock | steel | water
+699,aurorus,rock,ice,699.png,2.7,225.0,Tundra Pokémon,refrigerate | snow-warning,amaura | aurorus,fighting | fire | grass | ground | rock | steel | water
+700,sylveon,fairy,,700.png,1.0,23.5,Intertwining Pokémon,cute-charm | pixilate,eevee | vaporeon | jolteon | flareon | espeon | umbreon | leafeon | glaceon | sylveon,poison | steel
+701,hawlucha,fighting,flying,701.png,0.8,21.5,Wrestling Pokémon,limber | mold-breaker | unburden,hawlucha,electric | fairy | flying | ice | psychic | rock
+702,dedenne,electric,fairy,702.png,0.2,2.2,Antenna Pokémon,cheek-pouch | pickup | plus,dedenne,ground | poison | steel
+703,carbink,rock,fairy,703.png,0.3,5.7,Jewel Pokémon,clear-body | sturdy,carbink,fighting | grass | ground | poison | steel | water
+704,goomy,dragon,,704.png,0.3,2.8,Soft Tissue Pokémon,gooey | hydration | sap-sipper,goomy | sliggoo | goodra,dragon | fairy | ice
+705,sliggoo,dragon,,705.png,0.8,17.5,Soft Tissue Pokémon,gooey | hydration | sap-sipper,goomy | sliggoo | goodra,dragon | fairy | ice
+706,goodra,dragon,,706.png,2.0,150.5,Dragon Pokémon,gooey | hydration | sap-sipper,goomy | sliggoo | goodra,dragon | fairy | ice
+707,klefki,steel,fairy,707.png,0.2,3.0,Key Ring Pokémon,magician | prankster,klefki,fighting | fire | ground | poison | steel
+708,phantump,ghost,grass,708.png,0.4,7.0,Stump Pokémon,frisk | harvest | natural-cure,phantump | trevenant,bug | dark | fire | flying | ghost | ice | poison
+709,trevenant,ghost,grass,709.png,1.5,71.0,Elder Tree Pokémon,frisk | harvest | natural-cure,phantump | trevenant,bug | dark | fire | flying | ghost | ice | poison
+710,pumpkaboo-average,ghost,grass,710.png,0.4,5.0,Pumpkin Pokémon,frisk | insomnia | pickup,pumpkaboo | gourgeist,bug | dark | fire | flying | ghost | ice | poison
+711,gourgeist-average,ghost,grass,711.png,0.9,12.5,Pumpkin Pokémon,frisk | insomnia | pickup,pumpkaboo | gourgeist,bug | dark | fire | flying | ghost | ice | poison
+712,bergmite,ice,,712.png,1.0,99.5,Ice Chunk Pokémon,ice-body | own-tempo | sturdy,bergmite | avalugg,fighting | fire | rock | steel
+713,avalugg,ice,,713.png,2.0,505.0,Iceberg Pokémon,ice-body | own-tempo | sturdy,bergmite | avalugg,fighting | fire | rock | steel
+714,noibat,flying,dragon,714.png,0.5,8.0,Sound Wave Pokémon,frisk | infiltrator | telepathy,noibat | noivern,dragon | electric | fairy | ice | rock
+715,noivern,flying,dragon,715.png,1.5,85.0,Sound Wave Pokémon,frisk | infiltrator | telepathy,noibat | noivern,dragon | electric | fairy | ice | rock
+716,xerneas,fairy,,716.png,3.0,215.0,Life Pokémon,fairy-aura,xerneas,poison | steel
+717,yveltal,dark,flying,717.png,5.8,203.0,Destruction Pokémon,dark-aura,yveltal,bug | electric | fairy | fighting | ice | rock
+718,zygarde-50,dragon,ground,718.png,5.0,305.0,Order Pokémon,aura-break,zygarde,dragon | fairy | grass | ice | water
+719,diancie,rock,fairy,719.png,0.7,8.8,Jewel Pokémon,clear-body,diancie,fighting | grass | ground | poison | steel | water
+720,hoopa,psychic,ghost,720.png,0.5,9.0,Mischief Pokémon,magician,hoopa,bug | dark | ghost
+721,volcanion,fire,water,721.png,1.7,195.0,Steam Pokémon,water-absorb,volcanion,electric | grass | ground | rock | water
+722,rowlet,grass,flying,722.png,0.3,1.5,Grass Quill Pokémon,long-reach | overgrow,rowlet | dartrix | decidueye,bug | electric | fire | flying | ice | poison | rock
+723,dartrix,grass,flying,723.png,0.7,16.0,Blade Quill Pokémon,long-reach | overgrow,rowlet | dartrix | decidueye,bug | electric | fire | flying | ice | poison | rock
+724,decidueye,grass,ghost,724.png,1.6,36.6,Arrow Quill Pokémon,long-reach | overgrow,rowlet | dartrix | decidueye,bug | dark | fire | flying | ghost | ice | poison
+725,litten,fire,,725.png,0.4,4.3,Fire Cat Pokémon,blaze | intimidate,litten | torracat | incineroar,ground | rock | water
+726,torracat,fire,,726.png,0.7,25.0,Fire Cat Pokémon,blaze | intimidate,litten | torracat | incineroar,ground | rock | water
+727,incineroar,fire,dark,727.png,1.8,83.0,Heel Pokémon,blaze | intimidate,litten | torracat | incineroar,bug | fairy | fighting | ground | rock | water
+728,popplio,water,,728.png,0.4,7.5,Sea Lion Pokémon,liquid-voice | torrent,popplio | brionne | primarina,electric | grass
+729,brionne,water,,729.png,0.6,17.5,Pop Star Pokémon,liquid-voice | torrent,popplio | brionne | primarina,electric | grass
+730,primarina,water,fairy,730.png,1.8,44.0,Soloist Pokémon,liquid-voice | torrent,popplio | brionne | primarina,electric | grass | poison | steel
+731,pikipek,normal,flying,731.png,0.3,1.2,Woodpecker Pokémon,keen-eye | pickup | skill-link,pikipek | trumbeak | toucannon,electric | fighting | ice | rock
+732,trumbeak,normal,flying,732.png,0.6,14.8,Bugle Beak Pokémon,keen-eye | pickup | skill-link,pikipek | trumbeak | toucannon,electric | fighting | ice | rock
+733,toucannon,normal,flying,733.png,1.1,26.0,Cannon Pokémon,keen-eye | sheer-force | skill-link,pikipek | trumbeak | toucannon,electric | fighting | ice | rock
+734,yungoos,normal,,734.png,0.4,6.0,Loitering Pokémon,adaptability | stakeout | strong-jaw,yungoos | gumshoos,fighting
+735,gumshoos,normal,,735.png,0.7,14.2,Stakeout Pokémon,adaptability | stakeout | strong-jaw,yungoos | gumshoos,fighting
+736,grubbin,bug,,736.png,0.4,4.4,Larva Pokémon,swarm,grubbin | charjabug | vikavolt,fire | flying | rock
+737,charjabug,bug,electric,737.png,0.5,10.5,Battery Pokémon,battery,grubbin | charjabug | vikavolt,fire | flying | ground | rock
+738,vikavolt,bug,electric,738.png,1.5,45.0,Stag Beetle Pokémon,levitate,grubbin | charjabug | vikavolt,fire | flying | ground | rock
+739,crabrawler,fighting,,739.png,0.6,7.0,Boxing Pokémon,anger-point | hyper-cutter | iron-fist,crabrawler | crabominable,fairy | flying | psychic
+740,crabominable,fighting,ice,740.png,1.7,180.0,Woolly Crab Pokémon,anger-point | hyper-cutter | iron-fist,crabrawler | crabominable,fairy | fighting | fire | flying | psychic | rock | steel
+741,oricorio-baile,fire,flying,741.png,0.6,3.4,Dancing Pokémon,dancer,oricorio,electric | ground | ice | rock | water
+742,cutiefly,bug,fairy,742.png,0.1,0.2,Bee Fly Pokémon,honey-gather | shield-dust | sweet-veil,cutiefly | ribombee,fire | flying | poison | rock | steel
+743,ribombee,bug,fairy,743.png,0.2,0.5,Bee Fly Pokémon,honey-gather | shield-dust | sweet-veil,cutiefly | ribombee,fire | flying | poison | rock | steel
+744,rockruff,rock,,744.png,0.5,9.2,Puppy Pokémon,keen-eye | steadfast | vital-spirit,rockruff | lycanroc,fighting | grass | ground | steel | water
+745,lycanroc-midday,rock,,745.png,0.8,25.0,Wolf Pokémon,keen-eye | sand-rush | steadfast,rockruff | lycanroc,fighting | grass | ground | steel | water
+746,wishiwashi-solo,water,,746.png,0.2,0.3,Small Fry Pokémon,schooling,wishiwashi,electric | grass
+747,mareanie,poison,water,747.png,0.4,8.0,Brutal Star Pokémon,limber | merciless | regenerator,mareanie | toxapex,electric | grass | ground | psychic
+748,toxapex,poison,water,748.png,0.7,14.5,Brutal Star Pokémon,limber | merciless | regenerator,mareanie | toxapex,electric | grass | ground | psychic
+749,mudbray,ground,,749.png,1.0,110.0,Donkey Pokémon,inner-focus | own-tempo | stamina,mudbray | mudsdale,grass | ice | water
+750,mudsdale,ground,,750.png,2.5,920.0,Draft Horse Pokémon,inner-focus | own-tempo | stamina,mudbray | mudsdale,grass | ice | water
+751,dewpider,water,bug,751.png,0.3,4.0,Water Bubble Pokémon,water-absorb | water-bubble,dewpider | araquanid,electric | fire | flying | grass | rock
+752,araquanid,water,bug,752.png,1.8,82.0,Water Bubble Pokémon,water-absorb | water-bubble,dewpider | araquanid,electric | fire | flying | grass | rock
+753,fomantis,grass,,753.png,0.3,1.5,Sickle Grass Pokémon,contrary | leaf-guard,fomantis | lurantis,bug | fire | flying | ice | poison
+754,lurantis,grass,,754.png,0.9,18.5,Bloom Sickle Pokémon,contrary | leaf-guard,fomantis | lurantis,bug | fire | flying | ice | poison
+755,morelull,grass,fairy,755.png,0.2,1.5,Illuminating Pokémon,effect-spore | illuminate | rain-dish,morelull | shiinotic,bug | fire | flying | ice | poison | steel
+756,shiinotic,grass,fairy,756.png,1.0,11.5,Illuminating Pokémon,effect-spore | illuminate | rain-dish,morelull | shiinotic,bug | fire | flying | ice | poison | steel
+757,salandit,poison,fire,757.png,0.6,4.8,Toxic Lizard Pokémon,corrosion | oblivious,salandit | salazzle,ground | psychic | rock | water
+758,salazzle,poison,fire,758.png,1.2,22.2,Toxic Lizard Pokémon,corrosion | oblivious,salandit | salazzle,ground | psychic | rock | water
+759,stufful,normal,fighting,759.png,0.5,6.8,Flailing Pokémon,cute-charm | fluffy | klutz,stufful | bewear,fairy | fighting | flying | psychic
+760,bewear,normal,fighting,760.png,2.1,135.0,Strong Arm Pokémon,fluffy | klutz | unnerve,stufful | bewear,fairy | fighting | flying | psychic
+761,bounsweet,grass,,761.png,0.3,3.2,Fruit Pokémon,leaf-guard | oblivious | sweet-veil,bounsweet | steenee | tsareena,bug | fire | flying | ice | poison
+762,steenee,grass,,762.png,0.7,8.2,Fruit Pokémon,leaf-guard | oblivious | sweet-veil,bounsweet | steenee | tsareena,bug | fire | flying | ice | poison
+763,tsareena,grass,,763.png,1.2,21.4,Fruit Pokémon,leaf-guard | queenly-majesty | sweet-veil,bounsweet | steenee | tsareena,bug | fire | flying | ice | poison
+764,comfey,fairy,,764.png,0.1,0.3,Posy Picker Pokémon,flower-veil | natural-cure | triage,comfey,poison | steel
+765,oranguru,normal,psychic,765.png,1.5,76.0,Sage Pokémon,inner-focus | symbiosis | telepathy,oranguru,bug | dark | fighting | ghost
+766,passimian,fighting,,766.png,2.0,82.8,Teamwork Pokémon,defiant | receiver,passimian,fairy | flying | psychic
+767,wimpod,bug,water,767.png,0.5,12.0,Turn Tail Pokémon,wimp-out,wimpod | golisopod,electric | fire | flying | grass | rock
+768,golisopod,bug,water,768.png,2.0,108.0,Hard Scale Pokémon,emergency-exit,wimpod | golisopod,electric | fire | flying | grass | rock
+769,sandygast,ghost,ground,769.png,0.5,70.0,Sand Heap Pokémon,sand-veil | water-compaction,sandygast | palossand,dark | ghost | grass | ice | water
+770,palossand,ghost,ground,770.png,1.3,250.0,Sand Castle Pokémon,sand-veil | water-compaction,sandygast | palossand,dark | ghost | grass | ice | water
+771,pyukumuku,water,,771.png,0.3,1.2,Sea Cucumber Pokémon,innards-out | unaware,pyukumuku,electric | grass
+772,type-null,normal,,772.png,1.9,120.5,Synthetic Pokémon,battle-armor,type-null | silvally,fighting
+773,silvally,normal,,773.png,2.3,100.5,Synthetic Pokémon,rks-system,type-null | silvally,fighting
+774,minior-red-meteor,rock,flying,774.png,0.3,40.0,Meteor Pokémon,shields-down,minior,electric | fighting | grass | ground | ice | rock | steel | water
+775,komala,normal,,775.png,0.4,19.9,Drowsing Pokémon,comatose,komala,fighting
+776,turtonator,fire,dragon,776.png,2.0,212.0,Blast Turtle Pokémon,shell-armor,turtonator,dragon | fairy | ground | ice | rock | water
+777,togedemaru,electric,steel,777.png,0.3,3.3,Roly-Poly Pokémon,iron-barbs | lightning-rod | sturdy,togedemaru,fighting | fire | ground
+778,mimikyu-disguised,ghost,fairy,778.png,0.2,0.7,Disguise Pokémon,disguise,mimikyu,dark | ghost | poison | steel
+779,bruxish,water,psychic,779.png,0.9,19.0,Gnash Teeth Pokémon,dazzling | strong-jaw | wonder-skin,bruxish,bug | dark | electric | ghost | grass
+780,drampa,normal,dragon,780.png,3.0,185.0,Placid Pokémon,berserk | cloud-nine | sap-sipper,drampa,dragon | fairy | fighting | ice
+781,dhelmise,ghost,grass,781.png,3.9,210.0,Sea Creeper Pokémon,steelworker,dhelmise,bug | dark | fire | flying | ghost | ice | poison
+782,jangmo-o,dragon,,782.png,0.6,29.7,Scaly Pokémon,bulletproof | overcoat | soundproof,jangmo-o | hakamo-o | kommo-o,dragon | fairy | ice
+783,hakamo-o,dragon,fighting,783.png,1.2,47.0,Scaly Pokémon,bulletproof | overcoat | soundproof,jangmo-o | hakamo-o | kommo-o,dragon | fairy | flying | ice | psychic
+784,kommo-o,dragon,fighting,784.png,1.6,78.2,Scaly Pokémon,bulletproof | overcoat | soundproof,jangmo-o | hakamo-o | kommo-o,dragon | fairy | flying | ice | psychic
+785,tapu-koko,electric,fairy,785.png,1.8,20.5,Land Spirit Pokémon,electric-surge | telepathy,tapu-koko,ground | poison | steel
+786,tapu-lele,psychic,fairy,786.png,1.2,18.6,Land Spirit Pokémon,psychic-surge | telepathy,tapu-lele,bug | dark | ghost | poison | steel
+787,tapu-bulu,grass,fairy,787.png,1.9,45.5,Land Spirit Pokémon,grassy-surge | telepathy,tapu-bulu,bug | fire | flying | ice | poison | steel
+788,tapu-fini,water,fairy,788.png,1.3,21.2,Land Spirit Pokémon,misty-surge | telepathy,tapu-fini,electric | grass | poison | steel
+789,cosmog,psychic,,789.png,0.2,0.1,Nebula Pokémon,unaware,cosmog | cosmoem | solgaleo | lunala,bug | dark | ghost
+790,cosmoem,psychic,,790.png,0.1,999.9,Protostar Pokémon,sturdy,cosmog | cosmoem | solgaleo | lunala,bug | dark | ghost
+791,solgaleo,psychic,steel,791.png,3.4,230.0,Sunne Pokémon,full-metal-body,cosmog | cosmoem | solgaleo | lunala,bug | dark | fighting | fire | ghost | ground
+792,lunala,psychic,ghost,792.png,4.0,120.0,Moone Pokémon,shadow-shield,cosmog | cosmoem | solgaleo | lunala,bug | dark | ghost
+793,nihilego,rock,poison,793.png,1.2,55.5,Parasite Pokémon,beast-boost,nihilego,fighting | grass | ground | psychic | steel | water
+794,buzzwole,bug,fighting,794.png,2.4,333.6,Swollen Pokémon,beast-boost,buzzwole,fairy | fire | flying | psychic | rock
+795,pheromosa,bug,fighting,795.png,1.8,25.0,Lissome Pokémon,beast-boost,pheromosa,fairy | fire | flying | psychic | rock
+796,xurkitree,electric,,796.png,3.8,100.0,Glowing Pokémon,beast-boost,xurkitree,ground
+797,celesteela,steel,flying,797.png,9.2,999.9,Launch Pokémon,beast-boost,celesteela,electric | fighting | fire | ground | ice | rock
+798,kartana,grass,steel,798.png,0.3,0.1,Drawn Sword Pokémon,beast-boost,kartana,bug | fighting | fire | flying | ground | ice | poison
+799,guzzlord,dark,dragon,799.png,5.5,888.0,Junkivore Pokémon,beast-boost,guzzlord,bug | dragon | fairy | fighting | ice
+800,necrozma,psychic,,800.png,2.4,230.0,Prism Pokémon,prism-armor,necrozma,bug | dark | ghost
+801,magearna,steel,fairy,801.png,1.0,80.5,Artificial Pokémon,soul-heart,magearna,fighting | fire | ground | poison | steel
+802,marshadow,fighting,ghost,802.png,0.7,22.2,Gloomdweller Pokémon,technician,marshadow,dark | fairy | flying | ghost | psychic
+803,poipole,poison,,803.png,0.6,1.8,Poison Pin Pokémon,beast-boost,poipole | naganadel,ground | psychic
+804,naganadel,poison,dragon,804.png,3.6,150.0,Poison Pin Pokémon,beast-boost,poipole | naganadel,dragon | fairy | ground | ice | psychic
+805,stakataka,rock,steel,805.png,5.5,820.0,Rampart Pokémon,beast-boost,stakataka,fighting | fire | grass | ground | steel | water
+806,blacephalon,fire,ghost,806.png,1.8,13.0,Fireworks Pokémon,beast-boost,blacephalon,dark | ghost | ground | rock | water
+807,zeraora,electric,,807.png,1.5,44.5,Thunderclap Pokémon,volt-absorb,zeraora,ground
+808,meltan,steel,,808.png,0.2,8.0,Hex Nut Pokémon,magnet-pull,meltan,fighting | fire | ground
+809,melmetal,steel,,809.png,2.5,800.0,Hex Nut Pokémon,iron-fist,melmetal,fighting | fire | ground
+810,grookey,grass,,810.png,0.3,5.0,Chimp Pokémon,grassy-surge | overgrow,grookey | thwackey | rillaboom,bug | fire | flying | ice | poison
+811,thwackey,grass,,811.png,0.7,14.0,Beat Pokémon,grassy-surge | overgrow,grookey | thwackey | rillaboom,bug | fire | flying | ice | poison
+812,rillaboom,grass,,812.png,2.1,90.0,Drummer Pokémon,grassy-surge | overgrow,grookey | thwackey | rillaboom,bug | fire | flying | ice | poison
+813,scorbunny,fire,,813.png,0.3,4.5,Rabbit Pokémon,blaze | libero,scorbunny | raboot | cinderace,ground | rock | water
+814,raboot,fire,,814.png,0.6,9.0,Rabbit Pokémon,blaze | libero,scorbunny | raboot | cinderace,ground | rock | water
+815,cinderace,fire,,815.png,1.4,33.0,Striker Pokémon,blaze | libero,scorbunny | raboot | cinderace,ground | rock | water
+816,sobble,water,,816.png,0.3,4.0,Water Lizard Pokémon,sniper | torrent,sobble | drizzile | inteleon,electric | grass
+817,drizzile,water,,817.png,0.7,11.5,Water Lizard Pokémon,sniper | torrent,sobble | drizzile | inteleon,electric | grass
+818,inteleon,water,,818.png,1.9,45.2,Secret Agent Pokémon,sniper | torrent,sobble | drizzile | inteleon,electric | grass
+819,skwovet,normal,,819.png,0.3,2.5,Cheeky Pokémon,cheek-pouch | gluttony,skwovet | greedent,fighting
+820,greedent,normal,,820.png,0.6,6.0,Greedy Pokémon,cheek-pouch | gluttony,skwovet | greedent,fighting
+821,rookidee,flying,,821.png,0.2,1.8,Tiny Bird Pokémon,big-pecks | keen-eye | unnerve,rookidee | corvisquire | corviknight,electric | ice | rock
+822,corvisquire,flying,,822.png,0.8,16.0,Raven Pokémon,big-pecks | keen-eye | unnerve,rookidee | corvisquire | corviknight,electric | ice | rock
+823,corviknight,flying,steel,823.png,2.2,75.0,Raven Pokémon,mirror-armor | pressure | unnerve,rookidee | corvisquire | corviknight,electric | fighting | fire | ground | ice | rock
+824,blipbug,bug,,824.png,0.4,8.0,Larva Pokémon,compound-eyes | swarm | telepathy,blipbug | dottler | orbeetle,fire | flying | rock
+825,dottler,bug,psychic,825.png,0.4,19.5,Radome Pokémon,compound-eyes | swarm | telepathy,blipbug | dottler | orbeetle,bug | dark | fire | flying | ghost | rock
+826,orbeetle,bug,psychic,826.png,0.4,40.8,Seven Spot Pokémon,frisk | swarm | telepathy,blipbug | dottler | orbeetle,bug | dark | fire | flying | ghost | rock
+827,nickit,dark,,827.png,0.6,8.9,Fox Pokémon,run-away | stakeout | unburden,nickit | thievul,bug | fairy | fighting
+828,thievul,dark,,828.png,1.2,19.9,Fox Pokémon,run-away | stakeout | unburden,nickit | thievul,bug | fairy | fighting
+829,gossifleur,grass,,829.png,0.4,2.2,Flowering Pokémon,cotton-down | effect-spore | regenerator,gossifleur | eldegoss,bug | fire | flying | ice | poison
+830,eldegoss,grass,,830.png,0.5,2.5,Cotton Bloom Pokémon,cotton-down | effect-spore | regenerator,gossifleur | eldegoss,bug | fire | flying | ice | poison
+831,wooloo,normal,,831.png,0.6,6.0,Sheep Pokémon,bulletproof | fluffy | run-away,wooloo | dubwool,fighting
+832,dubwool,normal,,832.png,1.3,43.0,Sheep Pokémon,bulletproof | fluffy | steadfast,wooloo | dubwool,fighting
+833,chewtle,water,,833.png,0.3,8.5,Snapping Pokémon,shell-armor | strong-jaw | swift-swim,chewtle | drednaw,electric | grass
+834,drednaw,water,rock,834.png,1.0,115.5,Bite Pokémon,shell-armor | strong-jaw | swift-swim,chewtle | drednaw,electric | fighting | grass | ground | steel | water
+835,yamper,electric,,835.png,0.3,13.5,Puppy Pokémon,ball-fetch | rattled,yamper | boltund,ground
+836,boltund,electric,,836.png,1.0,34.0,Dog Pokémon,competitive | strong-jaw,yamper | boltund,ground
+837,rolycoly,rock,,837.png,0.3,12.0,Coal Pokémon,flash-fire | heatproof | steam-engine,rolycoly | carkol | coalossal,fighting | grass | ground | steel | water
+838,carkol,rock,fire,838.png,1.1,78.0,Coal Pokémon,flame-body | flash-fire | steam-engine,rolycoly | carkol | coalossal,fighting | grass | ground | rock | steel | water
+839,coalossal,rock,fire,839.png,2.8,310.5,Coal Pokémon,flame-body | flash-fire | steam-engine,rolycoly | carkol | coalossal,fighting | grass | ground | rock | steel | water
+840,applin,grass,dragon,840.png,0.2,0.5,Apple Core Pokémon,bulletproof | gluttony | ripen,applin | flapple | appletun | dipplin | hydrapple,bug | dragon | fairy | fire | flying | ice | poison
+841,flapple,grass,dragon,841.png,0.3,1.0,Apple Wing Pokémon,gluttony | hustle | ripen,applin | flapple | appletun | dipplin | hydrapple,bug | dragon | fairy | fire | flying | ice | poison
+842,appletun,grass,dragon,842.png,0.4,13.0,Apple Nectar Pokémon,gluttony | ripen | thick-fat,applin | flapple | appletun | dipplin | hydrapple,bug | dragon | fairy | fire | flying | ice | poison
+843,silicobra,ground,,843.png,2.2,7.6,Sand Snake Pokémon,sand-spit | sand-veil | shed-skin,silicobra | sandaconda,grass | ice | water
+844,sandaconda,ground,,844.png,3.8,65.5,Sand Snake Pokémon,sand-spit | sand-veil | shed-skin,silicobra | sandaconda,grass | ice | water
+845,cramorant,flying,water,845.png,0.8,18.0,Gulp Pokémon,gulp-missile,cramorant,electric | grass | ice | rock
+846,arrokuda,water,,846.png,0.5,1.0,Rush Pokémon,propeller-tail | swift-swim,arrokuda | barraskewda,electric | grass
+847,barraskewda,water,,847.png,1.3,30.0,Skewer Pokémon,propeller-tail | swift-swim,arrokuda | barraskewda,electric | grass
+848,toxel,electric,poison,848.png,0.4,11.0,Baby Pokémon,klutz | rattled | static,toxel | toxtricity,ground | psychic
+849,toxtricity-amped,electric,poison,849.png,1.6,40.0,Punk Pokémon,plus | punk-rock | technician,toxel | toxtricity,ground | psychic
+850,sizzlipede,fire,bug,850.png,0.7,1.0,Radiator Pokémon,flame-body | flash-fire | white-smoke,sizzlipede | centiskorch,fire | flying | ground | rock | water
+851,centiskorch,fire,bug,851.png,3.0,120.0,Radiator Pokémon,flame-body | flash-fire | white-smoke,sizzlipede | centiskorch,fire | flying | ground | rock | water
+852,clobbopus,fighting,,852.png,0.6,4.0,Tantrum Pokémon,limber | technician,clobbopus | grapploct,fairy | flying | psychic
+853,grapploct,fighting,,853.png,1.6,39.0,Jujitsu Pokémon,limber | technician,clobbopus | grapploct,fairy | flying | psychic
+854,sinistea,ghost,,854.png,0.1,0.2,Black Tea Pokémon,cursed-body | weak-armor,sinistea | polteageist,dark | ghost
+855,polteageist,ghost,,855.png,0.2,0.4,Black Tea Pokémon,cursed-body | weak-armor,sinistea | polteageist,dark | ghost
+856,hatenna,psychic,,856.png,0.4,3.4,Calm Pokémon,anticipation | healer | magic-bounce,hatenna | hattrem | hatterene,bug | dark | ghost
+857,hattrem,psychic,,857.png,0.6,4.8,Serene Pokémon,anticipation | healer | magic-bounce,hatenna | hattrem | hatterene,bug | dark | ghost
+858,hatterene,psychic,fairy,858.png,2.1,5.1,Silent Pokémon,anticipation | healer | magic-bounce,hatenna | hattrem | hatterene,bug | dark | ghost | poison | steel
+859,impidimp,dark,fairy,859.png,0.4,5.5,Wily Pokémon,frisk | pickpocket | prankster,impidimp | morgrem | grimmsnarl,bug | fairy | fighting | poison | steel
+860,morgrem,dark,fairy,860.png,0.8,12.5,Devious Pokémon,frisk | pickpocket | prankster,impidimp | morgrem | grimmsnarl,bug | fairy | fighting | poison | steel
+861,grimmsnarl,dark,fairy,861.png,1.5,61.0,Bulk Up Pokémon,frisk | pickpocket | prankster,impidimp | morgrem | grimmsnarl,bug | fairy | fighting | poison | steel
+862,obstagoon,dark,normal,862.png,1.6,46.0,Blocking Pokémon,defiant | guts | reckless,zigzagoon | linoone | obstagoon,bug | fairy | fighting
+863,perrserker,steel,,863.png,0.8,28.0,Viking Pokémon,battle-armor | steely-spirit | tough-claws,meowth | persian | perrserker,fighting | fire | ground
+864,cursola,ghost,,864.png,1.0,0.4,Coral Pokémon,perish-body | weak-armor,corsola | cursola,dark | ghost
+865,sirfetchd,fighting,,865.png,0.8,117.0,Wild Duck Pokémon,scrappy | steadfast,farfetchd | sirfetchd,fairy | flying | psychic
+866,mr-rime,ice,psychic,866.png,1.5,58.2,Comedian Pokémon,ice-body | screen-cleaner | tangled-feet,mime-jr | mr-mime | mr-rime,bug | dark | fighting | fire | ghost | rock | steel
+867,runerigus,ground,ghost,867.png,1.6,66.6,Grudge Pokémon,wandering-spirit,yamask | cofagrigus | runerigus,dark | ghost | grass | ice | water
+868,milcery,fairy,,868.png,0.2,0.3,Cream Pokémon,aroma-veil | sweet-veil,milcery | alcremie,poison | steel
+869,alcremie,fairy,,869.png,0.3,0.5,Cream Pokémon,aroma-veil | sweet-veil,milcery | alcremie,poison | steel
+870,falinks,fighting,,870.png,3.0,62.0,Formation Pokémon,battle-armor | defiant,falinks,fairy | flying | psychic
+871,pincurchin,electric,,871.png,0.3,1.0,Sea Urchin Pokémon,electric-surge | lightning-rod,pincurchin,ground
+872,snom,ice,bug,872.png,0.3,3.8,Worm Pokémon,ice-scales | shield-dust,snom | frosmoth,fighting | fire | flying | rock | steel
+873,frosmoth,ice,bug,873.png,1.3,42.0,Frost Moth Pokémon,ice-scales | shield-dust,snom | frosmoth,fighting | fire | flying | rock | steel
+874,stonjourner,rock,,874.png,2.5,520.0,Big Rock Pokémon,power-spot,stonjourner,fighting | grass | ground | steel | water
+875,eiscue-ice,ice,,875.png,1.4,89.0,Penguin Pokémon,ice-face,eiscue,fighting | fire | rock | steel
+876,indeedee-male,psychic,normal,876.png,0.9,28.0,Emotion Pokémon,inner-focus | psychic-surge | synchronize,indeedee,bug | dark | fighting | ghost
+877,morpeko-full-belly,electric,dark,877.png,0.3,3.0,Two-Sided Pokémon,hunger-switch,morpeko,bug | fairy | fighting | ground
+878,cufant,steel,,878.png,1.2,100.0,Copperderm Pokémon,heavy-metal | sheer-force,cufant | copperajah,fighting | fire | ground
+879,copperajah,steel,,879.png,3.0,650.0,Copperderm Pokémon,heavy-metal | sheer-force,cufant | copperajah,fighting | fire | ground
+880,dracozolt,electric,dragon,880.png,1.8,190.0,Fossil Pokémon,hustle | sand-rush | volt-absorb,dracozolt,dragon | fairy | ground | ice
+881,arctozolt,electric,ice,881.png,2.3,150.0,Fossil Pokémon,slush-rush | static | volt-absorb,arctozolt,fighting | fire | ground | rock | steel
+882,dracovish,water,dragon,882.png,2.3,215.0,Fossil Pokémon,sand-rush | strong-jaw | water-absorb,dracovish,dragon | electric | fairy | grass | ice
+883,arctovish,water,ice,883.png,2.0,175.0,Fossil Pokémon,ice-body | slush-rush | water-absorb,arctovish,electric | fighting | fire | grass | rock | steel
+884,duraludon,steel,dragon,884.png,1.8,40.0,Alloy Pokémon,heavy-metal | light-metal | stalwart,duraludon | archaludon,dragon | fairy | fighting | fire | ground | ice
+885,dreepy,dragon,ghost,885.png,0.5,2.0,Lingering Pokémon,clear-body | cursed-body | infiltrator,dreepy | drakloak | dragapult,dark | dragon | fairy | ghost | ice
+886,drakloak,dragon,ghost,886.png,1.4,11.0,Caretaker Pokémon,clear-body | cursed-body | infiltrator,dreepy | drakloak | dragapult,dark | dragon | fairy | ghost | ice
+887,dragapult,dragon,ghost,887.png,3.0,50.0,Stealth Pokémon,clear-body | cursed-body | infiltrator,dreepy | drakloak | dragapult,dark | dragon | fairy | ghost | ice
+888,zacian,fairy,,888.png,2.8,110.0,Warrior Pokémon,intrepid-sword,zacian,poison | steel
+889,zamazenta,fighting,,889.png,2.9,210.0,Warrior Pokémon,dauntless-shield,zamazenta,fairy | flying | psychic
+890,eternatus,poison,dragon,890.png,20.0,950.0,Gigantic Pokémon,pressure,eternatus,dragon | fairy | ground | ice | psychic
+891,kubfu,fighting,,891.png,0.6,12.0,Wushu Pokémon,inner-focus,kubfu | urshifu,fairy | flying | psychic
+892,urshifu-single-strike,fighting,dark,892.png,1.9,105.0,Wushu Pokémon,unseen-fist,kubfu | urshifu,bug | fairy | fighting | flying | psychic
+893,zarude,dark,grass,893.png,1.8,70.0,Rogue Monkey Pokémon,leaf-guard,zarude,bug | fairy | fighting | fire | flying | ice | poison
+894,regieleki,electric,,894.png,1.2,145.0,Electron Pokémon,transistor,regieleki,ground
+895,regidrago,dragon,,895.png,2.1,200.0,Dragon Orb Pokémon,dragons-maw,regidrago,dragon | fairy | ice
+896,glastrier,ice,,896.png,2.2,800.0,Wild Horse Pokémon,chilling-neigh,glastrier,fighting | fire | rock | steel
+897,spectrier,ghost,,897.png,2.0,44.5,Swift Horse Pokémon,grim-neigh,spectrier,dark | ghost
+898,calyrex,psychic,grass,898.png,1.1,7.7,King Pokémon,unnerve,calyrex,bug | dark | fire | flying | ghost | ice | poison
+899,wyrdeer,normal,psychic,899.png,1.8,95.1,Big Horn Pokémon,frisk | intimidate | sap-sipper,stantler | wyrdeer,bug | dark | fighting | ghost
+900,kleavor,bug,rock,900.png,1.8,89.0,Axe Pokémon,sharpness | sheer-force | swarm,scyther | scizor | kleavor,fighting | fire | flying | grass | ground | rock | steel | water
+901,ursaluna,ground,normal,901.png,2.4,290.0,Peat Pokémon,bulletproof | guts | unnerve,teddiursa | ursaring | ursaluna,fighting | grass | ice | water
+902,basculegion-male,water,ghost,902.png,3.0,110.0,Big Fish Pokémon,adaptability | mold-breaker | swift-swim,basculin | basculegion,dark | electric | ghost | grass
+903,sneasler,fighting,poison,903.png,1.3,43.0,Free Climb Pokémon,poison-touch | pressure | unburden,sneasel | weavile | sneasler,fairy | flying | ground | psychic
+904,overqwil,dark,poison,904.png,2.5,60.5,Pin Cluster Pokémon,intimidate | poison-point | swift-swim,qwilfish | overqwil,bug | fairy | fighting | ground | psychic
+905,enamorus-incarnate,fairy,flying,905.png,1.6,48.0,Love-Hate Pokémon,contrary | cute-charm,enamorus,electric | ice | poison | rock | steel
+906,sprigatito,grass,,906.png,0.4,4.1,Grass Cat Pokémon,overgrow | protean,sprigatito | floragato | meowscarada,bug | fire | flying | ice | poison
+907,floragato,grass,,907.png,0.9,12.2,Grass Cat Pokémon,overgrow | protean,sprigatito | floragato | meowscarada,bug | fire | flying | ice | poison
+908,meowscarada,grass,dark,908.png,1.5,31.2,Magician Pokémon,overgrow | protean,sprigatito | floragato | meowscarada,bug | fairy | fighting | fire | flying | ice | poison
+909,fuecoco,fire,,909.png,0.4,9.8,Fire Croc Pokémon,blaze | unaware,fuecoco | crocalor | skeledirge,ground | rock | water
+910,crocalor,fire,,910.png,1.0,30.7,Fire Croc Pokémon,blaze | unaware,fuecoco | crocalor | skeledirge,ground | rock | water
+911,skeledirge,fire,ghost,911.png,1.6,326.5,Singer Pokémon,blaze | unaware,fuecoco | crocalor | skeledirge,dark | ghost | ground | rock | water
+912,quaxly,water,,912.png,0.5,6.1,Duckling Pokémon,moxie | torrent,quaxly | quaxwell | quaquaval,electric | grass
+913,quaxwell,water,,913.png,1.2,21.5,Practicing Pokémon,moxie | torrent,quaxly | quaxwell | quaquaval,electric | grass
+914,quaquaval,water,fighting,914.png,1.8,61.9,Dancer Pokémon,moxie | torrent,quaxly | quaxwell | quaquaval,electric | fairy | flying | grass | psychic
+915,lechonk,normal,,915.png,0.5,10.2,Hog Pokémon,aroma-veil | gluttony | thick-fat,lechonk | oinkologne,fighting
+916,oinkologne-male,normal,,916.png,1.0,120.0,Hog Pokémon,gluttony | lingering-aroma | thick-fat,lechonk | oinkologne,fighting
+917,tarountula,bug,,917.png,0.3,4.0,String Ball Pokémon,insomnia | stakeout,tarountula | spidops,fire | flying | rock
+918,spidops,bug,,918.png,1.0,16.5,Trap Pokémon,insomnia | stakeout,tarountula | spidops,fire | flying | rock
+919,nymble,bug,,919.png,0.2,1.0,Grasshopper Pokémon,swarm | tinted-lens,nymble | lokix,fire | flying | rock
+920,lokix,bug,dark,920.png,1.0,17.5,Grasshopper Pokémon,swarm | tinted-lens,nymble | lokix,bug | fairy | fighting | fire | flying | rock
+921,pawmi,electric,,921.png,0.3,2.5,Mouse Pokémon,iron-fist | natural-cure | static,pawmi | pawmo | pawmot,ground
+922,pawmo,electric,fighting,922.png,0.4,6.5,Mouse Pokémon,iron-fist | natural-cure | volt-absorb,pawmi | pawmo | pawmot,fairy | flying | ground | psychic
+923,pawmot,electric,fighting,923.png,0.9,41.0,Hands-On Pokémon,iron-fist | natural-cure | volt-absorb,pawmi | pawmo | pawmot,fairy | flying | ground | psychic
+924,tandemaus,normal,,924.png,0.3,1.8,Couple Pokémon,own-tempo | pickup | run-away,tandemaus | maushold,fighting
+925,maushold-family-of-four,normal,,925.png,0.3,2.3,Family Pokémon,cheek-pouch | friend-guard | technician,tandemaus | maushold,fighting
+926,fidough,fairy,,926.png,0.3,10.9,Puppy Pokémon,klutz | own-tempo,fidough | dachsbun,poison | steel
+927,dachsbun,fairy,,927.png,0.5,14.9,Dog Pokémon,aroma-veil | well-baked-body,fidough | dachsbun,poison | steel
+928,smoliv,grass,normal,928.png,0.3,6.5,Olive Pokémon,early-bird | harvest,smoliv | dolliv | arboliva,bug | fighting | fire | flying | ice | poison
+929,dolliv,grass,normal,929.png,0.6,11.9,Olive Pokémon,early-bird | harvest,smoliv | dolliv | arboliva,bug | fighting | fire | flying | ice | poison
+930,arboliva,grass,normal,930.png,1.4,48.2,Olive Pokémon,harvest | seed-sower,smoliv | dolliv | arboliva,bug | fighting | fire | flying | ice | poison
+931,squawkabilly-green-plumage,normal,flying,931.png,0.6,2.4,Parrot Pokémon,guts | hustle | intimidate,squawkabilly,electric | fighting | ice | rock
+932,nacli,rock,,932.png,0.4,16.0,Rock Salt Pokémon,clear-body | purifying-salt | sturdy,nacli | naclstack | garganacl,fighting | grass | ground | steel | water
+933,naclstack,rock,,933.png,0.6,105.0,Rock Salt Pokémon,clear-body | purifying-salt | sturdy,nacli | naclstack | garganacl,fighting | grass | ground | steel | water
+934,garganacl,rock,,934.png,2.3,240.0,Rock Salt Pokémon,clear-body | purifying-salt | sturdy,nacli | naclstack | garganacl,fighting | grass | ground | steel | water
+935,charcadet,fire,,935.png,0.6,10.5,Fire Child Pokémon,flame-body | flash-fire,charcadet | armarouge | ceruledge,ground | rock | water
+936,armarouge,fire,psychic,936.png,1.5,85.0,Fire Warrior Pokémon,flash-fire | weak-armor,charcadet | armarouge | ceruledge,bug | dark | ghost | ground | rock | water
+937,ceruledge,fire,ghost,937.png,1.6,62.0,Fire Blades Pokémon,flash-fire | weak-armor,charcadet | armarouge | ceruledge,dark | ghost | ground | rock | water
+938,tadbulb,electric,,938.png,0.3,0.4,EleTadpole Pokémon,damp | own-tempo | static,tadbulb | bellibolt,ground
+939,bellibolt,electric,,939.png,1.2,113.0,EleFrog Pokémon,damp | electromorphosis | static,tadbulb | bellibolt,ground
+940,wattrel,electric,flying,940.png,0.4,3.6,Storm Petrel Pokémon,competitive | volt-absorb | wind-power,wattrel | kilowattrel,electric | ground | ice | rock
+941,kilowattrel,electric,flying,941.png,1.4,38.6,Frigatebird Pokémon,competitive | volt-absorb | wind-power,wattrel | kilowattrel,electric | ground | ice | rock
+942,maschiff,dark,,942.png,0.5,16.0,Rascal Pokémon,intimidate | run-away | stakeout,maschiff | mabosstiff,bug | fairy | fighting
+943,mabosstiff,dark,,943.png,1.1,61.0,Boss Pokémon,guard-dog | intimidate | stakeout,maschiff | mabosstiff,bug | fairy | fighting
+944,shroodle,poison,normal,944.png,0.2,0.7,Toxic Mouse Pokémon,pickpocket | prankster | unburden,shroodle | grafaiai,fighting | ground | psychic
+945,grafaiai,poison,normal,945.png,0.7,27.2,Toxic Monkey Pokémon,poison-touch | prankster | unburden,shroodle | grafaiai,fighting | ground | psychic
+946,bramblin,grass,ghost,946.png,0.6,0.6,Tumbleweed Pokémon,infiltrator | wind-rider,bramblin | brambleghast,bug | dark | fire | flying | ghost | ice | poison
+947,brambleghast,grass,ghost,947.png,1.2,6.0,Tumbleweed Pokémon,infiltrator | wind-rider,bramblin | brambleghast,bug | dark | fire | flying | ghost | ice | poison
+948,toedscool,ground,grass,948.png,0.9,33.0,Woodear Pokémon,mycelium-might | mycelium-might,toedscool | toedscruel,bug | fire | flying | grass | ice | poison | water
+949,toedscruel,ground,grass,949.png,1.9,58.0,Woodear Pokémon,mycelium-might | mycelium-might,toedscool | toedscruel,bug | fire | flying | grass | ice | poison | water
+950,klawf,rock,,950.png,1.3,79.0,Ambush Pokémon,anger-shell | regenerator | shell-armor,klawf,fighting | grass | ground | steel | water
+951,capsakid,grass,,951.png,0.3,3.0,Spicy Pepper Pokémon,chlorophyll | insomnia | klutz,capsakid | scovillain,bug | fire | flying | ice | poison
+952,scovillain,grass,fire,952.png,0.9,15.0,Spicy Pepper Pokémon,chlorophyll | insomnia | moody,capsakid | scovillain,bug | fire | flying | ground | ice | poison | rock | water
+953,rellor,bug,,953.png,0.2,1.0,Rolling Pokémon,compound-eyes | shed-skin,rellor | rabsca,fire | flying | rock
+954,rabsca,bug,psychic,954.png,0.3,3.5,Rolling Pokémon,synchronize | telepathy,rellor | rabsca,bug | dark | fire | flying | ghost | rock
+955,flittle,psychic,,955.png,0.2,1.5,Frill Pokémon,anticipation | frisk | speed-boost,flittle | espathra,bug | dark | ghost
+956,espathra,psychic,,956.png,1.9,90.0,Ostrich Pokémon,frisk | opportunist | speed-boost,flittle | espathra,bug | dark | ghost
+957,tinkatink,fairy,steel,957.png,0.4,8.9,Metalsmith Pokémon,mold-breaker | own-tempo | pickpocket,tinkatink | tinkatuff | tinkaton,fighting | fire | ground | poison | steel
+958,tinkatuff,fairy,steel,958.png,0.7,59.1,Hammer Pokémon,mold-breaker | own-tempo | pickpocket,tinkatink | tinkatuff | tinkaton,fighting | fire | ground | poison | steel
+959,tinkaton,fairy,steel,959.png,0.7,112.8,Hammer Pokémon,mold-breaker | own-tempo | pickpocket,tinkatink | tinkatuff | tinkaton,fighting | fire | ground | poison | steel
+960,wiglett,water,,960.png,1.2,1.8,Garden Eel Pokémon,gooey | rattled | sand-veil,wiglett | wugtrio,electric | grass
+961,wugtrio,water,,961.png,1.2,5.4,Garden Eel Pokémon,gooey | rattled | sand-veil,wiglett | wugtrio,electric | grass
+962,bombirdier,flying,dark,962.png,1.5,42.9,Item Drop Pokémon,big-pecks | keen-eye | rocky-payload,bombirdier,bug | electric | fairy | fighting | ice | rock
+963,finizen,water,,963.png,1.3,60.2,Dolphin Pokémon,water-veil | water-veil,finizen | palafin,electric | grass
+964,palafin-zero,water,,964.png,1.3,60.2,Dolphin Pokémon,zero-to-hero | zero-to-hero,finizen | palafin,electric | grass
+965,varoom,steel,poison,965.png,1.0,35.0,Single-Cyl Pokémon,overcoat | slow-start,varoom | revavroom,fighting | fire | ground | psychic
+966,revavroom,steel,poison,966.png,1.8,120.0,Multi-Cyl Pokémon,filter | overcoat,varoom | revavroom,fighting | fire | ground | psychic
+967,cyclizar,dragon,normal,967.png,1.6,63.0,Mount Pokémon,regenerator | shed-skin,cyclizar,dragon | fairy | fighting | ice
+968,orthworm,steel,,968.png,2.5,310.0,Earthworm Pokémon,earth-eater | sand-veil,orthworm,fighting | fire | ground
+969,glimmet,rock,poison,969.png,0.7,8.0,Ore Pokémon,corrosion | toxic-debris,glimmet | glimmora,fighting | grass | ground | psychic | steel | water
+970,glimmora,rock,poison,970.png,1.5,45.0,Ore Pokémon,corrosion | toxic-debris,glimmet | glimmora,fighting | grass | ground | psychic | steel | water
+971,greavard,ghost,,971.png,0.6,35.0,Ghost Dog Pokémon,fluffy | pickup,greavard | houndstone,dark | ghost
+972,houndstone,ghost,,972.png,2.0,15.0,Ghost Dog Pokémon,fluffy | sand-rush,greavard | houndstone,dark | ghost
+973,flamigo,flying,fighting,973.png,1.6,37.0,Synchronize Pokémon,costar | scrappy | tangled-feet,flamigo,electric | fairy | flying | ice | psychic | rock
+974,cetoddle,ice,,974.png,1.2,45.0,Terra Whale Pokémon,sheer-force | snow-cloak | thick-fat,cetoddle | cetitan,fighting | fire | rock | steel
+975,cetitan,ice,,975.png,4.5,700.0,Terra Whale Pokémon,sheer-force | slush-rush | thick-fat,cetoddle | cetitan,fighting | fire | rock | steel
+976,veluza,water,psychic,976.png,2.5,90.0,Jettison Pokémon,mold-breaker | sharpness,veluza,bug | dark | electric | ghost | grass
+977,dondozo,water,,977.png,12.0,220.0,Big Catfish Pokémon,oblivious | unaware | water-veil,dondozo,electric | grass
+978,tatsugiri-curly,dragon,water,978.png,0.3,8.0,Mimicry Pokémon,commander | storm-drain,tatsugiri,dragon | electric | fairy | grass | ice
+979,annihilape,fighting,ghost,979.png,1.2,56.0,Rage Monkey Pokémon,defiant | inner-focus | vital-spirit,mankey | primeape | annihilape,dark | fairy | flying | ghost | psychic
+980,clodsire,poison,ground,980.png,1.8,223.0,Spiny Fish Pokémon,poison-point | unaware | water-absorb,wooper | quagsire | clodsire,grass | ground | ice | psychic | water
+981,farigiraf,normal,psychic,981.png,3.2,160.0,Long Neck Pokémon,armor-tail | cud-chew | sap-sipper,girafarig | farigiraf,bug | dark | fighting | ghost
+982,dudunsparce-two-segment,normal,,982.png,3.6,39.2,Land Snake Pokémon,rattled | run-away | serene-grace,dunsparce | dudunsparce,fighting
+983,kingambit,dark,steel,983.png,2.0,120.0,Big Blade Pokémon,defiant | pressure | supreme-overlord,pawniard | bisharp | kingambit,bug | fairy | fighting | fire | ground
+984,great-tusk,ground,fighting,984.png,2.2,320.0,Paradox Pokémon,protosynthesis,great-tusk,fairy | flying | grass | ice | psychic | water
+985,scream-tail,fairy,psychic,985.png,1.2,8.0,Paradox Pokémon,protosynthesis,scream-tail,bug | dark | ghost | poison | steel
+986,brute-bonnet,grass,dark,986.png,1.2,21.0,Paradox Pokémon,protosynthesis,brute-bonnet,bug | fairy | fighting | fire | flying | ice | poison
+987,flutter-mane,ghost,fairy,987.png,1.4,4.0,Paradox Pokémon,protosynthesis,flutter-mane,dark | ghost | poison | steel
+988,slither-wing,bug,fighting,988.png,3.2,92.0,Paradox Pokémon,protosynthesis,slither-wing,fairy | fire | flying | psychic | rock
+989,sandy-shocks,electric,ground,989.png,2.3,60.0,Paradox Pokémon,protosynthesis,sandy-shocks,grass | ground | ice | water
+990,iron-treads,ground,steel,990.png,0.9,240.0,Paradox Pokémon,quark-drive,iron-treads,fighting | fire | grass | ground | ice | water
+991,iron-bundle,ice,water,991.png,0.6,11.0,Paradox Pokémon,quark-drive,iron-bundle,electric | fighting | fire | grass | rock | steel
+992,iron-hands,fighting,electric,992.png,1.8,380.7,Paradox Pokémon,quark-drive,iron-hands,fairy | flying | ground | psychic
+993,iron-jugulis,dark,flying,993.png,1.3,111.0,Paradox Pokémon,quark-drive,iron-jugulis,bug | electric | fairy | fighting | ice | rock
+994,iron-moth,fire,poison,994.png,1.2,36.0,Paradox Pokémon,quark-drive,iron-moth,ground | psychic | rock | water
+995,iron-thorns,rock,electric,995.png,1.6,303.0,Paradox Pokémon,quark-drive,iron-thorns,fighting | grass | ground | steel | water
+996,frigibax,dragon,ice,996.png,0.5,17.0,Ice Fin Pokémon,ice-body | thermal-exchange,frigibax | arctibax | baxcalibur,dragon | fairy | fighting | fire | ice | rock | steel
+997,arctibax,dragon,ice,997.png,0.8,30.0,Ice Fin Pokémon,ice-body | thermal-exchange,frigibax | arctibax | baxcalibur,dragon | fairy | fighting | fire | ice | rock | steel
+998,baxcalibur,dragon,ice,998.png,2.1,210.0,Ice Dragon Pokémon,ice-body | thermal-exchange,frigibax | arctibax | baxcalibur,dragon | fairy | fighting | fire | ice | rock | steel
+999,gimmighoul,ghost,,999.png,0.3,5.0,Coin Chest Pokémon,rattled,gimmighoul | gholdengo,dark | ghost
+1000,gholdengo,steel,ghost,1000.png,1.2,30.0,Coin Entity Pokémon,good-as-gold,gimmighoul | gholdengo,dark | fighting | fire | ghost | ground
+1001,wo-chien,dark,grass,1001.png,1.5,74.2,Ruinous Pokémon,tablets-of-ruin,wo-chien,bug | fairy | fighting | fire | flying | ice | poison
+1002,chien-pao,dark,ice,1002.png,1.9,152.2,Ruinous Pokémon,sword-of-ruin,chien-pao,bug | fairy | fighting | fire | rock | steel
+1003,ting-lu,dark,ground,1003.png,2.7,699.7,Ruinous Pokémon,vessel-of-ruin,ting-lu,bug | fairy | fighting | grass | ice | water
+1004,chi-yu,dark,fire,1004.png,0.4,4.9,Ruinous Pokémon,beads-of-ruin,chi-yu,bug | fairy | fighting | ground | rock | water
+1005,roaring-moon,dragon,dark,1005.png,2.0,380.0,Paradox Pokémon,protosynthesis,roaring-moon,bug | dragon | fairy | fighting | ice
+1006,iron-valiant,fairy,fighting,1006.png,1.4,35.0,Paradox Pokémon,quark-drive,iron-valiant,fairy | flying | poison | psychic | steel
+1007,koraidon,fighting,dragon,1007.png,2.5,303.0,Paradox Pokémon,orichalcum-pulse,koraidon,dragon | fairy | flying | ice | psychic
+1008,miraidon,electric,dragon,1008.png,3.5,240.0,Paradox Pokémon,hadron-engine,miraidon,dragon | fairy | ground | ice
+1009,walking-wake,water,dragon,1009.png,3.5,280.0,Paradox Pokémon,protosynthesis,walking-wake,dragon | electric | fairy | grass | ice
+1010,iron-leaves,grass,psychic,1010.png,1.5,125.0,Paradox Pokémon,quark-drive,iron-leaves,bug | dark | fire | flying | ghost | ice | poison
+1011,dipplin,grass,dragon,1011.png,0.4,9.7,Candy Apple Pokémon,gluttony | sticky-hold | supersweet-syrup,applin | flapple | appletun | dipplin | hydrapple,bug | dragon | fairy | fire | flying | ice | poison
+1012,poltchageist,grass,ghost,1012.png,0.1,1.1,Matcha Pokémon,heatproof | hospitality,poltchageist | sinistcha,bug | dark | fire | flying | ghost | ice | poison
+1013,sinistcha,grass,ghost,1013.png,0.2,2.2,Matcha Pokémon,heatproof | hospitality,poltchageist | sinistcha,bug | dark | fire | flying | ghost | ice | poison
+1014,okidogi,poison,fighting,1014.png,1.8,92.2,Retainer Pokémon,guard-dog | toxic-chain,okidogi,fairy | flying | ground | psychic
+1015,munkidori,poison,psychic,1015.png,1.0,12.2,Retainer Pokémon,frisk | toxic-chain,munkidori,bug | dark | ghost | ground | psychic
+1016,fezandipiti,poison,fairy,1016.png,1.4,30.1,Retainer Pokémon,technician | toxic-chain,fezandipiti,ground | poison | psychic | steel
+1017,ogerpon,grass,,1017.png,1.2,39.8,Mask Pokémon,defiant,ogerpon,bug | fire | flying | ice | poison
+1018,archaludon,steel,dragon,1018.png,2.0,60.0,Alloy Pokémon,stalwart | stamina | sturdy,duraludon | archaludon,dragon | fairy | fighting | fire | ground | ice
+1019,hydrapple,grass,dragon,1019.png,1.8,93.0,Apple Hydra Pokémon,regenerator | sticky-hold | supersweet-syrup,applin | flapple | appletun | dipplin | hydrapple,bug | dragon | fairy | fire | flying | ice | poison
+1020,gouging-fire,fire,dragon,1020.png,3.5,590.0,Paradox Pokémon,protosynthesis,gouging-fire,dragon | fairy | ground | ice | rock | water
+1021,raging-bolt,electric,dragon,1021.png,5.2,480.0,Paradox Pokémon,protosynthesis,raging-bolt,dragon | fairy | ground | ice
+1022,iron-boulder,rock,psychic,1022.png,1.5,162.5,Paradox Pokémon,quark-drive,iron-boulder,bug | dark | fighting | ghost | grass | ground | steel | water
+1023,iron-crown,steel,psychic,1023.png,1.6,156.0,Paradox Pokémon,quark-drive,iron-crown,bug | dark | fighting | fire | ghost | ground
+1024,terapagos,normal,,1024.png,0.2,6.5,Tera Pokémon,tera-shift,terapagos,fighting
+1025,pecharunt,poison,ghost,1025.png,0.3,0.3,Subjugation Pokémon,poison-puppeteer,pecharunt,dark | ghost | ground | psychic

@@ -33,11 +33,14 @@ def executar_preprocessamento():
 
     if not csv_ok or not imgs_ok:
         print("\n[AVISO] Gerando CSV e imagens...\n")
-        subprocess.run(["python", r"app\static\py\pre_processamento.py"], check=True)
+        subprocess.run(
+            ["python", os.path.join("app", "static", "py", "pre_processamento.py")],
+            check=True
+        )
 
 executar_preprocessamento()
 
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=True)
+    app.run(debug=False)

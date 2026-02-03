@@ -95,6 +95,17 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     padding-right: 36px;
+    max-height: 260px;
+    overflow-y: auto;
+}
+
+.filter-wrapper select::-webkit-scrollbar {
+    width: 6px;
+}
+
+.filter-wrapper select::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
 }
 
 .filter-icon {
@@ -376,6 +387,7 @@
     .filter-wrapper {
         width: 44px;
         height: 44px;
+        position: relative;
     }
 
     .filter-wrapper select {
@@ -385,6 +397,8 @@
         border-radius: 10px;
         text-indent: -9999px;
         cursor: pointer;
+        max-height: 220px;
+        overflow-y: auto;
     }
 
     .filter-icon {

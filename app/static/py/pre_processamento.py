@@ -50,7 +50,7 @@ def extrair_campos(pokemon_json, species_json):
 def main():
     linha = []
 
-    for pokemon_id in range(1, 201): # Teste inicial apenas com pokemons de Kanto
+    for pokemon_id in range(1, 1026): 
         print(f"Processando Pokémon {pokemon_id}...")
 
         pokemon_json = pegar_dados_pokemon(pokemon_id)
