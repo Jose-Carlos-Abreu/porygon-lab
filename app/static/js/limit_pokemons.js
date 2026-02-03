@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const counter = document.getElementById("selection-counter");
     const warning = document.getElementById("limit-warning");
 
-    // Se não existir nada disso na página, não executa o script
     if (!checkboxes.length || !counter || !warning) {
         return;
     }

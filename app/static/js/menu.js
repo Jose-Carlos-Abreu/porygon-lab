@@ -1,19 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.getElementById("mobile-menu");
+    const botaoMenu  = document.querySelector(".menu-toggle"); // Botão que para abrir e fechar o menu para mobile
+    const menuMobile  = document.getElementById("mobile-menu");
 
-    if (!toggle || !menu) return;
+    // Se não existir nada disso na página, não executa o script
+    if (!botaoMenu || !menuMobile) {
+        return;
+    }
+    
+    // Abre ou fecha o menu mobile adicionando ou removendo a classe "active".
+    function alternarMenu() {
+        menuMobile.classList.toggle("active");
+    }
 
-    toggle.addEventListener("click", (e) => {
-        e.stopPropagation();
-        menu.classList.toggle("active");
+    // Fecha o menu mobile removendo a classe "active".
+    function fecharMenu() {
+        menuMobile.classList.remove("active");
+    }
+
+    // Quando clicar no botão ".menu-toggle" abre ou fecha o menu
+    botaoMenu.addEventListener("click", (event) => {
+        event.stopPropagation();
+        alternarMenu();
     });
 
-    menu.addEventListener("click", (e) => {
-        e.stopPropagation();
+    // Isso é pra não fechar o menu
+    menuMobile.addEventListener("click", (event) => {
+        event.stopPropagation();
     });
 
+    // Quando clicar fora do menu fecha o menu
     document.addEventListener("click", () => {
-        menu.classList.remove("active");
+        fecharMenu();
     });
 });
