@@ -136,7 +136,8 @@ function checkIfEmpty(grid, header) {
         const emptyState = document.createElement("div");
         emptyState.className = "empty-state";
         emptyState.innerHTML = `
-            <div class="empty-icon">⭐</div>
+            <div class="empty-icon"></div>
+            <img src="/static/images/ui/icon_favoritos.png" alt="favoritos" class="empty-icon">
             <h2>Nenhum Pokémon favorito</h2>
             <p>
                 Você ainda não favoritou nenhum Pokémon.<br>
