@@ -1,3 +1,4 @@
+/* LAYOUT */
 .page-detail {
     background-color: #f7f7f7;
     min-height: 100vh;
@@ -11,24 +12,26 @@
     width: 100%;
 }
 
+
+/* TOPO / BOTÃO VOLTAR */
 .detail-header-top {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    padding: 20px 0 20px;
+    padding: 20px 0;
 }
 
 .btn-back {
     display: inline-block;
     padding: 8px 14px;
     border-radius: 8px;
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #ddd;
     color: #333;
     font-weight: bold;
     text-decoration: none;
-    transition: background 0.2s ease, transform 0.15s ease;
+    transition: transform 0.15s ease, background 0.2s ease;
 }
 
 .btn-back:hover {
@@ -36,14 +39,19 @@
     transform: translateX(-2px);
 }
 
+
+/* CARD PRINCIPAL */
 .pokemon-detail-card {
     position: relative;
-    background: white;
+    background: #fff;
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 48px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
+
+/* HEADER DO CARD (IMAGEM + INFO) */
 .detail-header {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -58,18 +66,18 @@
     width: 260px;
     margin: 0 auto;
     display: block;
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.15));
     transition: transform 0.3s ease;
-    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.15));
+}
+
+.main-image img:hover {
+    transform: scale(1.05) rotate(-2deg);
 }
 
 .header-info {
     display: flex;
     flex-direction: column;
     gap: 6px;
-}
-
-.main-image img:hover {
-    transform: scale(1.05) rotate(-2deg);
 }
 
 .pokemon-id {
@@ -85,6 +93,8 @@
     letter-spacing: -0.5px;
 }
 
+
+/* INFO GRID (ALTURA / PESO / ETC) */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -96,14 +106,16 @@
 }
 
 .info-box {
-    background: white;
+    background: #fff;
     border-radius: 12px;
     padding: 14px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    text-align: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
 .info-title {
@@ -117,35 +129,30 @@
     font-weight: bold;
 }
 
+
+/* SEÇÕES (STATS / FRAQUEZAS / EVOLUÇÕES) */
 .stats-section,
 .weakness-section,
 .evolution-section {
     margin-top: 30px;
 }
 
-.section-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #313131;
-    margin-bottom: 12px;
-}
-
+.section-title,
 .weakness-section h3 {
     margin-bottom: 12px;
     font-size: 1.2rem;
+    font-weight: 700;
     color: #313131;
 }
 
-.weakness-section .type-badge {
-    opacity: 0.9;
-    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.25);
-}
 
+/* TIPOS / HABILIDADES */
 .abilities-box {
     margin-bottom: 30px;
 }
 
-.pokemon-types, .abilities-list {
+.pokemon-types,
+.abilities-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -153,7 +160,7 @@
 
 .ability-chip {
     background: #313131;
-    color: white;
+    color: #fff;
     padding: 6px 16px;
     border-radius: 999px;
     font-size: 0.85rem;
@@ -161,19 +168,27 @@
     letter-spacing: 0.3px;
 }
 
+.weakness-section .type-badge {
+    opacity: 0.9;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+/* EVOLUÇÕES */
 .evolution-list {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
+
     background: #eee;
     padding: 20px;
     border-radius: 15px;
 }
 
 .evolution-item {
-    background: white;
+    background: #fff;
     border-radius: 14px;
     padding: 14px 16px;
     text-align: center;
@@ -185,12 +200,13 @@
     align-items: center;
     gap: 8px;
 
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .evolution-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .evolution-item img {
@@ -214,6 +230,8 @@
     margin: 0 6px;
 }
 
+
+/* FAVORITO (ESTRELA) */
 .favorite-star {
     position: absolute;
     top: 18px;
@@ -240,14 +258,12 @@
     color: #ffcb05;
 }
 
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
     .detail-header {
         grid-template-columns: 1fr;
         text-align: center;
-    }
-
-    .info-grid {
-        grid-template-columns: 1fr;
     }
 
     .main-image img {
@@ -260,6 +276,10 @@
 
     .pokemon-detail-card {
         padding: 24px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
     }
 }
 

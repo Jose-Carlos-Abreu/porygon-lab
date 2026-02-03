@@ -24,7 +24,7 @@
                         {% for category, message in messages %}
                             <div class="flash flash-{{ category }}">
                                 <span class="flash-icon">
-                                    {% if category == 'success' %}✅{% elif category == 'error' %}❌{% else %}ℹ️{% endif %}
+                                    {% if category == 'success' %}<i class="fa-solid fa-check"></i>{% elif category == 'error' %}<i class="fa-solid fa-x"></i>{% else %}ℹ️{% endif %}
                                 </span>
                                 <span class="flash-text">{{ message }}</span>
                             </div>

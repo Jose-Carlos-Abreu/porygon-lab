@@ -4,7 +4,7 @@ from app.models.favorite import listar_favoritos
 
 home_bp = Blueprint("home", __name__)
 
-POKEMONS_POR_PAGINA = 10  # Quantidade de pokémons exibidos por página na Pokédex.
+POKEMONS_POR_PAGINA = 30  # Quantidade de pokémons exibidos por página na Pokédex.
 
 
 @home_bp.route('/')

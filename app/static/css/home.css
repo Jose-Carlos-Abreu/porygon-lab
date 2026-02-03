@@ -1,12 +1,13 @@
-/* SEARCH E FILTER */
-
+/* SEARCH / FILTER */
 .search-section {
     padding: 35px 5%;
     display: flex;
     justify-content: center;
 }
 
-.search-section *, .search-section *::before, .search-section *::after {
+.search-section *,
+.search-section *::before,
+.search-section *::after {
     box-sizing: border-box;
 }
 
@@ -18,15 +19,12 @@
     max-width: 900px;
 }
 
-/* Wrapper do input (necessário para sugestões) */
 .search-wrapper {
     flex: 1;
     min-width: 0;
     position: relative;
 }
 
-
-/* Campo de busca */
 .search-form input {
     width: 100%;
     padding: 14px 16px;
@@ -36,19 +34,17 @@
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Select de tipos */
 .search-form select {
     flex-shrink: 0;
     padding: 14px;
     border-radius: 10px;
     border: 1px solid #dcdcdc;
     font-size: 1rem;
-    background-color: #ffffff;
+    background-color: #fff;
     cursor: pointer;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Focus unificado */
 .search-form input:focus,
 .search-form select:focus {
     outline: none;
@@ -56,7 +52,6 @@
     box-shadow: 0 0 0 3px rgba(238, 21, 21, 0.2);
 }
 
-/* Botão buscar */
 .btn-search {
     flex-shrink: 0;
     min-width: 140px;
@@ -64,7 +59,7 @@
     padding: 0 16px;
     border-radius: 10px;
     background: linear-gradient(135deg, #ee1515, #cc1212);
-    color: white;
+    color: #fff;
     border: none;
     cursor: pointer;
     font-weight: bold;
@@ -74,46 +69,56 @@
     align-items: center;
     justify-content: center;
     gap: 6px;
+
+    transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
 
-/* Hover do botão */
 .btn-search:hover {
     background: linear-gradient(135deg, #cc1212, #a50f0f);
     transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* Active (ao clicar) */
-.btn-search:active {
-    transform: translateY(0);
-    box-shadow: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .btn-search:active {
     transform: scale(0.97);
+    box-shadow: none;
 }
 
-/* Wrapper da busca (autocomplete) */
-.search-wrapper {
+/* FILTER (SELECT + ÍCONE MOBILE) */
+.filter-wrapper {
     position: relative;
-    width: 100%;
+    flex-shrink: 0;
 }
 
-/* SUGESTÕES */
+.filter-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 36px;
+}
 
+.filter-icon {
+    display: none;
+}
+
+
+/* AUTOCOMPLETE (SUGESTÕES) */
 #suggestions-container {
     position: absolute;
     top: calc(100% + 6px);
     left: 0;
     right: 0;
-    background: #ffffff;
+
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     max-height: 260px;
     overflow-y: auto;
     display: none;
+
     z-index: 1000;
-    border: 1px solid #eee;
 }
 
 .suggestion-item {
@@ -136,17 +141,17 @@
     background-color: #f5f5f5;
 }
 
+
+/* FAVORITOS / BOTÕES NOS CARDS */
 .pokemon-card .card-left-controls {
     position: absolute;
     top: 8px;
     left: 8px;
     display: flex;
-    gap: 6px;
     align-items: center;
+    gap: 6px;
     z-index: 6;
 }
-
-/* FAVORITE */
 
 .pokemon-card .favorite-star {
     background: transparent;
@@ -154,6 +159,7 @@
     cursor: pointer;
     color: #ccc;
     transition: transform 0.2s ease, color 0.2s ease;
+
     position: absolute;
     top: 8px;
     right: 8px;
@@ -170,8 +176,9 @@
     color: #ffcb05;
 }
 
-.pokemon-card .btn-add-team, .pokemon-card .btn-remove {
-    background: rgba(255,255,255,0.95);
+.pokemon-card .btn-add-team,
+.pokemon-card .btn-remove {
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid #eee;
     padding: 6px 8px;
     border-radius: 8px;
@@ -180,39 +187,37 @@
     transform: rotate(180deg);
 }
 
-/* small buttons next to favorite star */
-.pokemon-card .btn-remove { color: #e74c3c; border-color: rgba(231,76,60,0.15); }
-.pokemon-card .btn-add-team { background: linear-gradient(135deg,#34c759,#28a745); color: white; border: none; }
-.pokemon-card .btn-add-team:hover { opacity: 0.95; }
-.pokemon-card .btn-add-team img { width: 20px; height: 20px; display: block; }  
-
-/* FILTER WRAPPER */
-.filter-wrapper {
-    position: relative;
-    flex-shrink: 0;
+.pokemon-card .btn-remove {
+    color: #e74c3c;
+    border-color: rgba(231, 76, 60, 0.15);
 }
 
-.filter-wrapper select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding-right: 36px;
+.pokemon-card .btn-add-team {
+    background: linear-gradient(135deg, #34c759, #28a745);
+    color: #fff;
+    border: none;
 }
 
-/* Ícone invisível como padrão */
-.filter-icon {
-    display: none;
+.pokemon-card .btn-add-team:hover {
+    opacity: 0.95;
 }
 
-/* Caso pokemon nao seja encontrado */
+.pokemon-card .btn-add-team img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+
+/* EMPTY STATE */
 .empty-state {
     margin: 40px auto 60px;
     padding: 40px 20px;
     max-width: 420px;
-    background: #ffffff;
+    background: #fff;
     border-radius: 16px;
     text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .empty-icon {
@@ -247,19 +252,19 @@
     border-radius: 8px;
     background: #ee1515;
     border: 1px solid #ddd;
-    color: white;
+    color: #fff;
     font-weight: bold;
     text-decoration: none;
-    transition: background 0.2s ease, transform 0.15s ease;
+    transition: transform 0.15s ease, opacity 0.2s ease;
 }
 
 .btn-clear:hover {
     opacity: 0.9;
-    transform: translatey(-1px);
+    transform: translateY(-1px);
 }
 
-/* PAGINAÇÃO */
 
+/* PAGINAÇÃO */
 .pagination-wrapper {
     margin: 30px auto 50px;
     padding: 0 5%;
@@ -271,11 +276,11 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #eee;
     padding: 12px 16px;
     border-radius: 14px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .page-btn {
@@ -308,8 +313,9 @@
     color: #444;
 }
 
-@media (max-width: 768px) {
 
+/* RESPONSIVO */
+@media (max-width: 768px) {
     .search-section {
         padding: 24px 4%;
     }
@@ -332,7 +338,6 @@
 }
 
 @media (max-width: 480px) {
-
     .search-section {
         padding: 16px 4%;
     }
@@ -352,12 +357,10 @@
         max-width: 52px;
     }
 
-    /* ESCONDE TEXTO */
     .btn-search .btn-text {
         display: none;
     }
 
-    /* BOTÃO VIRA ÍCONE */
     .btn-search {
         min-width: 44px;
         width: 44px;
@@ -370,7 +373,6 @@
         font-size: 1.1rem;
     }
 
-    /* FILTER COMO ÍCONE */
     .filter-wrapper {
         width: 44px;
         height: 44px;
@@ -395,7 +397,7 @@
         font-size: 1.1rem;
     }
 
-     .pagination {
+    .pagination {
         width: 100%;
         justify-content: space-between;
         gap: 8px;
