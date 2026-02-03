@@ -19,5 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Evento do botão "Limpar busca"
-    btnClearSearch.addEventListener("click", limparBuscaEFiltro);
+    btnClear.addEventListener("click", limparBuscaEFiltro);
 });
