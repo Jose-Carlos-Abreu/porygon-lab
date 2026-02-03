@@ -29,6 +29,13 @@
     font-size: 0.9rem;
 }
 
+.card-link {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    height: 100%;
+}
+
 .favorite-star:active, .remove-favorite-x:active {
     transform: scale(0.95);
 }

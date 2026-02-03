@@ -138,8 +138,14 @@ function checkIfEmpty(grid, header) {
         emptyState.innerHTML = `
             <div class="empty-icon">⭐</div>
             <h2>Nenhum Pokémon favorito</h2>
-            <p>Você ainda não favoritou nenhum Pokémon.<br>Explore a Pokédex e marque seus favoritos!</p>
-            <a href="/" class="btn-back">← Voltar para Pokédex</a>
+            <p>
+                Você ainda não favoritou nenhum Pokémon.<br>
+                Explore a Pokédex e marque seus favoritos!
+            </p>
+
+            <a href="/" class="btn-back">
+                ← Voltar para Pokédex
+            </a>
         `;
         document.querySelector("main").appendChild(emptyState);
     }
