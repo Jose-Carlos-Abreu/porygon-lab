@@ -5,6 +5,8 @@ from app.controller.favorite import favorite_bp
 from app.controller.teams import teams_bp
 from app.models.usuario import db
 import os, subprocess
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(
     __name__,
@@ -14,7 +16,7 @@ app = Flask(
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///usuarios.sqlite3'
 
-app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET_KEY', 'chave_generica_para_dev_local')
+app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET_KEY')
 
 db.init_app(app)
 

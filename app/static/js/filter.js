@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("search");
     const typeSelect = document.getElementById("filter-type");
 
+    // Exibe mensagem de "nenhum encontrado" quando necessário
+    const emptyState = document.getElementById("empty-state-team");
+
     // Todos os cards de pokémon exibidos no grid
     const cards = document.querySelectorAll(".pokemon-card-container");
 
@@ -17,9 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cards.forEach(card => {
             // Dados vindos do HTML via dataset
-            const nomePokemon = card.dataset.name || "";
-            const idPokemon = card.dataset.id;
-            const tiposPokemon = card.dataset.types;
+            const nomePokemon = (card.dataset.name || "").toLowerCase();
+            const idPokemon = String(card.dataset.id || "");
+            const tiposPokemon = (card.dataset.types || "").toLowerCase();
             
             // Filtro de texto:
             // - se texto vazio, passa
@@ -34,26 +37,25 @@ document.addEventListener("DOMContentLoaded", () => {
             // - se tipo vazio, passa
             // - se os tipos do pokémon contém o tipo selecionado, passa
             const matchTipo =
-                !tipoSelecionado || tiposPokemon.includes(tipoSelecionado);
+                !tipoSelecionado ||
+                tiposPokemon.includes(tipoSelecionado);
 
             const deveMostrar = matchTexto && matchTipo;
 
             // Mostra ou esconde o card conforme o resultado do filtro
-            card.style.display = deveMostrar ? "block" : "none";
+            card.style.display = deveMostrar ? "" : "none";
 
             if (deveMostrar) {
-                totalVisiveis++;
+                visiveis++;
             }
         });
 
-        // Exibe mensagem de "nenhum encontrado" quando necessário
-        const emptyState = document.getElementById("empty-state-team");
         if (emptyState) {
             emptyState.style.display = visiveis === 0 ? "block" : "none";
         }
     }
 
- // Eventos: ao digitar ou mudar o tipo, refaz o filtro
+    // Eventos: ao digitar ou mudar o tipo, refaz o filtro
     searchInput.addEventListener("input", aplicarFiltro);
     typeSelect.addEventListener("change", aplicarFiltro);
 

@@ -1,3 +1,5 @@
+
+app/controller/teams.py
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 from app.decorators import session_required
 from app.models.teams import salvar_novo_time, pegar_time_do_usuario, remover_time, atualizar_time
