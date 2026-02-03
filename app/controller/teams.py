@@ -7,6 +7,53 @@ teams_bp = Blueprint('teams', __name__)
 
 MAX_POKEMONS_POR_TIME = 6
 
+def limpar_nome_time(nome_time):
+    """
+    Remove caracteres que podem quebrar o CSV.
+    """
+    if not nome_time:
+        return ""
+
+    nome_time = nome_time.strip()
+
+    # Retira caracteres que possam quebrar o CSV e o campo pokemons
+    nome_time = nome_time.replace(",", "")
+    nome_time = nome_time.replace(";", "")
+    nome_time = nome_time.replace("\n", "")
+    nome_time = nome_time.replace("\r", "")
+
+    return nome_time
+
+def validar_pokemons_selecionados(selecionados, maximo):
+    """
+    Validar os pokémons recebidos do formulário, removes valores inválidos, duplicados e garantir limite máximo de pokemons.
+    """
+    if not selecionados:
+        return []
+
+    # remove duplicados mantendo ordem
+    vistos = set()
+    lista_final = []
+
+    for pid in selecionados:
+        pid = str(pid).strip()
+
+        # só aceita número
+        if not pid.isdigit():
+            continue
+
+        # remove repetidos
+        if pid in vistos:
+            continue
+
+        vistos.add(pid)
+        lista_final.append(pid)
+
+        # trava no máximo permitido
+        if len(lista_final) >= maximo:
+            break
+
+    return lista_final
 
 @teams_bp.route('/teams')
 @session_required
@@ -66,6 +113,9 @@ def edit_team(team_id):
         nome_time = request.form.get('nome_time')
         selecionados = request.form.getlist('pokemons')
 
+        nome_time = limpar_nome_time(nome_time)
+        selecionados = validar_pokemons_selecionados(selecionados, MAX_POKEMONS_POR_TIME)
+
         # Validações do formulário.
         if not nome_time:
             flash('Informe o nome do time.', 'error')
@@ -117,6 +167,9 @@ def new_team():
         nome_time = request.form.get('nome_time')
         selecionados = request.form.getlist('pokemons')
 
+        nome_time = limpar_nome_time(nome_time)
+        selecionados = validar_pokemons_selecionados(selecionados, MAX_POKEMONS_POR_TIME)
+
         # Validações do formulário.
         if not nome_time:
             flash('Informe o nome do time.', 'error')
@@ -129,6 +182,7 @@ def new_team():
         if len(selecionados) > MAX_POKEMONS_POR_TIME:
             flash(f'Um time pode ter no máximo {MAX_POKEMONS_POR_TIME} Pokémons.', 'error')
             return redirect(url_for('teams.new_team'))
+        
         salvar_novo_time(
             usuario_id=usuario_id,
             nome_time=nome_time,

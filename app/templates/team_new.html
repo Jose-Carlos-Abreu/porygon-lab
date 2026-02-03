@@ -33,6 +33,8 @@
                 placeholder="Ex: Time Elétrico"
                 value="{{ team.nome if edit else '' }}"
                 maxlength="18"
+                pattern="[^,;]+"
+                title="Não use vírgulas (,) ou ponto e vírgula (;)"
             >
             <p id="selection-counter" class="selection-counter">
                 Selecionados: <strong>0</strong>/6

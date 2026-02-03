@@ -108,7 +108,7 @@ def atualizar_time(usuario_id, team_id, nome_time, pokemons):
         return False
 
     # Atualiza o time com os novos dados
-    nova_linha = f"{usuario_id},{nome_time},{';'.join(pokemons)}\n"
+    nova_linha = f"{usuario_id},{nome_time},{';'.join(pokemons[:6])}\n"
     linhas[index_real] = nova_linha
 
     escrever_arquivo(linhas[1:]) # Regrava apenas as linhas de dados
@@ -150,5 +150,5 @@ def salvar_novo_time(usuario_id, nome_time, pokemons):
             # Se o arquivo não existir, cria o arquivo e adiciona o cabeçalho.
             file.write('usuario_id,nome_time,pokemons\n')
 
-        linha = f"{usuario_id},{nome_time},{';'.join(pokemons)}\n"
+        linha = f"{usuario_id},{nome_time},{';'.join(pokemons[:6])}\n"
         file.write(linha)

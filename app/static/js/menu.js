@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const botaoMenu  = document.querySelector(".menu-toggle"); // Botão que para abrir e fechar o menu para mobile
     const menuMobile  = document.getElementById("mobile-menu");
 
-    // Se não existir nada disso na página, não executa o script
     if (!botaoMenu || !menuMobile) {
         return;
     }
