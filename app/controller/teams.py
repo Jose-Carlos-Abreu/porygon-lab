@@ -7,7 +7,7 @@ teams_bp = Blueprint('teams', __name__)
 
 MAX_POKEMONS_POR_TIME = 6
 
-def limpar_nome_time(nome_time)
+def limpar_nome_time(nome_time):
     """
     Remove caracteres que podem quebrar o CSV.
     """
