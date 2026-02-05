@@ -6,7 +6,9 @@ from app.controller.teams import teams_bp
 from app.models.usuario import db
 import os, subprocess
 from dotenv import load_dotenv
+
 load_dotenv()
+SECRET_KEY = os.environ.get('FLASK_SECRET_KEY')
 
 app = Flask(
     __name__,
@@ -16,7 +18,10 @@ app = Flask(
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///usuarios.sqlite3'
 
-app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET_KEY')
+if not SECRET_KEY:
+    raise RuntimeError("FLASK_SECRET_KEY não configurada no arquivo .env")
+
+app.config['SECRET_KEY'] = SECRET_KEY
 
 db.init_app(app)
 

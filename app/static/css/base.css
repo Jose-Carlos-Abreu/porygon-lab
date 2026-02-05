@@ -199,7 +199,7 @@ main.content {
 /* GRID DE POKÉMONS */
 .pokemon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     padding: 0 5% 50px;
     max-width: 1100px;
@@ -498,7 +498,7 @@ main.content {
     }
 
     .pokemon-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 18px;
         padding: 0 4% 40px;
     }
@@ -539,6 +539,10 @@ main.content {
     .user-auth a {
         padding: 6px 10px;
         font-size: 0.9rem;
+    }
+
+    .pokemon-grid {
+        grid-template-columns: 1fr;
     }
 
     .pokemon-card {
