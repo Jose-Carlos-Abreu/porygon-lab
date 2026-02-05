@@ -7,7 +7,7 @@ from app.models.usuario import db
 import os, subprocess
 from dotenv import load_dotenv, find_dotenv
 
-# Carrega o arquivo .env explicitamente (procura em pastas pai se necessário)
+# Carrega o arquivo .env explicitamente
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ.get('FLASK_SECRET_KEY')
 

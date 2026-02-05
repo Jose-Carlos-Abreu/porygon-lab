@@ -4,6 +4,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 db = SQLAlchemy()
 
 class Usuario(db.Model):
+    """
+    Classe de Usuario que define nome e senha, e faz a criptografia da senha.
+    """
     id = db.Column('id', db.Integer, primary_key=True, autoincrement=True)
     nome = db.Column(db.String(150), unique=True)
     senha_hash = db.Column(db.String(128))
