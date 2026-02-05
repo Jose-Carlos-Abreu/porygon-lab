@@ -97,6 +97,24 @@ pip install -r requirements.txt
 python app.py
 ```
 
+## Configuração do ambiente
+
+Crie um arquivo **.env** na raiz do projeto e adicione a seguinte variável:
+
+```env
+FLASK_SECRET_KEY=sua_chave_secreta_aqui
+```
+
+Essa chave é utilizada pelo Flask para controle de sessões e segurança da aplicação.
+
+---
+
+## Execução da aplicação
+
+```bash
+python app.py
+```
+
 A aplicação estará disponível em:
 
 [http://localhost:5000](http://localhost:5000)
