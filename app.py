@@ -5,9 +5,10 @@ from app.controller.favorite import favorite_bp
 from app.controller.teams import teams_bp
 from app.models.usuario import db
 import os, subprocess
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
-load_dotenv()
+# Carrega o arquivo .env explicitamente (procura em pastas pai se necessário)
+load_dotenv(find_dotenv())
 SECRET_KEY = os.environ.get('FLASK_SECRET_KEY')
 
 app = Flask(
